@@ -40,8 +40,8 @@ var (
 // It automatically starts a go routine that manages expiration of assumed pods.
 // "ttl" is how long the assumed pod will get expired.
 // "stop" is the channel that would close the background goroutine.
-func New(ttl time.Duration, stop <-chan struct{}) Cache {
-	cache := newSchedulerCache(ttl, cleanAssumedPeriod, stop)
+func New(ttl time.Duration, stop <-chan struct{}, featureGate utilfeature.FeatureGate) Cache {
+	cache := newSchedulerCache(ttl, cleanAssumedPeriod, stop, featureGate)
 	cache.run()
 	return cache
 }
@@ -62,6 +62,7 @@ type schedulerCache struct {
 	nodeTree  *NodeTree
 	// A map from image name to its imageState.
 	imageStates map[string]*imageState
+	featureGate utilfeature.FeatureGate
 }
 
 type podState struct {
@@ -87,7 +88,7 @@ func (cache *schedulerCache) createImageStateSummary(state *imageState) *schedul
 	}
 }
 
-func newSchedulerCache(ttl, period time.Duration, stop <-chan struct{}) *schedulerCache {
+func newSchedulerCache(ttl, period time.Duration, stop <-chan struct{}, featureGate utilfeature.FeatureGate) *schedulerCache {
 	return &schedulerCache{
 		ttl:    ttl,
 		period: period,
@@ -98,6 +99,7 @@ func newSchedulerCache(ttl, period time.Duration, stop <-chan struct{}) *schedul
 		assumedPods: make(map[string]bool),
 		podStates:   make(map[string]*podState),
 		imageStates: make(map[string]*imageState),
+		featureGate: featureGate,
 	}
 }
 
@@ -128,7 +130,7 @@ func (cache *schedulerCache) UpdateNodeNameToInfoMap(nodeNameToInfo map[string]*
 	defer cache.mu.Unlock()
 
 	for name, info := range cache.nodes {
-		if utilfeature.DefaultFeatureGate.Enabled(features.BalanceAttachedNodeVolumes) && info.TransientInfo != nil {
+		if cache.featureGate.Enabled(features.BalanceAttachedNodeVolumes) && info.TransientInfo != nil {
 			// Transient scheduler info is reset here.
 			info.TransientInfo.ResetTransientSchedulerInfo()
 		}

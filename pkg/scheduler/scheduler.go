@@ -145,6 +145,7 @@ func New(client clientset.Interface,
 	recorder record.EventRecorder,
 	schedulerAlgorithmSource kubeschedulerconfig.SchedulerAlgorithmSource,
 	stopCh <-chan struct{},
+	featureGate utilfeature.FeatureGate,
 	opts ...func(o *schedulerOptions)) (*Scheduler, error) {
 
 	options := defaultSchedulerOptions
@@ -166,6 +167,7 @@ func New(client clientset.Interface,
 		ServiceInformer:                serviceInformer,
 		PdbInformer:                    pdbInformer,
 		StorageClassInformer:           storageClassInformer,
+		FeatureGate:                    featureGate,
 		HardPodAffinitySymmetricWeight: options.hardPodAffinitySymmetricWeight,
 		EnableEquivalenceClassCache:    options.enableEquivalenceClassCache,
 		DisablePreemption:              options.disablePreemption,
@@ -318,7 +320,7 @@ func (sched *Scheduler) schedule(pod *v1.Pod) (string, error) {
 // If it succeeds, it adds the name of the node where preemption has happened to the pod annotations.
 // It returns the node name and an error if any.
 func (sched *Scheduler) preempt(preemptor *v1.Pod, scheduleErr error) (string, error) {
-	if !util.PodPriorityEnabled() || sched.config.DisablePreemption {
+	if !sched.config.FeatureGate.Enabled(features.PodPriority) || sched.config.DisablePreemption {
 		klog.V(3).Infof("Pod priority feature is not enabled or preemption is disabled by scheduler configuration." +
 			" No preemption is performed.")
 		return "", nil
@@ -369,7 +371,7 @@ func (sched *Scheduler) preempt(preemptor *v1.Pod, scheduleErr error) (string, e
 //
 // This function modifies assumed if volume binding is required.
 func (sched *Scheduler) assumeVolumes(assumed *v1.Pod, host string) (allBound bool, err error) {
-	if utilfeature.DefaultFeatureGate.Enabled(features.VolumeScheduling) {
+	if sched.config.FeatureGate.Enabled(features.VolumeScheduling) {
 		allBound, err = sched.config.VolumeBinder.Binder.AssumePodVolumes(assumed, host)
 		if err != nil {
 			sched.recordSchedulingFailure(assumed, err, SchedulerError,

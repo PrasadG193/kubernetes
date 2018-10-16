@@ -297,6 +297,7 @@ type MaxPDVolumeCountChecker struct {
 	// It is used to prefix volumeID generated inside the predicate() method to
 	// avoid conflicts with any real volume.
 	randomVolumeIDPrefix string
+	featureGate          utilfeature.FeatureGate
 }
 
 // VolumeFilter contains information on how to filter PD Volumes when checking PD Volume caps
@@ -313,7 +314,7 @@ type VolumeFilter struct {
 // types, counts the number of unique volumes, and rejects the new pod if it would place the total count over
 // the maximum.
 func NewMaxPDVolumeCountPredicate(
-	filterName string, pvInfo PersistentVolumeInfo, pvcInfo PersistentVolumeClaimInfo) algorithm.FitPredicate {
+	filterName string, pvInfo PersistentVolumeInfo, pvcInfo PersistentVolumeClaimInfo, featureGate utilfeature.FeatureGate) algorithm.FitPredicate {
 	var filter VolumeFilter
 	var volumeLimitKey v1.ResourceName
 
@@ -341,6 +342,7 @@ func NewMaxPDVolumeCountPredicate(
 		pvInfo:               pvInfo,
 		pvcInfo:              pvcInfo,
 		randomVolumeIDPrefix: rand.String(32),
+		featureGate:          featureGate,
 	}
 
 	return c.predicate
@@ -483,7 +485,7 @@ func (c *MaxPDVolumeCountChecker) predicate(pod *v1.Pod, meta algorithm.Predicat
 	numNewVolumes := len(newVolumes)
 	maxAttachLimit := c.maxVolumeFunc(nodeInfo.Node())
 
-	if utilfeature.DefaultFeatureGate.Enabled(features.AttachVolumeLimit) {
+	if c.featureGate.Enabled(features.AttachVolumeLimit) {
 		volumeLimits := nodeInfo.VolumeLimits()
 		if maxAttachLimitFromAllocatable, ok := volumeLimits[c.volumeLimitKey]; ok {
 			maxAttachLimit = int(maxAttachLimitFromAllocatable)
@@ -494,7 +496,7 @@ func (c *MaxPDVolumeCountChecker) predicate(pod *v1.Pod, meta algorithm.Predicat
 		// violates MaxEBSVolumeCount or MaxGCEPDVolumeCount
 		return false, []algorithm.PredicateFailureReason{ErrMaxVolumeCountExceeded}, nil
 	}
-	if nodeInfo != nil && nodeInfo.TransientInfo != nil && utilfeature.DefaultFeatureGate.Enabled(features.BalanceAttachedNodeVolumes) {
+	if nodeInfo != nil && nodeInfo.TransientInfo != nil && c.featureGate.Enabled(features.BalanceAttachedNodeVolumes) {
 		nodeInfo.TransientInfo.TransientLock.Lock()
 		defer nodeInfo.TransientInfo.TransientLock.Unlock()
 		nodeInfo.TransientInfo.TransNodeInfo.AllocatableVolumesCount = maxAttachLimit - numExistingVolumes
@@ -556,9 +558,10 @@ var AzureDiskVolumeFilter = VolumeFilter{
 
 // VolumeZoneChecker contains information to check the volume zone for a predicate.
 type VolumeZoneChecker struct {
-	pvInfo    PersistentVolumeInfo
-	pvcInfo   PersistentVolumeClaimInfo
-	classInfo StorageClassInfo
+	pvInfo      PersistentVolumeInfo
+	pvcInfo     PersistentVolumeClaimInfo
+	classInfo   StorageClassInfo
+	featureGate utilfeature.FeatureGate
 }
 
 // NewVolumeZonePredicate evaluates if a pod can fit due to the volumes it requests, given
@@ -575,11 +578,12 @@ type VolumeZoneChecker struct {
 // determining the zone of a volume during scheduling, and that is likely to
 // require calling out to the cloud provider.  It seems that we are moving away
 // from inline volume declarations anyway.
-func NewVolumeZonePredicate(pvInfo PersistentVolumeInfo, pvcInfo PersistentVolumeClaimInfo, classInfo StorageClassInfo) algorithm.FitPredicate {
+func NewVolumeZonePredicate(pvInfo PersistentVolumeInfo, pvcInfo PersistentVolumeClaimInfo, classInfo StorageClassInfo, featureGate utilfeature.FeatureGate) algorithm.FitPredicate {
 	c := &VolumeZoneChecker{
-		pvInfo:    pvInfo,
-		pvcInfo:   pvcInfo,
-		classInfo: classInfo,
+		pvInfo:      pvInfo,
+		pvcInfo:     pvcInfo,
+		classInfo:   classInfo,
+		featureGate: featureGate,
 	}
 	return c.predicate
 }
@@ -631,7 +635,7 @@ func (c *VolumeZoneChecker) predicate(pod *v1.Pod, meta algorithm.PredicateMetad
 
 			pvName := pvc.Spec.VolumeName
 			if pvName == "" {
-				if utilfeature.DefaultFeatureGate.Enabled(features.VolumeScheduling) {
+				if c.featureGate.Enabled(features.VolumeScheduling) {
 					scName := v1helper.GetPersistentVolumeClaimClass(pvc)
 					if len(scName) > 0 {
 						class, _ := c.classInfo.GetStorageClassInfo(scName)
@@ -1596,7 +1600,8 @@ func CheckNodeConditionPredicate(pod *v1.Pod, meta algorithm.PredicateMetadata, 
 
 // VolumeBindingChecker contains information to check a volume binding.
 type VolumeBindingChecker struct {
-	binder *volumebinder.VolumeBinder
+	binder      *volumebinder.VolumeBinder
+	featureGate utilfeature.FeatureGate
 }
 
 // NewVolumeBindingPredicate evaluates if a pod can fit due to the volumes it requests,
@@ -1610,15 +1615,16 @@ type VolumeBindingChecker struct {
 //
 // The predicate returns true if all bound PVCs have compatible PVs with the node, and if all unbound
 // PVCs can be matched with an available and node-compatible PV.
-func NewVolumeBindingPredicate(binder *volumebinder.VolumeBinder) algorithm.FitPredicate {
+func NewVolumeBindingPredicate(binder *volumebinder.VolumeBinder, featureGate utilfeature.FeatureGate) algorithm.FitPredicate {
 	c := &VolumeBindingChecker{
-		binder: binder,
+		binder:      binder,
+		featureGate: featureGate,
 	}
 	return c.predicate
 }
 
 func (c *VolumeBindingChecker) predicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {
-	if !utilfeature.DefaultFeatureGate.Enabled(features.VolumeScheduling) {
+	if !c.featureGate.Enabled(features.VolumeScheduling) {
 		return true, nil, nil
 	}
 

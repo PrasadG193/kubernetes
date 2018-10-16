@@ -50,10 +50,11 @@ type Cache struct {
 	mu             sync.RWMutex
 	nodeToCache    nodeMap
 	predicateIDMap map[string]int
+	featureGate    utilfeature.FeatureGate
 }
 
 // NewCache create an empty equiv class cache.
-func NewCache(predicates []string) *Cache {
+func NewCache(predicates []string, featureGate utilfeature.FeatureGate) *Cache {
 	predicateIDMap := make(map[string]int, len(predicates))
 	for id, predicate := range predicates {
 		predicateIDMap[predicate] = id
@@ -61,6 +62,7 @@ func NewCache(predicates []string) *Cache {
 	return &Cache{
 		nodeToCache:    make(nodeMap),
 		predicateIDMap: predicateIDMap,
+		featureGate:    featureGate,
 	}
 }
 
@@ -215,7 +217,7 @@ func (c *Cache) InvalidateCachedPredicateItemForPodAdd(pod *v1.Pod, nodeName str
 				predicates.MaxEBSVolumeCountPred,
 				predicates.MaxGCEPDVolumeCountPred,
 				predicates.MaxAzureDiskVolumeCountPred)
-			if utilfeature.DefaultFeatureGate.Enabled(features.AttachVolumeLimit) {
+			if c.featureGate.Enabled(features.AttachVolumeLimit) {
 				invalidPredicates.Insert(predicates.MaxCSIVolumeCountPred)
 			}
 		} else {

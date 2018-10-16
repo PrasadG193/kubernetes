@@ -109,34 +109,34 @@ func defaultPredicates() sets.String {
 		factory.RegisterFitPredicateFactory(
 			predicates.NoVolumeZoneConflictPred,
 			func(args factory.PluginFactoryArgs) algorithm.FitPredicate {
-				return predicates.NewVolumeZonePredicate(args.PVInfo, args.PVCInfo, args.StorageClassInfo)
+				return predicates.NewVolumeZonePredicate(args.PVInfo, args.PVCInfo, args.StorageClassInfo, args.FeatureGate)
 			},
 		),
 		// Fit is determined by whether or not there would be too many AWS EBS volumes attached to the node
 		factory.RegisterFitPredicateFactory(
 			predicates.MaxEBSVolumeCountPred,
 			func(args factory.PluginFactoryArgs) algorithm.FitPredicate {
-				return predicates.NewMaxPDVolumeCountPredicate(predicates.EBSVolumeFilterType, args.PVInfo, args.PVCInfo)
+				return predicates.NewMaxPDVolumeCountPredicate(predicates.EBSVolumeFilterType, args.PVInfo, args.PVCInfo, args.FeatureGate)
 			},
 		),
 		// Fit is determined by whether or not there would be too many GCE PD volumes attached to the node
 		factory.RegisterFitPredicateFactory(
 			predicates.MaxGCEPDVolumeCountPred,
 			func(args factory.PluginFactoryArgs) algorithm.FitPredicate {
-				return predicates.NewMaxPDVolumeCountPredicate(predicates.GCEPDVolumeFilterType, args.PVInfo, args.PVCInfo)
+				return predicates.NewMaxPDVolumeCountPredicate(predicates.GCEPDVolumeFilterType, args.PVInfo, args.PVCInfo, args.FeatureGate)
 			},
 		),
 		// Fit is determined by whether or not there would be too many Azure Disk volumes attached to the node
 		factory.RegisterFitPredicateFactory(
 			predicates.MaxAzureDiskVolumeCountPred,
 			func(args factory.PluginFactoryArgs) algorithm.FitPredicate {
-				return predicates.NewMaxPDVolumeCountPredicate(predicates.AzureDiskVolumeFilterType, args.PVInfo, args.PVCInfo)
+				return predicates.NewMaxPDVolumeCountPredicate(predicates.AzureDiskVolumeFilterType, args.PVInfo, args.PVCInfo, args.FeatureGate)
 			},
 		),
 		factory.RegisterFitPredicateFactory(
 			predicates.MaxCSIVolumeCountPred,
 			func(args factory.PluginFactoryArgs) algorithm.FitPredicate {
-				return predicates.NewCSIMaxVolumeLimitPredicate(args.PVInfo, args.PVCInfo)
+				return predicates.NewCSIMaxVolumeLimitPredicate(args.PVInfo, args.PVCInfo, args.FeatureGate)
 			},
 		),
 		// Fit is determined by inter-pod affinity.
@@ -173,15 +173,15 @@ func defaultPredicates() sets.String {
 		factory.RegisterFitPredicateFactory(
 			predicates.CheckVolumeBindingPred,
 			func(args factory.PluginFactoryArgs) algorithm.FitPredicate {
-				return predicates.NewVolumeBindingPredicate(args.VolumeBinder)
+				return predicates.NewVolumeBindingPredicate(args.VolumeBinder, args.FeatureGate)
 			},
 		),
 	)
 }
 
 // ApplyFeatureGates applies algorithm by feature gates.
-func ApplyFeatureGates() {
-	if utilfeature.DefaultFeatureGate.Enabled(features.TaintNodesByCondition) {
+func ApplyFeatureGates(featureGate utilfeature.FeatureGate) {
+	if featureGate.Enabled(features.TaintNodesByCondition) {
 		// Remove "CheckNodeCondition", "CheckNodeMemoryPressure", "CheckNodePIDPressurePred"
 		// and "CheckNodeDiskPressure" predicates
 		factory.RemoveFitPredicate(predicates.CheckNodeConditionPred)
@@ -211,7 +211,7 @@ func ApplyFeatureGates() {
 	}
 
 	// Prioritizes nodes that satisfy pod's resource limits
-	if utilfeature.DefaultFeatureGate.Enabled(features.ResourceLimitsPriorityFunction) {
+	if featureGate.Enabled(features.ResourceLimitsPriorityFunction) {
 		klog.Infof("Registering resourcelimits priority function")
 		factory.RegisterPriorityFunction2("ResourceLimitsPriority", priorities.ResourceLimitsPriorityMap, nil, 1)
 		// Register the priority function to specific provider too.

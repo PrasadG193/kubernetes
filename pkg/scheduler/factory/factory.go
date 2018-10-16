@@ -142,6 +142,9 @@ type Config struct {
 
 	// SchedulingQueue holds pods to be scheduled
 	SchedulingQueue internalqueue.SchedulingQueue
+
+	// FeatureGate to manage feature flags
+	FeatureGate utilfeature.FeatureGate
 }
 
 // PodPreemptor has methods needed to delete a pod and to update
@@ -208,6 +211,8 @@ type configFactory struct {
 	storageClassLister storagelisters.StorageClassLister
 	// pluginRunner has a set of plugins and the context used for running them.
 	pluginSet pluginsv1alpha1.PluginSet
+	// featureGate to manage feature flags
+	featureGate utilfeature.FeatureGate
 
 	// Close this to stop all reflectors
 	StopEverything <-chan struct{}
@@ -258,6 +263,7 @@ type ConfigFactoryArgs struct {
 	ServiceInformer                coreinformers.ServiceInformer
 	PdbInformer                    policyinformers.PodDisruptionBudgetInformer
 	StorageClassInformer           storageinformers.StorageClassInformer
+	FeatureGate                    utilfeature.FeatureGate
 	HardPodAffinitySymmetricWeight int32
 	EnableEquivalenceClassCache    bool
 	DisablePreemption              bool
@@ -273,7 +279,7 @@ func NewConfigFactory(args *ConfigFactoryArgs) Configurator {
 	if stopEverything == nil {
 		stopEverything = wait.NeverStop
 	}
-	schedulerCache := schedulerinternalcache.New(30*time.Second, stopEverything)
+	schedulerCache := schedulerinternalcache.New(30*time.Second, stopEverything, args.FeatureGate)
 
 	// storageClassInformer is only enabled through VolumeScheduling feature gate
 	var storageClassLister storagelisters.StorageClassLister
@@ -283,7 +289,7 @@ func NewConfigFactory(args *ConfigFactoryArgs) Configurator {
 	c := &configFactory{
 		client:                         args.Client,
 		podLister:                      schedulerCache,
-		podQueue:                       internalqueue.NewSchedulingQueue(),
+		podQueue:                       internalqueue.NewSchedulingQueue(args.FeatureGate),
 		nodeLister:                     args.NodeInformer.Lister(),
 		pVLister:                       args.PvInformer.Lister(),
 		pVCLister:                      args.PvcInformer.Lister(),
@@ -293,6 +299,7 @@ func NewConfigFactory(args *ConfigFactoryArgs) Configurator {
 		statefulSetLister:              args.StatefulSetInformer.Lister(),
 		pdbLister:                      args.PdbInformer.Lister(),
 		storageClassLister:             storageClassLister,
+		featureGate:                    args.FeatureGate,
 		schedulerCache:                 schedulerCache,
 		StopEverything:                 stopEverything,
 		schedulerName:                  args.SchedulerName,
@@ -399,7 +406,7 @@ func NewConfigFactory(args *ConfigFactoryArgs) Configurator {
 	// Existing equivalence cache should not be affected by add/delete RC/Deployment etc,
 	// it only make sense when pod is scheduled or deleted
 
-	if utilfeature.DefaultFeatureGate.Enabled(features.VolumeScheduling) {
+	if c.featureGate.Enabled(features.VolumeScheduling) {
 		// Setup volume binder
 		c.volumeBinder = volumebinder.NewVolumeBinder(args.Client, args.PvcInformer, args.PvInformer, args.StorageClassInformer, time.Duration(args.BindTimeoutSeconds)*time.Second)
 
@@ -530,7 +537,7 @@ func (c *configFactory) invalidatePredicatesForPvUpdate(oldPV, newPV *v1.Persist
 	// which will cache PVs in PodBindingCache. When PV got updated, we should
 	// invalidate cache, otherwise PVAssumeCache.Assume will fail with out of sync
 	// error.
-	if utilfeature.DefaultFeatureGate.Enabled(features.VolumeScheduling) {
+	if c.featureGate.Enabled(features.VolumeScheduling) {
 		invalidPredicates.Insert(predicates.CheckVolumeBindingPred)
 	}
 	for k, v := range newPV.Labels {
@@ -585,7 +592,7 @@ func (c *configFactory) invalidatePredicatesForPv(pv *v1.PersistentVolume) {
 		invalidPredicates.Insert(predicates.MaxAzureDiskVolumeCountPred)
 	}
 
-	if pv.Spec.CSI != nil && utilfeature.DefaultFeatureGate.Enabled(features.AttachVolumeLimit) {
+	if pv.Spec.CSI != nil && c.featureGate.Enabled(features.AttachVolumeLimit) {
 		invalidPredicates.Insert(predicates.MaxCSIVolumeCountPred)
 	}
 
@@ -597,7 +604,7 @@ func (c *configFactory) invalidatePredicatesForPv(pv *v1.PersistentVolume) {
 		}
 	}
 
-	if utilfeature.DefaultFeatureGate.Enabled(features.VolumeScheduling) {
+	if c.featureGate.Enabled(features.VolumeScheduling) {
 		// Add/delete impacts the available PVs to choose from
 		invalidPredicates.Insert(predicates.CheckVolumeBindingPred)
 	}
@@ -618,7 +625,7 @@ func (c *configFactory) onPvcAdd(obj interface{}) {
 }
 
 func (c *configFactory) onPvcUpdate(old, new interface{}) {
-	if !utilfeature.DefaultFeatureGate.Enabled(features.VolumeScheduling) {
+	if !c.featureGate.Enabled(features.VolumeScheduling) {
 		return
 	}
 
@@ -665,14 +672,14 @@ func (c *configFactory) invalidatePredicatesForPvc(pvc *v1.PersistentVolumeClaim
 	// The bound volume type may change
 	invalidPredicates := sets.NewString(maxPDVolumeCountPredicateKeys...)
 
-	if utilfeature.DefaultFeatureGate.Enabled(features.AttachVolumeLimit) {
+	if c.featureGate.Enabled(features.AttachVolumeLimit) {
 		invalidPredicates.Insert(predicates.MaxCSIVolumeCountPred)
 	}
 
 	// The bound volume's label may change
 	invalidPredicates.Insert(predicates.NoVolumeZoneConflictPred)
 
-	if utilfeature.DefaultFeatureGate.Enabled(features.VolumeScheduling) {
+	if c.featureGate.Enabled(features.VolumeScheduling) {
 		// Add/delete impacts the available PVs to choose from
 		invalidPredicates.Insert(predicates.CheckVolumeBindingPred)
 	}
@@ -683,14 +690,14 @@ func (c *configFactory) invalidatePredicatesForPvcUpdate(old, new *v1.Persistent
 	invalidPredicates := sets.NewString()
 
 	if old.Spec.VolumeName != new.Spec.VolumeName {
-		if utilfeature.DefaultFeatureGate.Enabled(features.VolumeScheduling) {
+		if c.featureGate.Enabled(features.VolumeScheduling) {
 			// PVC volume binding has changed
 			invalidPredicates.Insert(predicates.CheckVolumeBindingPred)
 		}
 		// The bound volume type may change
 		invalidPredicates.Insert(maxPDVolumeCountPredicateKeys...)
 
-		if utilfeature.DefaultFeatureGate.Enabled(features.AttachVolumeLimit) {
+		if c.featureGate.Enabled(features.AttachVolumeLimit) {
 			invalidPredicates.Insert(predicates.MaxCSIVolumeCountPred)
 		}
 	}
@@ -740,7 +747,7 @@ func (c *configFactory) onStorageClassDelete(obj interface{}) {
 func (c *configFactory) invalidatePredicatesForStorageClass(sc *storagev1.StorageClass) {
 	invalidPredicates := sets.NewString()
 
-	if utilfeature.DefaultFeatureGate.Enabled(features.VolumeScheduling) {
+	if c.featureGate.Enabled(features.VolumeScheduling) {
 		if sc.VolumeBindingMode != nil && *sc.VolumeBindingMode == storagev1.VolumeBindingWaitForFirstConsumer {
 			// Delete can cause predicates to fail
 			invalidPredicates.Insert(predicates.CheckVolumeBindingPred)
@@ -1236,7 +1243,7 @@ func (c *configFactory) CreateFromKeys(predicateKeys, priorityKeys sets.String, 
 
 	// Init equivalence class cache
 	if c.enableEquivalenceClassCache {
-		c.equivalencePodCache = equivalence.NewCache(predicates.Ordering())
+		c.equivalencePodCache = equivalence.NewCache(predicates.Ordering(), c.featureGate)
 		klog.Info("Created equivalence class cache")
 	}
 
@@ -1279,6 +1286,7 @@ func (c *configFactory) CreateFromKeys(predicateKeys, priorityKeys sets.String, 
 		StopEverything:  c.StopEverything,
 		VolumeBinder:    c.volumeBinder,
 		SchedulingQueue: c.podQueue,
+		FeatureGate:     c.featureGate,
 	}, nil
 }
 
@@ -1340,6 +1348,7 @@ func (c *configFactory) getPluginArgs() (*PluginFactoryArgs, error) {
 		StorageClassInfo:               &predicates.CachedStorageClassInfo{StorageClassLister: c.storageClassLister},
 		VolumeBinder:                   c.volumeBinder,
 		HardPodAffinitySymmetricWeight: c.hardPodAffinitySymmetricWeight,
+		FeatureGate:                    c.featureGate,
 	}, nil
 }
 
@@ -1492,7 +1501,7 @@ func (c *configFactory) MakeDefaultErrorFunc(backoff *util.PodBackoff, podQueue 
 			// pod in the unschedulable queue. This ensures that if the pod is nominated
 			// to run on a node, scheduler takes the pod into account when running
 			// predicates for the node.
-			if !util.PodPriorityEnabled() {
+			if !c.featureGate.Enabled(features.PodPriority) {
 				entry := backoff.GetEntry(podID)
 				if !entry.TryWait(backoff.MaxDuration()) {
 					klog.Warningf("Request for pod %v already in flight, abandoning", podID)

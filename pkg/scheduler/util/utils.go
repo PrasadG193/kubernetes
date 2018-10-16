@@ -20,9 +20,7 @@ import (
 	"sort"
 
 	"k8s.io/api/core/v1"
-	"k8s.io/apiserver/pkg/util/feature"
 	"k8s.io/kubernetes/pkg/apis/scheduling"
-	"k8s.io/kubernetes/pkg/features"
 )
 
 // GetContainerPorts returns the used host ports of Pods: if 'port' was used, a 'port:true' pair
@@ -38,11 +36,6 @@ func GetContainerPorts(pods ...*v1.Pod) []*v1.ContainerPort {
 		}
 	}
 	return ports
-}
-
-// PodPriorityEnabled indicates whether pod priority feature is enabled.
-func PodPriorityEnabled() bool {
-	return feature.DefaultFeatureGate.Enabled(features.PodPriority)
 }
 
 // GetPodFullName returns a name that uniquely identifies a pod.

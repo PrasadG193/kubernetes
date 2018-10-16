@@ -30,16 +30,18 @@ import (
 
 // CSIMaxVolumeLimitChecker defines predicate needed for counting CSI volumes
 type CSIMaxVolumeLimitChecker struct {
-	pvInfo  PersistentVolumeInfo
-	pvcInfo PersistentVolumeClaimInfo
+	pvInfo      PersistentVolumeInfo
+	pvcInfo     PersistentVolumeClaimInfo
+	featureGate utilfeature.FeatureGate
 }
 
 // NewCSIMaxVolumeLimitPredicate returns a predicate for counting CSI volumes
 func NewCSIMaxVolumeLimitPredicate(
-	pvInfo PersistentVolumeInfo, pvcInfo PersistentVolumeClaimInfo) algorithm.FitPredicate {
+	pvInfo PersistentVolumeInfo, pvcInfo PersistentVolumeClaimInfo, featureGate utilfeature.FeatureGate) algorithm.FitPredicate {
 	c := &CSIMaxVolumeLimitChecker{
-		pvInfo:  pvInfo,
-		pvcInfo: pvcInfo,
+		pvInfo:      pvInfo,
+		pvcInfo:     pvcInfo,
+		featureGate: featureGate,
 	}
 	return c.attachableLimitPredicate
 }
@@ -48,7 +50,7 @@ func (c *CSIMaxVolumeLimitChecker) attachableLimitPredicate(
 	pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {
 
 	// if feature gate is disable we return
-	if !utilfeature.DefaultFeatureGate.Enabled(features.AttachVolumeLimit) {
+	if !c.featureGate.Enabled(features.AttachVolumeLimit) {
 		return true, nil, nil
 	}
 	// If a pod doesn't have any volume attached to it, the predicate will always be true.

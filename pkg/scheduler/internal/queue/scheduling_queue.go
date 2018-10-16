@@ -21,6 +21,7 @@ limitations under the License.
 // being considered for scheduling. This is called activeQ. Another queue holds
 // pods that are already tried and are determined to be unschedulable. The latter
 // is called unschedulableQ.
+// TODO: Fix comment
 // FIFO is here for flag-gating purposes and allows us to use the traditional
 // scheduling queue when util.PodPriorityEnabled() returns false.
 
@@ -36,8 +37,10 @@ import (
 
 	"k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	"k8s.io/client-go/tools/cache"
 	podutil "k8s.io/kubernetes/pkg/api/v1/pod"
+	"k8s.io/kubernetes/pkg/features"
 	"k8s.io/kubernetes/pkg/scheduler/algorithm/predicates"
 	priorityutil "k8s.io/kubernetes/pkg/scheduler/algorithm/priorities/util"
 	"k8s.io/kubernetes/pkg/scheduler/util"
@@ -73,8 +76,8 @@ type SchedulingQueue interface {
 
 // NewSchedulingQueue initializes a new scheduling queue. If pod priority is
 // enabled a priority queue is returned. If it is disabled, a FIFO is returned.
-func NewSchedulingQueue() SchedulingQueue {
-	if util.PodPriorityEnabled() {
+func NewSchedulingQueue(featureGate utilfeature.FeatureGate) SchedulingQueue {
+	if featureGate.Enabled(features.PodPriority) {
 		return NewPriorityQueue()
 	}
 	return NewFIFO()

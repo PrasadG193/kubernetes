@@ -151,7 +151,7 @@ func runCommand(cmd *cobra.Command, args []string, opts *options.Options) error 
 
 	// Apply algorithms based on feature gates.
 	// TODO: make configurable?
-	algorithmprovider.ApplyFeatureGates()
+	algorithmprovider.ApplyFeatureGates(utilfeature.DefaultFeatureGate.DeepCopy())
 
 	// Configz registration.
 	if cz, err := configz.New("componentconfig"); err == nil {
@@ -185,6 +185,7 @@ func Run(cc schedulerserverconfig.CompletedConfig, stopCh <-chan struct{}) error
 		cc.Recorder,
 		cc.ComponentConfig.AlgorithmSource,
 		stopCh,
+		utilfeature.DefaultFeatureGate.DeepCopy(),
 		scheduler.WithName(cc.ComponentConfig.SchedulerName),
 		scheduler.WithHardPodAffinitySymmetricWeight(cc.ComponentConfig.HardPodAffinitySymmetricWeight),
 		scheduler.WithEquivalenceClassCacheEnabled(cc.ComponentConfig.EnableContentionProfiling),

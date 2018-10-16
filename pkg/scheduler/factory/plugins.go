@@ -24,6 +24,7 @@ import (
 	"sync"
 
 	"k8s.io/apimachinery/pkg/util/sets"
+	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	"k8s.io/kubernetes/pkg/scheduler/algorithm"
 	"k8s.io/kubernetes/pkg/scheduler/algorithm/predicates"
 	"k8s.io/kubernetes/pkg/scheduler/algorithm/priorities"
@@ -48,6 +49,7 @@ type PluginFactoryArgs struct {
 	StorageClassInfo               predicates.StorageClassInfo
 	VolumeBinder                   *volumebinder.VolumeBinder
 	HardPodAffinitySymmetricWeight int32
+	FeatureGate                    utilfeature.FeatureGate
 }
 
 // PriorityMetadataProducerFactory produces PriorityMetadataProducer from the given args.

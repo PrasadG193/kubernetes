@@ -1,0 +1,1646 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Add	cache/host_ports.go	/^func (h HostPortInfo) Add(ip, protocol string, port int32) {$/;"	f
+Add	cache/node_info.go	/^func (r *Resource) Add(rl v1.ResourceList) {$/;"	f
+Add	internal/queue/scheduling_queue.go	/^func (f *FIFO) Add(pod *v1.Pod) error {$/;"	f
+Add	internal/queue/scheduling_queue.go	/^func (h *Heap) Add(obj interface{}) error {$/;"	f
+Add	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) Add(pod *v1.Pod) error {$/;"	f
+AddIfNotPresent	internal/queue/scheduling_queue.go	/^func (f *FIFO) AddIfNotPresent(pod *v1.Pod) error {$/;"	f
+AddIfNotPresent	internal/queue/scheduling_queue.go	/^func (h *Heap) AddIfNotPresent(obj interface{}) error {$/;"	f
+AddIfNotPresent	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) AddIfNotPresent(pod *v1.Pod) error {$/;"	f
+AddNode	internal/cache/cache.go	/^func (cache *schedulerCache) AddNode(node *v1.Node) error {$/;"	f
+AddNode	internal/cache/fake/fake_cache.go	/^func (c *Cache) AddNode(node *v1.Node) error { return nil }$/;"	f
+AddNode	internal/cache/node_tree.go	/^func (nt *NodeTree) AddNode(n *v1.Node) {$/;"	f
+AddPod	algorithm/predicates/metadata.go	/^func (meta *predicateMetadata) AddPod(addedPod *v1.Pod, nodeInfo *schedulercache.NodeInfo) error {$/;"	f
+AddPod	cache/node_info.go	/^func (n *NodeInfo) AddPod(pod *v1.Pod) {$/;"	f
+AddPod	internal/cache/cache.go	/^func (cache *schedulerCache) AddPod(pod *v1.Pod) error {$/;"	f
+AddPod	internal/cache/fake/fake_cache.go	/^func (c *Cache) AddPod(pod *v1.Pod) error { return nil }$/;"	f
+AddScalar	cache/node_info.go	/^func (r *Resource) AddScalar(name v1.ResourceName, quantity int64) {$/;"	f
+AddToScheme	api/register.go	/^	AddToScheme = SchemeBuilder.AddToScheme$/;"	v
+AddToScheme	api/v1/register.go	/^	AddToScheme = localSchemeBuilder.AddToScheme$/;"	v
+AddToScheme	apis/config/register.go	/^	AddToScheme = SchemeBuilder.AddToScheme$/;"	v
+AddToScheme	apis/config/scheme/scheme.go	/^func AddToScheme(scheme *runtime.Scheme) {$/;"	f
+AddToScheme	apis/config/v1alpha1/register.go	/^	AddToScheme = localSchemeBuilder.AddToScheme$/;"	v
+AddUnschedulableIfNotPresent	internal/queue/scheduling_queue.go	/^func (f *FIFO) AddUnschedulableIfNotPresent(pod *v1.Pod) error {$/;"	f
+AddUnschedulableIfNotPresent	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) AddUnschedulableIfNotPresent(pod *v1.Pod) error {$/;"	f
+AddUnsetLabelsToMap	algorithm/predicates/utils.go	/^func AddUnsetLabelsToMap(aL map[string]string, labelsToAdd []string, labelSet labels.Set) {$/;"	f
+AlgorithmProviderConfig	factory/plugins.go	/^type AlgorithmProviderConfig struct {$/;"	t
+AllocatableResource	cache/node_info.go	/^func (n *NodeInfo) AllocatableResource() Resource {$/;"	f
+AllowedPodNumber	cache/node_info.go	/^func (n *NodeInfo) AllowedPodNumber() int {$/;"	f
+ApplyFeatureGates	algorithmprovider/defaults/defaults.go	/^func ApplyFeatureGates() {$/;"	f
+ApplyFeatureGates	algorithmprovider/plugins.go	/^func ApplyFeatureGates() {$/;"	f
+AssignedPodAdded	internal/queue/scheduling_queue.go	/^func (f *FIFO) AssignedPodAdded(pod *v1.Pod) {}$/;"	f
+AssignedPodAdded	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) AssignedPodAdded(pod *v1.Pod) {$/;"	f
+AssignedPodUpdated	internal/queue/scheduling_queue.go	/^func (f *FIFO) AssignedPodUpdated(pod *v1.Pod) {}$/;"	f
+AssignedPodUpdated	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) AssignedPodUpdated(pod *v1.Pod) {$/;"	f
+AssumePod	internal/cache/cache.go	/^func (cache *schedulerCache) AssumePod(pod *v1.Pod) error {$/;"	f
+AssumePod	internal/cache/fake/fake_cache.go	/^func (c *Cache) AssumePod(pod *v1.Pod) error {$/;"	f
+AzureDiskVolumeFilter	algorithm/predicates/predicates.go	/^var AzureDiskVolumeFilter = VolumeFilter{$/;"	v
+AzureDiskVolumeFilterType	algorithm/predicates/predicates.go	/^	AzureDiskVolumeFilterType = "AzureDisk"$/;"	c
+BackoffEntry	util/backoff_utils.go	/^type BackoffEntry struct {$/;"	t
+BalancedResourceAllocationMap	algorithm/priorities/balanced_resource_allocation.go	/^	BalancedResourceAllocationMap = balancedResourcePriority.PriorityMap$/;"	v
+BenchmarkEquivalenceHash	core/equivalence/eqivalence_test.go	/^func BenchmarkEquivalenceHash(b *testing.B) {$/;"	f
+BenchmarkExpirePods	internal/cache/cache_test.go	/^func BenchmarkExpirePods(b *testing.B) {$/;"	f
+BenchmarkList1kNodes30kPods	internal/cache/cache_test.go	/^func BenchmarkList1kNodes30kPods(b *testing.B) {$/;"	f
+BenchmarkUpdate1kNodes30kPods	internal/cache/cache_test.go	/^func BenchmarkUpdate1kNodes30kPods(b *testing.B) {$/;"	f
+Bind	core/extender.go	/^func (h *HTTPExtender) Bind(binding *v1.Binding) error {$/;"	f
+Bind	core/extender_test.go	/^func (f *FakeExtender) Bind(binding *v1.Binding) error {$/;"	f
+Bind	factory/factory.go	/^func (b *binder) Bind(binding *v1.Binding) error {$/;"	f
+Bind	factory/factory_test.go	/^func (f *fakeExtender) Bind(binding *v1.Binding) error {$/;"	f
+Bind	scheduler_test.go	/^func (fb fakeBinder) Bind(binding *v1.Binding) error { return fb.b(binding) }$/;"	f
+BindTimeoutSeconds	scheduler.go	/^	BindTimeoutSeconds = 100$/;"	c
+Binder	factory/factory.go	/^type Binder interface {$/;"	t
+Binding	metrics/metrics.go	/^	Binding = "binding"$/;"	c
+BindingLatency	metrics/metrics.go	/^	BindingLatency = prometheus.NewHistogram($/;"	v
+CSIMaxVolumeLimitChecker	algorithm/predicates/csi_volume_predicate.go	/^type CSIMaxVolumeLimitChecker struct {$/;"	t
+Cache	core/equivalence/eqivalence.go	/^type Cache struct {$/;"	t
+Cache	internal/cache/fake/fake_cache.go	/^type Cache struct {$/;"	t
+Cache	internal/cache/interface.go	/^type Cache interface {$/;"	t
+Cache	scheduler.go	/^func (sched *Scheduler) Cache() schedulerinternalcache.Cache {$/;"	f
+CacheComparer	internal/cache/debugger/comparer.go	/^type CacheComparer struct {$/;"	t
+CacheDebugger	internal/cache/debugger/debugger.go	/^type CacheDebugger struct {$/;"	t
+CacheDumper	internal/cache/debugger/dumper.go	/^type CacheDumper struct {$/;"	t
+CachedNodeInfo	algorithm/predicates/predicates.go	/^type CachedNodeInfo struct {$/;"	t
+CachedPersistentVolumeClaimInfo	algorithm/predicates/predicates.go	/^type CachedPersistentVolumeClaimInfo struct {$/;"	t
+CachedPersistentVolumeInfo	algorithm/predicates/predicates.go	/^type CachedPersistentVolumeInfo struct {$/;"	t
+CachedStorageClassInfo	algorithm/predicates/predicates.go	/^type CachedStorageClassInfo struct {$/;"	t
+CalculateAntiAffinityPriorityMap	algorithm/priorities/selector_spreading.go	/^func (s *ServiceAntiAffinity) CalculateAntiAffinityPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {$/;"	f
+CalculateAntiAffinityPriorityReduce	algorithm/priorities/selector_spreading.go	/^func (s *ServiceAntiAffinity) CalculateAntiAffinityPriorityReduce(pod *v1.Pod, meta interface{}, nodeNameToInfo map[string]*schedulercache.NodeInfo, result schedulerapi.HostPriorityList) error {$/;"	f
+CalculateInterPodAffinityPriority	algorithm/priorities/interpod_affinity.go	/^func (ipa *InterPodAffinity) CalculateInterPodAffinityPriority(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo, nodes []*v1.Node) (schedulerapi.HostPriorityList, error) {$/;"	f
+CalculateNodeAffinityPriorityMap	algorithm/priorities/node_affinity.go	/^func CalculateNodeAffinityPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {$/;"	f
+CalculateNodeAffinityPriorityReduce	algorithm/priorities/node_affinity.go	/^var CalculateNodeAffinityPriorityReduce = NormalizeReduce(schedulerapi.MaxPriority, false)$/;"	v
+CalculateNodeLabelPriorityMap	algorithm/priorities/node_label.go	/^func (n *NodeLabelPrioritizer) CalculateNodeLabelPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {$/;"	f
+CalculateNodePreferAvoidPodsPriorityMap	algorithm/priorities/node_prefer_avoid_pods.go	/^func CalculateNodePreferAvoidPodsPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {$/;"	f
+CalculateSpreadPriorityMap	algorithm/priorities/selector_spreading.go	/^func (s *SelectorSpread) CalculateSpreadPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {$/;"	f
+CalculateSpreadPriorityReduce	algorithm/priorities/selector_spreading.go	/^func (s *SelectorSpread) CalculateSpreadPriorityReduce(pod *v1.Pod, meta interface{}, nodeNameToInfo map[string]*schedulercache.NodeInfo, result schedulerapi.HostPriorityList) error {$/;"	f
+CheckConflict	cache/host_ports.go	/^func (h HostPortInfo) CheckConflict(ip, protocol string, port int32) bool {$/;"	f
+CheckNodeConditionPred	algorithm/predicates/predicates.go	/^	CheckNodeConditionPred = "CheckNodeCondition"$/;"	c
+CheckNodeConditionPredicate	algorithm/predicates/predicates.go	/^func CheckNodeConditionPredicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+CheckNodeDiskPressurePred	algorithm/predicates/predicates.go	/^	CheckNodeDiskPressurePred = "CheckNodeDiskPressure"$/;"	c
+CheckNodeDiskPressurePredicate	algorithm/predicates/predicates.go	/^func CheckNodeDiskPressurePredicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+CheckNodeLabelPresence	algorithm/predicates/predicates.go	/^func (n *NodeLabelChecker) CheckNodeLabelPresence(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+CheckNodeLabelPresencePred	algorithm/predicates/predicates.go	/^	CheckNodeLabelPresencePred = "CheckNodeLabelPresence"$/;"	c
+CheckNodeMemoryPressurePred	algorithm/predicates/predicates.go	/^	CheckNodeMemoryPressurePred = "CheckNodeMemoryPressure"$/;"	c
+CheckNodeMemoryPressurePredicate	algorithm/predicates/predicates.go	/^func CheckNodeMemoryPressurePredicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+CheckNodePIDPressurePred	algorithm/predicates/predicates.go	/^	CheckNodePIDPressurePred = "CheckNodePIDPressure"$/;"	c
+CheckNodePIDPressurePredicate	algorithm/predicates/predicates.go	/^func CheckNodePIDPressurePredicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+CheckNodeUnschedulablePred	algorithm/predicates/predicates.go	/^	CheckNodeUnschedulablePred = "CheckNodeUnschedulable"$/;"	c
+CheckNodeUnschedulablePredicate	algorithm/predicates/predicates.go	/^func CheckNodeUnschedulablePredicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+CheckServiceAffinityPred	algorithm/predicates/predicates.go	/^	CheckServiceAffinityPred = "CheckServiceAffinity"$/;"	c
+CheckVolumeBindingPred	algorithm/predicates/predicates.go	/^	CheckVolumeBindingPred = "CheckVolumeBinding"$/;"	c
+Class	core/equivalence/eqivalence.go	/^type Class struct {$/;"	t
+Clone	cache/node_info.go	/^func (n *NodeInfo) Clone() *NodeInfo {$/;"	f
+Clone	cache/node_info.go	/^func (r *Resource) Clone() *Resource {$/;"	f
+Close	internal/queue/scheduling_queue.go	/^func (f *FIFO) Close() {$/;"	f
+Close	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) Close() {$/;"	f
+ClusterAutoscalerProvider	algorithmprovider/defaults/defaults.go	/^	ClusterAutoscalerProvider = "ClusterAutoscalerProvider"$/;"	c
+Codec	api/latest/latest.go	/^var Codec runtime.Codec$/;"	v
+Codec	testing/util.go	/^func (g TestGroup) Codec() runtime.Codec {$/;"	f
+Codecs	apis/config/scheme/scheme.go	/^	Codecs = serializer.NewCodecFactory(Scheme)$/;"	v
+Compare	internal/cache/debugger/comparer.go	/^func (c *CacheComparer) Compare() error {$/;"	f
+CompareNodes	internal/cache/debugger/comparer.go	/^func (c *CacheComparer) CompareNodes(nodes []*v1.Node, nodeinfos map[string]*schedulercache.NodeInfo) (missed, redundant []string) {$/;"	f
+ComparePods	internal/cache/debugger/comparer.go	/^func (c *CacheComparer) ComparePods(pods, waitingPods []*v1.Pod, nodeinfos map[string]*schedulercache.NodeInfo) (missed, redundant []string) {$/;"	f
+ComputeTaintTolerationPriorityMap	algorithm/priorities/taint_toleration.go	/^func ComputeTaintTolerationPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {$/;"	f
+ComputeTaintTolerationPriorityReduce	algorithm/priorities/taint_toleration.go	/^var ComputeTaintTolerationPriorityReduce = NormalizeReduce(schedulerapi.MaxPriority, true)$/;"	v
+Config	factory/factory.go	/^type Config struct {$/;"	t
+Config	scheduler.go	/^func (sched *Scheduler) Config() *factory.Config {$/;"	f
+ConfigFactoryArgs	factory/factory.go	/^type ConfigFactoryArgs struct {$/;"	t
+Configurator	factory/factory.go	/^type Configurator interface {$/;"	t
+ControllerLister	algorithm/types.go	/^type ControllerLister interface {$/;"	t
+Convert_config_KubeSchedulerConfiguration_To_v1alpha1_KubeSchedulerConfiguration	apis/config/v1alpha1/zz_generated.conversion.go	/^func Convert_config_KubeSchedulerConfiguration_To_v1alpha1_KubeSchedulerConfiguration(in *config.KubeSchedulerConfiguration, out *v1alpha1.KubeSchedulerConfiguration, s conversion.Scope) error {$/;"	f
+Convert_config_KubeSchedulerLeaderElectionConfiguration_To_v1alpha1_KubeSchedulerLeaderElectionConfiguration	apis/config/v1alpha1/zz_generated.conversion.go	/^func Convert_config_KubeSchedulerLeaderElectionConfiguration_To_v1alpha1_KubeSchedulerLeaderElectionConfiguration(in *config.KubeSchedulerLeaderElectionConfiguration, out *v1alpha1.KubeSchedulerLeaderElectionConfiguration, s conversion.Scope) error {$/;"	f
+Convert_config_SchedulerAlgorithmSource_To_v1alpha1_SchedulerAlgorithmSource	apis/config/v1alpha1/zz_generated.conversion.go	/^func Convert_config_SchedulerAlgorithmSource_To_v1alpha1_SchedulerAlgorithmSource(in *config.SchedulerAlgorithmSource, out *v1alpha1.SchedulerAlgorithmSource, s conversion.Scope) error {$/;"	f
+Convert_config_SchedulerPolicyConfigMapSource_To_v1alpha1_SchedulerPolicyConfigMapSource	apis/config/v1alpha1/zz_generated.conversion.go	/^func Convert_config_SchedulerPolicyConfigMapSource_To_v1alpha1_SchedulerPolicyConfigMapSource(in *config.SchedulerPolicyConfigMapSource, out *v1alpha1.SchedulerPolicyConfigMapSource, s conversion.Scope) error {$/;"	f
+Convert_config_SchedulerPolicyFileSource_To_v1alpha1_SchedulerPolicyFileSource	apis/config/v1alpha1/zz_generated.conversion.go	/^func Convert_config_SchedulerPolicyFileSource_To_v1alpha1_SchedulerPolicyFileSource(in *config.SchedulerPolicyFileSource, out *v1alpha1.SchedulerPolicyFileSource, s conversion.Scope) error {$/;"	f
+Convert_config_SchedulerPolicySource_To_v1alpha1_SchedulerPolicySource	apis/config/v1alpha1/zz_generated.conversion.go	/^func Convert_config_SchedulerPolicySource_To_v1alpha1_SchedulerPolicySource(in *config.SchedulerPolicySource, out *v1alpha1.SchedulerPolicySource, s conversion.Scope) error {$/;"	f
+Convert_v1alpha1_KubeSchedulerConfiguration_To_config_KubeSchedulerConfiguration	apis/config/v1alpha1/zz_generated.conversion.go	/^func Convert_v1alpha1_KubeSchedulerConfiguration_To_config_KubeSchedulerConfiguration(in *v1alpha1.KubeSchedulerConfiguration, out *config.KubeSchedulerConfiguration, s conversion.Scope) error {$/;"	f
+Convert_v1alpha1_KubeSchedulerLeaderElectionConfiguration_To_config_KubeSchedulerLeaderElectionConfiguration	apis/config/v1alpha1/zz_generated.conversion.go	/^func Convert_v1alpha1_KubeSchedulerLeaderElectionConfiguration_To_config_KubeSchedulerLeaderElectionConfiguration(in *v1alpha1.KubeSchedulerLeaderElectionConfiguration, out *config.KubeSchedulerLeaderElectionConfiguration, s conversion.Scope) error {$/;"	f
+Convert_v1alpha1_SchedulerAlgorithmSource_To_config_SchedulerAlgorithmSource	apis/config/v1alpha1/zz_generated.conversion.go	/^func Convert_v1alpha1_SchedulerAlgorithmSource_To_config_SchedulerAlgorithmSource(in *v1alpha1.SchedulerAlgorithmSource, out *config.SchedulerAlgorithmSource, s conversion.Scope) error {$/;"	f
+Convert_v1alpha1_SchedulerPolicyConfigMapSource_To_config_SchedulerPolicyConfigMapSource	apis/config/v1alpha1/zz_generated.conversion.go	/^func Convert_v1alpha1_SchedulerPolicyConfigMapSource_To_config_SchedulerPolicyConfigMapSource(in *v1alpha1.SchedulerPolicyConfigMapSource, out *config.SchedulerPolicyConfigMapSource, s conversion.Scope) error {$/;"	f
+Convert_v1alpha1_SchedulerPolicyFileSource_To_config_SchedulerPolicyFileSource	apis/config/v1alpha1/zz_generated.conversion.go	/^func Convert_v1alpha1_SchedulerPolicyFileSource_To_config_SchedulerPolicyFileSource(in *v1alpha1.SchedulerPolicyFileSource, out *config.SchedulerPolicyFileSource, s conversion.Scope) error {$/;"	f
+Convert_v1alpha1_SchedulerPolicySource_To_config_SchedulerPolicySource	apis/config/v1alpha1/zz_generated.conversion.go	/^func Convert_v1alpha1_SchedulerPolicySource_To_config_SchedulerPolicySource(in *v1alpha1.SchedulerPolicySource, out *config.SchedulerPolicySource, s conversion.Scope) error {$/;"	f
+Create	factory/factory.go	/^func (c *configFactory) Create() (*Config, error) {$/;"	f
+Create	testutil.go	/^func (fc *FakeConfigurator) Create() (*factory.Config, error) {$/;"	f
+CreateDefaultPodBackoff	util/backoff_utils.go	/^func CreateDefaultPodBackoff() *PodBackoff {$/;"	f
+CreateFromConfig	factory/factory.go	/^func (c *configFactory) CreateFromConfig(policy schedulerapi.Policy) (*Config, error) {$/;"	f
+CreateFromConfig	testutil.go	/^func (fc *FakeConfigurator) CreateFromConfig(policy schedulerapi.Policy) (*factory.Config, error) {$/;"	f
+CreateFromKeys	factory/factory.go	/^func (c *configFactory) CreateFromKeys(predicateKeys, priorityKeys sets.String, extenders []algorithm.SchedulerExtender) (*Config, error) {$/;"	f
+CreateFromKeys	testutil.go	/^func (fc *FakeConfigurator) CreateFromKeys(predicateKeys, priorityKeys sets.String, extenders []algorithm.SchedulerExtender) (*factory.Config, error) {$/;"	f
+CreateFromProvider	factory/factory.go	/^func (c *configFactory) CreateFromProvider(providerName string) (*Config, error) {$/;"	f
+CreateFromProvider	testutil.go	/^func (fc *FakeConfigurator) CreateFromProvider(providerName string) (*factory.Config, error) {$/;"	f
+CreateNodeNameToInfoMap	cache/util.go	/^func CreateNodeNameToInfoMap(pods []*v1.Pod, nodes []*v1.Node) map[string]*NodeInfo {$/;"	f
+CreatePodBackoff	util/backoff_utils.go	/^func CreatePodBackoff(defaultDuration, maxDuration time.Duration) *PodBackoff {$/;"	f
+CreatePodBackoffWithClock	util/backoff_utils.go	/^func CreatePodBackoffWithClock(defaultDuration, maxDuration time.Duration, clock clock) *PodBackoff {$/;"	f
+CreateSelectorFromLabels	algorithm/predicates/utils.go	/^func CreateSelectorFromLabels(aL map[string]string) labels.Selector {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderArgs) DeepCopy() *ExtenderArgs {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderBindingArgs) DeepCopy() *ExtenderBindingArgs {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderBindingResult) DeepCopy() *ExtenderBindingResult {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderConfig) DeepCopy() *ExtenderConfig {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderFilterResult) DeepCopy() *ExtenderFilterResult {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderManagedResource) DeepCopy() *ExtenderManagedResource {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderPreemptionArgs) DeepCopy() *ExtenderPreemptionArgs {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderPreemptionResult) DeepCopy() *ExtenderPreemptionResult {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *HostPriority) DeepCopy() *HostPriority {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *LabelPreference) DeepCopy() *LabelPreference {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *LabelsPresence) DeepCopy() *LabelsPresence {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *MetaPod) DeepCopy() *MetaPod {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *MetaVictims) DeepCopy() *MetaVictims {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *Policy) DeepCopy() *Policy {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *PredicateArgument) DeepCopy() *PredicateArgument {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *PredicatePolicy) DeepCopy() *PredicatePolicy {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *PriorityArgument) DeepCopy() *PriorityArgument {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *PriorityPolicy) DeepCopy() *PriorityPolicy {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *RequestedToCapacityRatioArguments) DeepCopy() *RequestedToCapacityRatioArguments {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *ServiceAffinity) DeepCopy() *ServiceAffinity {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *ServiceAntiAffinity) DeepCopy() *ServiceAntiAffinity {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *UtilizationShapePoint) DeepCopy() *UtilizationShapePoint {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in *Victims) DeepCopy() *Victims {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in FailedNodesMap) DeepCopy() FailedNodesMap {$/;"	f
+DeepCopy	api/v1/zz_generated.deepcopy.go	/^func (in HostPriorityList) DeepCopy() HostPriorityList {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *ExtenderArgs) DeepCopy() *ExtenderArgs {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *ExtenderBindingArgs) DeepCopy() *ExtenderBindingArgs {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *ExtenderBindingResult) DeepCopy() *ExtenderBindingResult {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *ExtenderConfig) DeepCopy() *ExtenderConfig {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *ExtenderFilterResult) DeepCopy() *ExtenderFilterResult {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *ExtenderManagedResource) DeepCopy() *ExtenderManagedResource {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *ExtenderPreemptionArgs) DeepCopy() *ExtenderPreemptionArgs {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *ExtenderPreemptionResult) DeepCopy() *ExtenderPreemptionResult {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *HostPriority) DeepCopy() *HostPriority {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *LabelPreference) DeepCopy() *LabelPreference {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *LabelsPresence) DeepCopy() *LabelsPresence {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *MetaPod) DeepCopy() *MetaPod {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *MetaVictims) DeepCopy() *MetaVictims {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *Policy) DeepCopy() *Policy {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *PredicateArgument) DeepCopy() *PredicateArgument {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *PredicatePolicy) DeepCopy() *PredicatePolicy {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *PriorityArgument) DeepCopy() *PriorityArgument {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *PriorityPolicy) DeepCopy() *PriorityPolicy {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *RequestedToCapacityRatioArguments) DeepCopy() *RequestedToCapacityRatioArguments {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *ServiceAffinity) DeepCopy() *ServiceAffinity {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *ServiceAntiAffinity) DeepCopy() *ServiceAntiAffinity {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *UtilizationShapePoint) DeepCopy() *UtilizationShapePoint {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in *Victims) DeepCopy() *Victims {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in FailedNodesMap) DeepCopy() FailedNodesMap {$/;"	f
+DeepCopy	api/zz_generated.deepcopy.go	/^func (in HostPriorityList) DeepCopy() HostPriorityList {$/;"	f
+DeepCopy	apis/config/zz_generated.deepcopy.go	/^func (in *KubeSchedulerConfiguration) DeepCopy() *KubeSchedulerConfiguration {$/;"	f
+DeepCopy	apis/config/zz_generated.deepcopy.go	/^func (in *KubeSchedulerLeaderElectionConfiguration) DeepCopy() *KubeSchedulerLeaderElectionConfiguration {$/;"	f
+DeepCopy	apis/config/zz_generated.deepcopy.go	/^func (in *SchedulerAlgorithmSource) DeepCopy() *SchedulerAlgorithmSource {$/;"	f
+DeepCopy	apis/config/zz_generated.deepcopy.go	/^func (in *SchedulerPolicyConfigMapSource) DeepCopy() *SchedulerPolicyConfigMapSource {$/;"	f
+DeepCopy	apis/config/zz_generated.deepcopy.go	/^func (in *SchedulerPolicyFileSource) DeepCopy() *SchedulerPolicyFileSource {$/;"	f
+DeepCopy	apis/config/zz_generated.deepcopy.go	/^func (in *SchedulerPolicySource) DeepCopy() *SchedulerPolicySource {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderArgs) DeepCopyInto(out *ExtenderArgs) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderBindingArgs) DeepCopyInto(out *ExtenderBindingArgs) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderBindingResult) DeepCopyInto(out *ExtenderBindingResult) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderConfig) DeepCopyInto(out *ExtenderConfig) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderFilterResult) DeepCopyInto(out *ExtenderFilterResult) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderManagedResource) DeepCopyInto(out *ExtenderManagedResource) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderPreemptionArgs) DeepCopyInto(out *ExtenderPreemptionArgs) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *ExtenderPreemptionResult) DeepCopyInto(out *ExtenderPreemptionResult) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *HostPriority) DeepCopyInto(out *HostPriority) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *LabelPreference) DeepCopyInto(out *LabelPreference) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *LabelsPresence) DeepCopyInto(out *LabelsPresence) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *MetaPod) DeepCopyInto(out *MetaPod) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *MetaVictims) DeepCopyInto(out *MetaVictims) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *Policy) DeepCopyInto(out *Policy) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *PredicateArgument) DeepCopyInto(out *PredicateArgument) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *PredicatePolicy) DeepCopyInto(out *PredicatePolicy) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *PriorityArgument) DeepCopyInto(out *PriorityArgument) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *PriorityPolicy) DeepCopyInto(out *PriorityPolicy) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *RequestedToCapacityRatioArguments) DeepCopyInto(out *RequestedToCapacityRatioArguments) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *ServiceAffinity) DeepCopyInto(out *ServiceAffinity) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *ServiceAntiAffinity) DeepCopyInto(out *ServiceAntiAffinity) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *UtilizationShapePoint) DeepCopyInto(out *UtilizationShapePoint) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in *Victims) DeepCopyInto(out *Victims) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in FailedNodesMap) DeepCopyInto(out *FailedNodesMap) {$/;"	f
+DeepCopyInto	api/v1/zz_generated.deepcopy.go	/^func (in HostPriorityList) DeepCopyInto(out *HostPriorityList) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *ExtenderArgs) DeepCopyInto(out *ExtenderArgs) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *ExtenderBindingArgs) DeepCopyInto(out *ExtenderBindingArgs) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *ExtenderBindingResult) DeepCopyInto(out *ExtenderBindingResult) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *ExtenderConfig) DeepCopyInto(out *ExtenderConfig) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *ExtenderFilterResult) DeepCopyInto(out *ExtenderFilterResult) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *ExtenderManagedResource) DeepCopyInto(out *ExtenderManagedResource) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *ExtenderPreemptionArgs) DeepCopyInto(out *ExtenderPreemptionArgs) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *ExtenderPreemptionResult) DeepCopyInto(out *ExtenderPreemptionResult) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *HostPriority) DeepCopyInto(out *HostPriority) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *LabelPreference) DeepCopyInto(out *LabelPreference) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *LabelsPresence) DeepCopyInto(out *LabelsPresence) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *MetaPod) DeepCopyInto(out *MetaPod) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *MetaVictims) DeepCopyInto(out *MetaVictims) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *Policy) DeepCopyInto(out *Policy) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *PredicateArgument) DeepCopyInto(out *PredicateArgument) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *PredicatePolicy) DeepCopyInto(out *PredicatePolicy) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *PriorityArgument) DeepCopyInto(out *PriorityArgument) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *PriorityPolicy) DeepCopyInto(out *PriorityPolicy) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *RequestedToCapacityRatioArguments) DeepCopyInto(out *RequestedToCapacityRatioArguments) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *ServiceAffinity) DeepCopyInto(out *ServiceAffinity) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *ServiceAntiAffinity) DeepCopyInto(out *ServiceAntiAffinity) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *UtilizationShapePoint) DeepCopyInto(out *UtilizationShapePoint) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in *Victims) DeepCopyInto(out *Victims) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in FailedNodesMap) DeepCopyInto(out *FailedNodesMap) {$/;"	f
+DeepCopyInto	api/zz_generated.deepcopy.go	/^func (in HostPriorityList) DeepCopyInto(out *HostPriorityList) {$/;"	f
+DeepCopyInto	apis/config/zz_generated.deepcopy.go	/^func (in *KubeSchedulerConfiguration) DeepCopyInto(out *KubeSchedulerConfiguration) {$/;"	f
+DeepCopyInto	apis/config/zz_generated.deepcopy.go	/^func (in *KubeSchedulerLeaderElectionConfiguration) DeepCopyInto(out *KubeSchedulerLeaderElectionConfiguration) {$/;"	f
+DeepCopyInto	apis/config/zz_generated.deepcopy.go	/^func (in *SchedulerAlgorithmSource) DeepCopyInto(out *SchedulerAlgorithmSource) {$/;"	f
+DeepCopyInto	apis/config/zz_generated.deepcopy.go	/^func (in *SchedulerPolicyConfigMapSource) DeepCopyInto(out *SchedulerPolicyConfigMapSource) {$/;"	f
+DeepCopyInto	apis/config/zz_generated.deepcopy.go	/^func (in *SchedulerPolicyFileSource) DeepCopyInto(out *SchedulerPolicyFileSource) {$/;"	f
+DeepCopyInto	apis/config/zz_generated.deepcopy.go	/^func (in *SchedulerPolicySource) DeepCopyInto(out *SchedulerPolicySource) {$/;"	f
+DeepCopyObject	api/v1/zz_generated.deepcopy.go	/^func (in *Policy) DeepCopyObject() runtime.Object {$/;"	f
+DeepCopyObject	api/zz_generated.deepcopy.go	/^func (in *Policy) DeepCopyObject() runtime.Object {$/;"	f
+DeepCopyObject	apis/config/zz_generated.deepcopy.go	/^func (in *KubeSchedulerConfiguration) DeepCopyObject() runtime.Object {$/;"	f
+DefaultBindAllHostIP	cache/host_ports.go	/^const DefaultBindAllHostIP = "0.0.0.0"$/;"	c
+DefaultExtenderTimeout	core/extender.go	/^	DefaultExtenderTimeout = 5 * time.Second$/;"	c
+DefaultMaxAzureDiskVolumes	algorithm/predicates/predicates.go	/^	DefaultMaxAzureDiskVolumes = 16$/;"	c
+DefaultMaxGCEPDVolumes	algorithm/predicates/predicates.go	/^	DefaultMaxGCEPDVolumes = 16$/;"	c
+DefaultMemoryRequest	algorithm/priorities/util/non_zero.go	/^const DefaultMemoryRequest int64 = 200 * 1024 * 1024 \/\/ 200 MB$/;"	c
+DefaultMilliCPURequest	algorithm/priorities/util/non_zero.go	/^const DefaultMilliCPURequest int64 = 100 \/\/ 0.1 core$/;"	c
+DefaultPercentageOfNodesToScore	api/types.go	/^	DefaultPercentageOfNodesToScore = 50$/;"	c
+DefaultProvider	factory/plugins.go	/^	DefaultProvider = "DefaultProvider"$/;"	c
+Delete	internal/queue/scheduling_queue.go	/^func (f *FIFO) Delete(pod *v1.Pod) error {$/;"	f
+Delete	internal/queue/scheduling_queue.go	/^func (h *Heap) Delete(obj interface{}) error {$/;"	f
+Delete	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) Delete(pod *v1.Pod) error {$/;"	f
+DeleteNominatedPodIfExists	internal/queue/scheduling_queue.go	/^func (f *FIFO) DeleteNominatedPodIfExists(pod *v1.Pod) {}$/;"	f
+DeleteNominatedPodIfExists	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) DeleteNominatedPodIfExists(pod *v1.Pod) {$/;"	f
+DeletePod	factory/factory.go	/^func (p *podPreemptor) DeletePod(pod *v1.Pod) error {$/;"	f
+DeletePod	scheduler_test.go	/^func (fp fakePodPreemptor) DeletePod(pod *v1.Pod) error {$/;"	f
+DeletePodBindings	volumebinder/volume_binder.go	/^func (b *VolumeBinder) DeletePodBindings(pod *v1.Pod) {$/;"	f
+DeprecatedTaintNodeNotReady	api/well_known_labels.go	/^	DeprecatedTaintNodeNotReady = "node.alpha.kubernetes.io\/notReady"$/;"	c
+DeprecatedTaintNodeUnreachable	api/well_known_labels.go	/^	DeprecatedTaintNodeUnreachable = "node.alpha.kubernetes.io\/unreachable"$/;"	c
+DiskPressureCondition	cache/node_info.go	/^func (n *NodeInfo) DiskPressureCondition() v1.ConditionStatus {$/;"	f
+DumpAll	internal/cache/debugger/dumper.go	/^func (d *CacheDumper) DumpAll() {$/;"	f
+E2eSchedulingLatency	metrics/metrics.go	/^	E2eSchedulingLatency = prometheus.NewHistogram($/;"	v
+EBSVolumeFilter	algorithm/predicates/predicates.go	/^var EBSVolumeFilter = VolumeFilter{$/;"	v
+EBSVolumeFilterType	algorithm/predicates/predicates.go	/^	EBSVolumeFilterType = "EBS"$/;"	c
+EmptyControllerLister	algorithm/types.go	/^type EmptyControllerLister struct{}$/;"	t
+EmptyPredicateMetadataProducer	algorithm/types.go	/^func EmptyPredicateMetadataProducer(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo) PredicateMetadata {$/;"	f
+EmptyPriorityMetadataProducer	algorithm/types.go	/^func EmptyPriorityMetadataProducer(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo) interface{} {$/;"	f
+EmptyReplicaSetLister	algorithm/types.go	/^type EmptyReplicaSetLister struct{}$/;"	t
+EmptyStatefulSetLister	algorithm/types.go	/^type EmptyStatefulSetLister struct{}$/;"	t
+EqualPriorityMap	core/generic_scheduler.go	/^func EqualPriorityMap(_ *v1.Pod, _ interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {$/;"	f
+EquivalenceCacheHits	metrics/metrics.go	/^	EquivalenceCacheHits   = equivalenceCacheLookups.With(prometheus.Labels{"result": "hit"})$/;"	v
+EquivalenceCacheMisses	metrics/metrics.go	/^	EquivalenceCacheMisses = equivalenceCacheLookups.With(prometheus.Labels{"result": "miss"})$/;"	v
+EquivalenceCacheWrites	metrics/metrics.go	/^	EquivalenceCacheWrites = prometheus.NewCounterVec($/;"	v
+ErrDiskConflict	algorithm/predicates/error.go	/^	ErrDiskConflict = newPredicateFailureError("NoDiskConflict", "node(s) had no available disk")$/;"	v
+ErrExistingPodsAntiAffinityRulesNotMatch	algorithm/predicates/error.go	/^	ErrExistingPodsAntiAffinityRulesNotMatch = newPredicateFailureError("ExistingPodsAntiAffinityRulesNotMatch", "node(s) didn't satisfy existing pods anti-affinity rules")$/;"	v
+ErrFakePredicate	algorithm/predicates/error.go	/^	ErrFakePredicate = newPredicateFailureError("FakePredicateError", "Nodes failed the fake predicate")$/;"	v
+ErrMaxVolumeCountExceeded	algorithm/predicates/error.go	/^	ErrMaxVolumeCountExceeded = newPredicateFailureError("MaxVolumeCount", "node(s) exceed max volume count")$/;"	v
+ErrNoNodesAvailable	core/generic_scheduler.go	/^var ErrNoNodesAvailable = fmt.Errorf("no nodes available to schedule pods")$/;"	v
+ErrNodeLabelPresenceViolated	algorithm/predicates/error.go	/^	ErrNodeLabelPresenceViolated = newPredicateFailureError("CheckNodeLabelPresence", "node(s) didn't have the requested labels")$/;"	v
+ErrNodeNetworkUnavailable	algorithm/predicates/error.go	/^	ErrNodeNetworkUnavailable = newPredicateFailureError("NodeNetworkUnavailable", "node(s) had unavailable network")$/;"	v
+ErrNodeNotReady	algorithm/predicates/error.go	/^	ErrNodeNotReady = newPredicateFailureError("NodeNotReady", "node(s) were not ready")$/;"	v
+ErrNodeOutOfDisk	algorithm/predicates/error.go	/^	ErrNodeOutOfDisk = newPredicateFailureError("NodeOutOfDisk", "node(s) were out of disk space")$/;"	v
+ErrNodeSelectorNotMatch	algorithm/predicates/error.go	/^	ErrNodeSelectorNotMatch = newPredicateFailureError("MatchNodeSelector", "node(s) didn't match node selector")$/;"	v
+ErrNodeUnderDiskPressure	algorithm/predicates/error.go	/^	ErrNodeUnderDiskPressure = newPredicateFailureError("NodeUnderDiskPressure", "node(s) had disk pressure")$/;"	v
+ErrNodeUnderMemoryPressure	algorithm/predicates/error.go	/^	ErrNodeUnderMemoryPressure = newPredicateFailureError("NodeUnderMemoryPressure", "node(s) had memory pressure")$/;"	v
+ErrNodeUnderPIDPressure	algorithm/predicates/error.go	/^	ErrNodeUnderPIDPressure = newPredicateFailureError("NodeUnderPIDPressure", "node(s) had pid pressure")$/;"	v
+ErrNodeUnknownCondition	algorithm/predicates/error.go	/^	ErrNodeUnknownCondition = newPredicateFailureError("NodeUnknownCondition", "node(s) had unknown conditions")$/;"	v
+ErrNodeUnschedulable	algorithm/predicates/error.go	/^	ErrNodeUnschedulable = newPredicateFailureError("NodeUnschedulable", "node(s) were unschedulable")$/;"	v
+ErrPodAffinityNotMatch	algorithm/predicates/error.go	/^	ErrPodAffinityNotMatch = newPredicateFailureError("MatchInterPodAffinity", "node(s) didn't match pod affinity\/anti-affinity")$/;"	v
+ErrPodAffinityRulesNotMatch	algorithm/predicates/error.go	/^	ErrPodAffinityRulesNotMatch = newPredicateFailureError("PodAffinityRulesNotMatch", "node(s) didn't match pod affinity rules")$/;"	v
+ErrPodAntiAffinityRulesNotMatch	algorithm/predicates/error.go	/^	ErrPodAntiAffinityRulesNotMatch = newPredicateFailureError("PodAntiAffinityRulesNotMatch", "node(s) didn't match pod anti-affinity rules")$/;"	v
+ErrPodNotFitsHostPorts	algorithm/predicates/error.go	/^	ErrPodNotFitsHostPorts = newPredicateFailureError("PodFitsHostPorts", "node(s) didn't have free ports for the requested pod ports")$/;"	v
+ErrPodNotMatchHostName	algorithm/predicates/error.go	/^	ErrPodNotMatchHostName = newPredicateFailureError("HostName", "node(s) didn't match the requested hostname")$/;"	v
+ErrServiceAffinityViolated	algorithm/predicates/error.go	/^	ErrServiceAffinityViolated = newPredicateFailureError("CheckServiceAffinity", "node(s) didn't match service affinity")$/;"	v
+ErrTaintsTolerationsNotMatch	algorithm/predicates/error.go	/^	ErrTaintsTolerationsNotMatch = newPredicateFailureError("PodToleratesNodeTaints", "node(s) had taints that the pod didn't tolerate")$/;"	v
+ErrVolumeBindConflict	algorithm/predicates/error.go	/^	ErrVolumeBindConflict = newPredicateFailureError("VolumeBindingNoMatch", "node(s) didn't find available persistent volumes to bind")$/;"	v
+ErrVolumeNodeConflict	algorithm/predicates/error.go	/^	ErrVolumeNodeConflict = newPredicateFailureError("VolumeNodeAffinityConflict", "node(s) had volume node affinity conflict")$/;"	v
+ErrVolumeZoneConflict	algorithm/predicates/error.go	/^	ErrVolumeZoneConflict = newPredicateFailureError("NoVolumeZoneConflict", "node(s) had no available volume zone")$/;"	v
+Error	algorithm/predicates/error.go	/^func (e *InsufficientResourceError) Error() string {$/;"	f
+Error	algorithm/predicates/error.go	/^func (e *PredicateFailureError) Error() string {$/;"	f
+Error	core/generic_scheduler.go	/^func (f *FitError) Error() string {$/;"	f
+EssentialPredicates	algorithm/predicates/predicates.go	/^func EssentialPredicates(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+ExampleFindLabelsInSet	algorithm/predicates/utils_test.go	/^func ExampleFindLabelsInSet() {$/;"	f
+ExtenderArgs	api/types.go	/^type ExtenderArgs struct {$/;"	t
+ExtenderArgs	api/v1/types.go	/^type ExtenderArgs struct {$/;"	t
+ExtenderBindingArgs	api/types.go	/^type ExtenderBindingArgs struct {$/;"	t
+ExtenderBindingArgs	api/v1/types.go	/^type ExtenderBindingArgs struct {$/;"	t
+ExtenderBindingResult	api/types.go	/^type ExtenderBindingResult struct {$/;"	t
+ExtenderBindingResult	api/v1/types.go	/^type ExtenderBindingResult struct {$/;"	t
+ExtenderConfig	api/types.go	/^type ExtenderConfig struct {$/;"	t
+ExtenderConfig	api/v1/types.go	/^type ExtenderConfig struct {$/;"	t
+ExtenderFilterResult	api/types.go	/^type ExtenderFilterResult struct {$/;"	t
+ExtenderFilterResult	api/v1/types.go	/^type ExtenderFilterResult struct {$/;"	t
+ExtenderManagedResource	api/types.go	/^type ExtenderManagedResource struct {$/;"	t
+ExtenderManagedResource	api/v1/types.go	/^type ExtenderManagedResource struct {$/;"	t
+ExtenderPreemptionArgs	api/types.go	/^type ExtenderPreemptionArgs struct {$/;"	t
+ExtenderPreemptionArgs	api/v1/types.go	/^type ExtenderPreemptionArgs struct {$/;"	t
+ExtenderPreemptionResult	api/types.go	/^type ExtenderPreemptionResult struct {$/;"	t
+ExtenderPreemptionResult	api/v1/types.go	/^type ExtenderPreemptionResult struct {$/;"	t
+FIFO	internal/queue/scheduling_queue.go	/^type FIFO struct {$/;"	t
+FailedNodesMap	api/types.go	/^type FailedNodesMap map[string]string$/;"	t
+FailedNodesMap	api/v1/types.go	/^type FailedNodesMap map[string]string$/;"	t
+FailedPredicateMap	core/generic_scheduler.go	/^type FailedPredicateMap map[string][]algorithm.PredicateFailureReason$/;"	t
+FailureReason	algorithm/predicates/error.go	/^type FailureReason struct {$/;"	t
+FakeConfigurator	testutil.go	/^type FakeConfigurator struct {$/;"	t
+FakeControllerLister	testing/fake_lister.go	/^type FakeControllerLister []*v1.ReplicationController$/;"	t
+FakeExtender	core/extender_test.go	/^type FakeExtender struct {$/;"	t
+FakeNodeInfo	algorithm/predicates/testing_helper.go	/^type FakeNodeInfo v1.Node$/;"	t
+FakeNodeInfo	core/generic_scheduler_test.go	/^type FakeNodeInfo v1.Node$/;"	t
+FakeNodeListInfo	algorithm/predicates/testing_helper.go	/^type FakeNodeListInfo []v1.Node$/;"	t
+FakeNodeListInfo	algorithm/priorities/interpod_affinity_test.go	/^type FakeNodeListInfo []*v1.Node$/;"	t
+FakeNodeLister	testing/fake_lister.go	/^type FakeNodeLister []*v1.Node$/;"	t
+FakePDBLister	testing/fake_lister.go	/^type FakePDBLister []*policy.PodDisruptionBudget$/;"	t
+FakePersistentVolumeClaimInfo	algorithm/predicates/testing_helper.go	/^type FakePersistentVolumeClaimInfo []v1.PersistentVolumeClaim$/;"	t
+FakePersistentVolumeClaimLister	testing/fake_lister.go	/^type FakePersistentVolumeClaimLister []*v1.PersistentVolumeClaim$/;"	t
+FakePersistentVolumeInfo	algorithm/predicates/testing_helper.go	/^type FakePersistentVolumeInfo []v1.PersistentVolume$/;"	t
+FakePodLister	testing/fake_lister.go	/^type FakePodLister []*v1.Pod$/;"	t
+FakeReplicaSetLister	testing/fake_lister.go	/^type FakeReplicaSetLister []*apps.ReplicaSet$/;"	t
+FakeServiceLister	testing/fake_lister.go	/^type FakeServiceLister []*v1.Service$/;"	t
+FakeStatefulSetLister	testing/fake_lister.go	/^type FakeStatefulSetLister []*apps.StatefulSet$/;"	t
+FakeStorageClassInfo	algorithm/predicates/testing_helper.go	/^type FakeStorageClassInfo []storagev1.StorageClass$/;"	t
+Filter	cache/node_info.go	/^func (n *NodeInfo) Filter(pod *v1.Pod) bool {$/;"	f
+Filter	core/extender.go	/^func (h *HTTPExtender) Filter($/;"	f
+Filter	core/extender_test.go	/^func (f *FakeExtender) Filter(pod *v1.Pod, nodes []*v1.Node, nodeNameToInfo map[string]*schedulercache.NodeInfo) ([]*v1.Node, schedulerapi.FailedNodesMap, error) {$/;"	f
+Filter	factory/factory_test.go	/^func (f *fakeExtender) Filter($/;"	f
+FilterOutPods	cache/node_info.go	/^func (n *NodeInfo) FilterOutPods(pods []*v1.Pod) []*v1.Pod {$/;"	f
+FilterPodsByNamespace	algorithm/predicates/utils.go	/^func FilterPodsByNamespace(pods []*v1.Pod, ns string) []*v1.Pod {$/;"	f
+FilteredList	internal/cache/cache.go	/^func (cache *schedulerCache) FilteredList(podFilter PodFilter, selector labels.Selector) ([]*v1.Pod, error) {$/;"	f
+FilteredList	internal/cache/fake/fake_cache.go	/^func (c *Cache) FilteredList(filter schedulerinternalcache.PodFilter, selector labels.Selector) ([]*v1.Pod, error) {$/;"	f
+FilteredList	testing/fake_lister.go	/^func (f FakePodLister) FilteredList(podFilter schedulerinternalcache.PodFilter, s labels.Selector) (selected []*v1.Pod, err error) {$/;"	f
+FindLabelsInSet	algorithm/predicates/utils.go	/^func FindLabelsInSet(labelsToKeep []string, selector labels.Set) map[string]string {$/;"	f
+FinishBinding	internal/cache/cache.go	/^func (cache *schedulerCache) FinishBinding(pod *v1.Pod) error {$/;"	f
+FinishBinding	internal/cache/fake/fake_cache.go	/^func (c *Cache) FinishBinding(pod *v1.Pod) error { return nil }$/;"	f
+FitError	core/generic_scheduler.go	/^type FitError struct {$/;"	t
+FitPredicate	algorithm/types.go	/^type FitPredicate func(pod *v1.Pod, meta PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []PredicateFailureReason, error)$/;"	t
+FitPredicateFactory	factory/plugins.go	/^type FitPredicateFactory func(PluginFactoryArgs) algorithm.FitPredicate$/;"	t
+ForgetPod	internal/cache/cache.go	/^func (cache *schedulerCache) ForgetPod(pod *v1.Pod) error {$/;"	f
+ForgetPod	internal/cache/fake/fake_cache.go	/^func (c *Cache) ForgetPod(pod *v1.Pod) error {$/;"	f
+FunctionShape	algorithm/priorities/requested_to_capacity_ratio.go	/^type FunctionShape []FunctionShapePoint$/;"	t
+FunctionShapePoint	algorithm/priorities/requested_to_capacity_ratio.go	/^type FunctionShapePoint struct {$/;"	t
+GCEPDVolumeFilter	algorithm/predicates/predicates.go	/^var GCEPDVolumeFilter = VolumeFilter{$/;"	v
+GCEPDVolumeFilterType	algorithm/predicates/predicates.go	/^	GCEPDVolumeFilterType = "GCE"$/;"	c
+Gc	util/backoff_utils.go	/^func (p *PodBackoff) Gc() {$/;"	f
+GeneralPred	algorithm/predicates/predicates.go	/^	GeneralPred = "GeneralPredicates"$/;"	c
+GeneralPredicates	algorithm/predicates/predicates.go	/^func GeneralPredicates(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+Get	factory/factory.go	/^func (l assignedPodNamespaceLister) Get(name string) (*v1.Pod, error) {$/;"	f
+Get	factory/factory.go	/^func (ne *nodeEnumerator) Get(index int) interface{} {$/;"	f
+Get	internal/queue/scheduling_queue.go	/^func (h *Heap) Get(obj interface{}) (interface{}, bool, error) {$/;"	f
+Get	testing/fake_lister.go	/^func (f *fakePersistentVolumeClaimNamespaceLister) Get(name string) (*v1.PersistentVolumeClaim, error) {$/;"	f
+GetAlgorithmProvider	factory/plugins.go	/^func GetAlgorithmProvider(name string) (*AlgorithmProviderConfig, error) {$/;"	f
+GetByKey	internal/queue/scheduling_queue.go	/^func (h *Heap) GetByKey(key string) (interface{}, bool, error) {$/;"	f
+GetClient	factory/factory.go	/^func (c *configFactory) GetClient() clientset.Interface {$/;"	f
+GetClient	testutil.go	/^func (fc *FakeConfigurator) GetClient() clientset.Interface {$/;"	f
+GetContainerPorts	util/utils.go	/^func GetContainerPorts(pods ...*v1.Pod) []*v1.ContainerPort {$/;"	f
+GetEntry	util/backoff_utils.go	/^func (p *PodBackoff) GetEntry(podID ktypes.NamespacedName) *BackoffEntry {$/;"	f
+GetGeneration	cache/node_info.go	/^func (n *NodeInfo) GetGeneration() int64 {$/;"	f
+GetHardPodAffinitySymmetricWeight	factory/factory.go	/^func (c *configFactory) GetHardPodAffinitySymmetricWeight() int32 {$/;"	f
+GetHardPodAffinitySymmetricWeight	testutil.go	/^func (fc *FakeConfigurator) GetHardPodAffinitySymmetricWeight() int32 {$/;"	f
+GetInsufficientAmount	algorithm/predicates/error.go	/^func (e *InsufficientResourceError) GetInsufficientAmount() int64 {$/;"	f
+GetMetadata	algorithm/predicates/metadata.go	/^func (pfactory *PredicateMetadataFactory) GetMetadata(pod *v1.Pod, nodeNameToInfoMap map[string]*schedulercache.NodeInfo) algorithm.PredicateMetadata {$/;"	f
+GetNamespacesFromPodAffinityTerm	algorithm/priorities/util/topologies.go	/^func GetNamespacesFromPodAffinityTerm(pod *v1.Pod, podAffinityTerm *v1.PodAffinityTerm) sets.String {$/;"	f
+GetNodeCache	core/equivalence/eqivalence.go	/^func (c *Cache) GetNodeCache(name string) (nodeCache *NodeCache, exists bool) {$/;"	f
+GetNodeInfo	algorithm/predicates/predicates.go	/^func (c *CachedNodeInfo) GetNodeInfo(id string) (*v1.Node, error) {$/;"	f
+GetNodeInfo	algorithm/predicates/testing_helper.go	/^func (n FakeNodeInfo) GetNodeInfo(nodeName string) (*v1.Node, error) {$/;"	f
+GetNodeInfo	algorithm/predicates/testing_helper.go	/^func (nodes FakeNodeListInfo) GetNodeInfo(nodeName string) (*v1.Node, error) {$/;"	f
+GetNodeInfo	algorithm/priorities/interpod_affinity_test.go	/^func (nodes FakeNodeListInfo) GetNodeInfo(nodeName string) (*v1.Node, error) {$/;"	f
+GetNodeInfo	core/generic_scheduler_test.go	/^func (n FakeNodeInfo) GetNodeInfo(nodeName string) (*v1.Node, error) {$/;"	f
+GetNodeLister	factory/factory.go	/^func (c *configFactory) GetNodeLister() corelisters.NodeLister {$/;"	f
+GetNodeLister	testutil.go	/^func (fc *FakeConfigurator) GetNodeLister() corelisters.NodeLister {$/;"	f
+GetNonzeroRequests	algorithm/priorities/util/non_zero.go	/^func GetNonzeroRequests(requests *v1.ResourceList) (int64, int64) {$/;"	f
+GetPersistentVolumeClaimInfo	algorithm/predicates/predicates.go	/^func (c *CachedPersistentVolumeClaimInfo) GetPersistentVolumeClaimInfo(namespace string, name string) (*v1.PersistentVolumeClaim, error) {$/;"	f
+GetPersistentVolumeClaimInfo	algorithm/predicates/testing_helper.go	/^func (pvcs FakePersistentVolumeClaimInfo) GetPersistentVolumeClaimInfo(namespace string, pvcID string) (*v1.PersistentVolumeClaim, error) {$/;"	f
+GetPersistentVolumeInfo	algorithm/predicates/predicates.go	/^func (c *CachedPersistentVolumeInfo) GetPersistentVolumeInfo(pvID string) (*v1.PersistentVolume, error) {$/;"	f
+GetPersistentVolumeInfo	algorithm/predicates/testing_helper.go	/^func (pvs FakePersistentVolumeInfo) GetPersistentVolumeInfo(pvID string) (*v1.PersistentVolume, error) {$/;"	f
+GetPod	internal/cache/cache.go	/^func (cache *schedulerCache) GetPod(pod *v1.Pod) (*v1.Pod, error) {$/;"	f
+GetPod	internal/cache/fake/fake_cache.go	/^func (c *Cache) GetPod(pod *v1.Pod) (*v1.Pod, error) {$/;"	f
+GetPodAffinityTerms	algorithm/predicates/predicates.go	/^func GetPodAffinityTerms(podAffinity *v1.PodAffinity) (terms []v1.PodAffinityTerm) {$/;"	f
+GetPodAntiAffinityTerms	algorithm/predicates/predicates.go	/^func GetPodAntiAffinityTerms(podAntiAffinity *v1.PodAntiAffinity) (terms []v1.PodAffinityTerm) {$/;"	f
+GetPodControllers	algorithm/types.go	/^func (f EmptyControllerLister) GetPodControllers(pod *v1.Pod) (controllers []*v1.ReplicationController, err error) {$/;"	f
+GetPodControllers	testing/fake_lister.go	/^func (f FakeControllerLister) GetPodControllers(pod *v1.Pod) (controllers []*v1.ReplicationController, err error) {$/;"	f
+GetPodFullName	util/utils.go	/^func GetPodFullName(pod *v1.Pod) string {$/;"	f
+GetPodKey	cache/node_info.go	/^func GetPodKey(pod *v1.Pod) (string, error) {$/;"	f
+GetPodPriority	util/utils.go	/^func GetPodPriority(pod *v1.Pod) int32 {$/;"	f
+GetPodReplicaSets	algorithm/types.go	/^func (f EmptyReplicaSetLister) GetPodReplicaSets(pod *v1.Pod) (rss []*apps.ReplicaSet, err error) {$/;"	f
+GetPodReplicaSets	testing/fake_lister.go	/^func (f FakeReplicaSetLister) GetPodReplicaSets(pod *v1.Pod) (rss []*apps.ReplicaSet, err error) {$/;"	f
+GetPodServices	testing/fake_lister.go	/^func (f FakeServiceLister) GetPodServices(pod *v1.Pod) (services []*v1.Service, err error) {$/;"	f
+GetPodStatefulSets	algorithm/types.go	/^func (f EmptyStatefulSetLister) GetPodStatefulSets(pod *v1.Pod) (sss []*apps.StatefulSet, err error) {$/;"	f
+GetPodStatefulSets	testing/fake_lister.go	/^func (f FakeStatefulSetLister) GetPodStatefulSets(pod *v1.Pod) (sss []*apps.StatefulSet, err error) {$/;"	f
+GetPredicateMetadataProducer	factory/factory.go	/^func (c *configFactory) GetPredicateMetadataProducer() (algorithm.PredicateMetadataProducer, error) {$/;"	f
+GetPredicateMetadataProducer	testutil.go	/^func (fc *FakeConfigurator) GetPredicateMetadataProducer() (algorithm.PredicateMetadataProducer, error) {$/;"	f
+GetPredicates	factory/factory.go	/^func (c *configFactory) GetPredicates(predicateKeys sets.String) (map[string]algorithm.FitPredicate, error) {$/;"	f
+GetPredicates	testutil.go	/^func (fc *FakeConfigurator) GetPredicates(predicateKeys sets.String) (map[string]algorithm.FitPredicate, error) {$/;"	f
+GetPriorityFunctionConfigs	factory/factory.go	/^func (c *configFactory) GetPriorityFunctionConfigs(priorityKeys sets.String) ([]algorithm.PriorityConfig, error) {$/;"	f
+GetPriorityMetadataProducer	factory/factory.go	/^func (c *configFactory) GetPriorityMetadataProducer() (algorithm.PriorityMetadataProducer, error) {$/;"	f
+GetReason	algorithm/predicates/error.go	/^func (e *FailureReason) GetReason() string {$/;"	f
+GetReason	algorithm/predicates/error.go	/^func (e *InsufficientResourceError) GetReason() string {$/;"	f
+GetReason	algorithm/predicates/error.go	/^func (e *PredicateFailureError) GetReason() string {$/;"	f
+GetResourceRequest	algorithm/predicates/predicates.go	/^func GetResourceRequest(pod *v1.Pod) *schedulercache.Resource {$/;"	f
+GetScheduledPodLister	factory/factory.go	/^func (c *configFactory) GetScheduledPodLister() corelisters.PodLister {$/;"	f
+GetScheduledPodLister	testutil.go	/^func (fc *FakeConfigurator) GetScheduledPodLister() corelisters.PodLister {$/;"	f
+GetSchedulerName	factory/factory.go	/^func (c *configFactory) GetSchedulerName() string {$/;"	f
+GetStorageClassInfo	algorithm/predicates/predicates.go	/^func (c *CachedStorageClassInfo) GetStorageClassInfo(className string) (*storagev1.StorageClass, error) {$/;"	f
+GetStorageClassInfo	algorithm/predicates/testing_helper.go	/^func (classes FakeStorageClassInfo) GetStorageClassInfo(name string) (*storagev1.StorageClass, error) {$/;"	f
+GetUpdatedPod	factory/factory.go	/^func (p *podPreemptor) GetUpdatedPod(pod *v1.Pod) (*v1.Pod, error) {$/;"	f
+GetUpdatedPod	scheduler_test.go	/^func (fp fakePodPreemptor) GetUpdatedPod(pod *v1.Pod) (*v1.Pod, error) {$/;"	f
+GroupName	apis/config/register.go	/^const GroupName = "kubescheduler.config.k8s.io"$/;"	c
+GroupName	apis/config/v1alpha1/register.go	/^const GroupName = "kubescheduler.config.k8s.io"$/;"	c
+Groups	testing/util.go	/^	Groups = make(map[string]TestGroup)$/;"	v
+HTTPExtender	core/extender.go	/^type HTTPExtender struct {$/;"	t
+Heap	internal/queue/scheduling_queue.go	/^type Heap struct {$/;"	t
+HigherPriorityPod	util/utils.go	/^func HigherPriorityPod(pod1, pod2 interface{}) bool {$/;"	f
+HostNamePred	algorithm/predicates/predicates.go	/^	HostNamePred = "HostName"$/;"	c
+HostPortInfo	cache/host_ports.go	/^type HostPortInfo map[string]map[ProtocolPort]struct{}$/;"	t
+HostPriority	api/types.go	/^type HostPriority struct {$/;"	t
+HostPriority	api/v1/types.go	/^type HostPriority struct {$/;"	t
+HostPriorityList	api/types.go	/^type HostPriorityList []HostPriority$/;"	t
+HostPriorityList	api/v1/types.go	/^type HostPriorityList []HostPriority$/;"	t
+ImageLocalityPriorityMap	algorithm/priorities/image_locality.go	/^func ImageLocalityPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {$/;"	f
+ImageStateSummary	cache/node_info.go	/^type ImageStateSummary struct {$/;"	t
+ImageStates	cache/node_info.go	/^func (n *NodeInfo) ImageStates() map[string]*ImageStateSummary {$/;"	f
+Informer	factory/factory.go	/^func (i *podInformer) Informer() cache.SharedIndexInformer {$/;"	f
+InsertPredicateKeyToAlgoProvider	factory/plugins.go	/^func InsertPredicateKeyToAlgoProvider(providerName, key string) error {$/;"	f
+InsertPredicateKeyToAlgorithmProviderMap	factory/plugins.go	/^func InsertPredicateKeyToAlgorithmProviderMap(key string) {$/;"	f
+InsertPriorityKeyToAlgorithmProviderMap	factory/plugins.go	/^func InsertPriorityKeyToAlgorithmProviderMap(key string) {$/;"	f
+InsufficientResourceError	algorithm/predicates/error.go	/^type InsufficientResourceError struct {$/;"	t
+InterPodAffinity	algorithm/priorities/interpod_affinity.go	/^type InterPodAffinity struct {$/;"	t
+InterPodAffinityMatches	algorithm/predicates/predicates.go	/^func (c *PodAffinityChecker) InterPodAffinityMatches(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+InvalidateAllPredicatesOnNode	core/equivalence/eqivalence.go	/^func (c *Cache) InvalidateAllPredicatesOnNode(nodeName string) {$/;"	f
+InvalidateCachedPredicateItemForPodAdd	core/equivalence/eqivalence.go	/^func (c *Cache) InvalidateCachedPredicateItemForPodAdd(pod *v1.Pod, nodeName string) {$/;"	f
+InvalidatePredicates	core/equivalence/eqivalence.go	/^func (c *Cache) InvalidatePredicates(predicateKeys sets.String) {$/;"	f
+InvalidatePredicatesOnNode	core/equivalence/eqivalence.go	/^func (c *Cache) InvalidatePredicatesOnNode(nodeName string, predicateKeys sets.String) {$/;"	f
+IsAssumedPod	internal/cache/cache.go	/^func (cache *schedulerCache) IsAssumedPod(pod *v1.Pod) (bool, error) {$/;"	f
+IsAssumedPod	internal/cache/fake/fake_cache.go	/^func (c *Cache) IsAssumedPod(pod *v1.Pod) (bool, error) {$/;"	f
+IsBinder	core/extender.go	/^func (h *HTTPExtender) IsBinder() bool {$/;"	f
+IsBinder	core/extender_test.go	/^func (f *FakeExtender) IsBinder() bool {$/;"	f
+IsBinder	factory/factory_test.go	/^func (f *fakeExtender) IsBinder() bool {$/;"	f
+IsFitPredicateRegistered	factory/plugins.go	/^func IsFitPredicateRegistered(name string) bool {$/;"	f
+IsIgnorable	core/extender.go	/^func (h *HTTPExtender) IsIgnorable() bool {$/;"	f
+IsIgnorable	core/extender_test.go	/^func (f *FakeExtender) IsIgnorable() bool {$/;"	f
+IsIgnorable	factory/factory_test.go	/^func (f *fakeExtender) IsIgnorable() bool {$/;"	f
+IsInterested	core/extender.go	/^func (h *HTTPExtender) IsInterested(pod *v1.Pod) bool {$/;"	f
+IsInterested	core/extender_test.go	/^func (f *FakeExtender) IsInterested(pod *v1.Pod) bool {$/;"	f
+IsInterested	factory/factory_test.go	/^func (f *fakeExtender) IsInterested(pod *v1.Pod) bool {$/;"	f
+IsPriorityFunctionRegistered	factory/plugins.go	/^func IsPriorityFunctionRegistered(name string) bool {$/;"	f
+KeyFunc	internal/queue/scheduling_queue.go	/^type KeyFunc func(obj interface{}) (string, error)$/;"	t
+KubeMaxPDVols	algorithm/predicates/predicates.go	/^	KubeMaxPDVols = "KUBE_MAX_PD_VOLS"$/;"	c
+KubeSchedulerConfiguration	apis/config/types.go	/^type KubeSchedulerConfiguration struct {$/;"	t
+KubeSchedulerLeaderElectionConfiguration	apis/config/types.go	/^type KubeSchedulerLeaderElectionConfiguration struct {$/;"	t
+LabelPreference	api/types.go	/^type LabelPreference struct {$/;"	t
+LabelPreference	api/v1/types.go	/^type LabelPreference struct {$/;"	t
+LabelsPresence	api/types.go	/^type LabelsPresence struct {$/;"	t
+LabelsPresence	api/v1/types.go	/^type LabelsPresence struct {$/;"	t
+LeastRequestedPriorityMap	algorithm/priorities/least_requested.go	/^	LeastRequestedPriorityMap = leastResourcePriority.PriorityMap$/;"	v
+Len	algorithm/predicates/metadata_test.go	/^func (s sortablePods) Len() int      { return len(s) }$/;"	f
+Len	algorithm/predicates/metadata_test.go	/^func (s sortableServices) Len() int      { return len(s) }$/;"	f
+Len	api/types.go	/^func (h HostPriorityList) Len() int {$/;"	f
+Len	api/v1/types.go	/^func (h HostPriorityList) Len() int {$/;"	f
+Len	cache/host_ports.go	/^func (h HostPortInfo) Len() int {$/;"	f
+Len	factory/factory.go	/^func (ne *nodeEnumerator) Len() int {$/;"	f
+Len	internal/queue/scheduling_queue.go	/^func (h *heapData) Len() int { return len(h.queue) }$/;"	f
+Len	util/utils.go	/^func (l *SortableList) Len() int { return len(l.Items) }$/;"	f
+Less	algorithm/predicates/metadata_test.go	/^func (s sortablePods) Less(i, j int) bool {$/;"	f
+Less	algorithm/predicates/metadata_test.go	/^func (s sortableServices) Less(i, j int) bool {$/;"	f
+Less	api/types.go	/^func (h HostPriorityList) Less(i, j int) bool {$/;"	f
+Less	api/v1/types.go	/^func (h HostPriorityList) Less(i, j int) bool {$/;"	f
+Less	internal/queue/scheduling_queue.go	/^func (h *heapData) Less(i, j int) bool {$/;"	f
+Less	util/utils.go	/^func (l *SortableList) Less(i, j int) bool {$/;"	f
+LessFunc	internal/queue/scheduling_queue.go	/^type LessFunc func(interface{}, interface{}) bool$/;"	t
+LessFunc	util/utils.go	/^type LessFunc func(item1, item2 interface{}) bool$/;"	t
+List	algorithm/types.go	/^func (f EmptyControllerLister) List(labels.Selector) ([]*v1.ReplicationController, error) {$/;"	f
+List	factory/factory.go	/^func (l assignedPodLister) List(selector labels.Selector) ([]*v1.Pod, error) {$/;"	f
+List	factory/factory.go	/^func (l assignedPodNamespaceLister) List(selector labels.Selector) (ret []*v1.Pod, err error) {$/;"	f
+List	factory/factory.go	/^func (n *nodeLister) List() ([]*v1.Node, error) {$/;"	f
+List	internal/cache/cache.go	/^func (cache *schedulerCache) List(selector labels.Selector) ([]*v1.Pod, error) {$/;"	f
+List	internal/cache/fake/fake_cache.go	/^func (c *Cache) List(s labels.Selector) ([]*v1.Pod, error) { return nil, nil }$/;"	f
+List	internal/queue/scheduling_queue.go	/^func (h *Heap) List() []interface{} {$/;"	f
+List	scheduler_test.go	/^func (n *nodeLister) List() ([]*v1.Node, error) {$/;"	f
+List	testing/fake_lister.go	/^func (f FakeControllerLister) List(labels.Selector) ([]*v1.ReplicationController, error) {$/;"	f
+List	testing/fake_lister.go	/^func (f FakeNodeLister) List() ([]*v1.Node, error) {$/;"	f
+List	testing/fake_lister.go	/^func (f FakePDBLister) List(labels.Selector) ([]*policy.PodDisruptionBudget, error) {$/;"	f
+List	testing/fake_lister.go	/^func (f FakePersistentVolumeClaimLister) List(selector labels.Selector) (ret []*v1.PersistentVolumeClaim, err error) {$/;"	f
+List	testing/fake_lister.go	/^func (f FakePodLister) List(s labels.Selector) (selected []*v1.Pod, err error) {$/;"	f
+List	testing/fake_lister.go	/^func (f FakeServiceLister) List(labels.Selector) ([]*v1.Service, error) {$/;"	f
+List	testing/fake_lister.go	/^func (f fakePersistentVolumeClaimNamespaceLister) List(selector labels.Selector) (ret []*v1.PersistentVolumeClaim, err error) {$/;"	f
+ListAlgorithmProviders	factory/plugins.go	/^func ListAlgorithmProviders() string {$/;"	f
+ListRegisteredFitPredicates	factory/plugins.go	/^func ListRegisteredFitPredicates() []string {$/;"	f
+ListRegisteredPriorityFunctions	factory/plugins.go	/^func ListRegisteredPriorityFunctions() []string {$/;"	f
+Lister	factory/factory.go	/^func (i *podInformer) Lister() corelisters.PodLister {$/;"	f
+LoadNodeCache	core/equivalence/eqivalence.go	/^func (c *Cache) LoadNodeCache(node string) *NodeCache {$/;"	f
+MakeDefaultErrorFunc	factory/factory.go	/^func (c *configFactory) MakeDefaultErrorFunc(backoff *util.PodBackoff, podQueue internalqueue.SchedulingQueue) func(pod *v1.Pod, err error) {$/;"	f
+MakeDefaultErrorFunc	testutil.go	/^func (fc *FakeConfigurator) MakeDefaultErrorFunc(backoff *util.PodBackoff, podQueue internalqueue.SchedulingQueue) func(pod *v1.Pod, err error) {$/;"	f
+MatchInterPodAffinityPred	algorithm/predicates/predicates.go	/^	MatchInterPodAffinityPred = "MatchInterPodAffinity"$/;"	c
+MatchNodeSelectorPred	algorithm/predicates/predicates.go	/^	MatchNodeSelectorPred = "MatchNodeSelector"$/;"	c
+MaxAzureDiskVolumeCountPred	algorithm/predicates/predicates.go	/^	MaxAzureDiskVolumeCountPred = "MaxAzureDiskVolumeCount"$/;"	c
+MaxCSIVolumeCountPred	algorithm/predicates/predicates.go	/^	MaxCSIVolumeCountPred = "MaxCSIVolumeCountPred"$/;"	c
+MaxDuration	util/backoff_utils.go	/^func (p *PodBackoff) MaxDuration() time.Duration {$/;"	f
+MaxEBSVolumeCountPred	algorithm/predicates/predicates.go	/^	MaxEBSVolumeCountPred = "MaxEBSVolumeCount"$/;"	c
+MaxGCEPDVolumeCountPred	algorithm/predicates/predicates.go	/^	MaxGCEPDVolumeCountPred = "MaxGCEPDVolumeCount"$/;"	c
+MaxInt	api/types.go	/^	MaxInt = int(MaxUint >> 1)$/;"	c
+MaxPDVolumeCountChecker	algorithm/predicates/predicates.go	/^type MaxPDVolumeCountChecker struct {$/;"	t
+MaxPriority	api/types.go	/^	MaxPriority = 10$/;"	c
+MaxTotalPriority	api/types.go	/^	MaxTotalPriority = MaxInt$/;"	c
+MaxUint	api/types.go	/^	MaxUint = ^uint(0)$/;"	c
+MaxWeight	api/types.go	/^	MaxWeight = MaxInt \/ MaxPriority$/;"	c
+MemoryPressureCondition	cache/node_info.go	/^func (n *NodeInfo) MemoryPressureCondition() v1.ConditionStatus {$/;"	f
+MetaPod	api/types.go	/^type MetaPod struct {$/;"	t
+MetaPod	api/v1/types.go	/^type MetaPod struct {$/;"	t
+MetaVictims	api/types.go	/^type MetaVictims struct {$/;"	t
+MetaVictims	api/v1/types.go	/^type MetaVictims struct {$/;"	t
+MostRequestedPriorityMap	algorithm/priorities/most_requested.go	/^	MostRequestedPriorityMap = mostResourcePriority.PriorityMap$/;"	v
+MoveAllToActiveQueue	internal/queue/scheduling_queue.go	/^func (f *FIFO) MoveAllToActiveQueue() {}$/;"	f
+MoveAllToActiveQueue	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) MoveAllToActiveQueue() {$/;"	f
+Name	core/extender.go	/^func (h *HTTPExtender) Name() string {$/;"	f
+Name	core/extender_test.go	/^func (f *FakeExtender) Name() string {$/;"	f
+Name	factory/factory_test.go	/^func (f *fakeExtender) Name() string {$/;"	f
+New	internal/cache/cache.go	/^func New(ttl time.Duration, stop <-chan struct{}) Cache {$/;"	f
+New	internal/cache/debugger/debugger.go	/^func New($/;"	f
+New	scheduler.go	/^func New(client clientset.Interface,$/;"	f
+NewCSIMaxVolumeLimitPredicate	algorithm/predicates/csi_volume_predicate.go	/^func NewCSIMaxVolumeLimitPredicate($/;"	f
+NewCache	core/equivalence/eqivalence.go	/^func NewCache(predicates []string) *Cache {$/;"	f
+NewClass	core/equivalence/eqivalence.go	/^func NewClass(pod *v1.Pod) *Class {$/;"	f
+NewConfigFactory	factory/factory.go	/^func NewConfigFactory(args *ConfigFactoryArgs) Configurator {$/;"	f
+NewFIFO	internal/queue/scheduling_queue.go	/^func NewFIFO() *FIFO {$/;"	f
+NewFailureReason	algorithm/predicates/error.go	/^func NewFailureReason(msg string) *FailureReason {$/;"	f
+NewFakeVolumeBinder	volumebinder/volume_binder.go	/^func NewFakeVolumeBinder(config *persistentvolume.FakeVolumeBinderConfig) *VolumeBinder {$/;"	f
+NewFromConfig	scheduler.go	/^func NewFromConfig(config *factory.Config) *Scheduler {$/;"	f
+NewFromConfigurator	scheduler.go	/^func NewFromConfigurator(c factory.Configurator, modifiers ...func(c *factory.Config)) (*Scheduler, error) {$/;"	f
+NewFunctionShape	algorithm/priorities/requested_to_capacity_ratio.go	/^func NewFunctionShape(points []FunctionShapePoint) (FunctionShape, error) {$/;"	f
+NewGenericScheduler	core/generic_scheduler.go	/^func NewGenericScheduler($/;"	f
+NewHTTPExtender	core/extender.go	/^func NewHTTPExtender(config *schedulerapi.ExtenderConfig) (algorithm.SchedulerExtender, error) {$/;"	f
+NewInsufficientResourceError	algorithm/predicates/error.go	/^func NewInsufficientResourceError(resourceName v1.ResourceName, requested, used, capacity int64) *InsufficientResourceError {$/;"	f
+NewInterPodAffinityPriority	algorithm/priorities/interpod_affinity.go	/^func NewInterPodAffinityPriority($/;"	f
+NewMaxPDVolumeCountPredicate	algorithm/predicates/predicates.go	/^func NewMaxPDVolumeCountPredicate($/;"	f
+NewNodeInfo	cache/node_info.go	/^func NewNodeInfo(pods ...*v1.Pod) *NodeInfo {$/;"	f
+NewNodeLabelPredicate	algorithm/predicates/predicates.go	/^func NewNodeLabelPredicate(labels []string, presence bool) algorithm.FitPredicate {$/;"	f
+NewNodeLabelPriority	algorithm/priorities/node_label.go	/^func NewNodeLabelPriority(label string, presence bool) (algorithm.PriorityMapFunction, algorithm.PriorityReduceFunction) {$/;"	f
+NewPodAffinityPredicate	algorithm/predicates/predicates.go	/^func NewPodAffinityPredicate(info NodeInfo, podLister algorithm.PodLister) algorithm.FitPredicate {$/;"	f
+NewPodInformer	factory/factory.go	/^func NewPodInformer(client clientset.Interface, resyncPeriod time.Duration) coreinformers.PodInformer {$/;"	f
+NewPredicateMetadataFactory	algorithm/predicates/metadata.go	/^func NewPredicateMetadataFactory(podLister algorithm.PodLister) algorithm.PredicateMetadataProducer {$/;"	f
+NewPriorityMetadataFactory	algorithm/priorities/metadata.go	/^func NewPriorityMetadataFactory(serviceLister algorithm.ServiceLister, controllerLister algorithm.ControllerLister, replicaSetLister algorithm.ReplicaSetLister, statefulSetLister algorithm.StatefulSetLister) algorithm.PriorityMetadataProducer {$/;"	f
+NewPriorityQueue	internal/queue/scheduling_queue.go	/^func NewPriorityQueue() *PriorityQueue {$/;"	f
+NewProtocolPort	cache/host_ports.go	/^func NewProtocolPort(protocol string, port int32) *ProtocolPort {$/;"	f
+NewResource	cache/node_info.go	/^func NewResource(rl v1.ResourceList) *Resource {$/;"	f
+NewSchedulingQueue	internal/queue/scheduling_queue.go	/^func NewSchedulingQueue() SchedulingQueue {$/;"	f
+NewSelectorSpreadPriority	algorithm/priorities/selector_spreading.go	/^func NewSelectorSpreadPriority($/;"	f
+NewServiceAffinityPredicate	algorithm/predicates/predicates.go	/^func NewServiceAffinityPredicate(podLister algorithm.PodLister, serviceLister algorithm.ServiceLister, nodeInfo NodeInfo, labels []string) (algorithm.FitPredicate, PredicateMetadataProducer) {$/;"	f
+NewServiceAntiAffinityPriority	algorithm/priorities/selector_spreading.go	/^func NewServiceAntiAffinityPriority(podLister algorithm.PodLister, serviceLister algorithm.ServiceLister, label string) (algorithm.PriorityMapFunction, algorithm.PriorityReduceFunction) {$/;"	f
+NewTransientSchedulerInfo	cache/node_info.go	/^func NewTransientSchedulerInfo() *TransientSchedulerInfo {$/;"	f
+NewVolumeBinder	volumebinder/volume_binder.go	/^func NewVolumeBinder($/;"	f
+NewVolumeBindingPredicate	algorithm/predicates/predicates.go	/^func NewVolumeBindingPredicate(binder *volumebinder.VolumeBinder) algorithm.FitPredicate {$/;"	f
+NewVolumeZonePredicate	algorithm/predicates/predicates.go	/^func NewVolumeZonePredicate(pvInfo PersistentVolumeInfo, pvcInfo PersistentVolumeClaimInfo, classInfo StorageClassInfo) algorithm.FitPredicate {$/;"	f
+Next	internal/cache/node_tree.go	/^func (nt *NodeTree) Next() string {$/;"	f
+NoDiskConflict	algorithm/predicates/predicates.go	/^func NoDiskConflict(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+NoDiskConflictPred	algorithm/predicates/predicates.go	/^	NoDiskConflictPred = "NoDiskConflict"$/;"	c
+NoNodeAvailableMsg	core/generic_scheduler.go	/^	NoNodeAvailableMsg = "0\/%v nodes are available"$/;"	c
+NoVolumeZoneConflictPred	algorithm/predicates/predicates.go	/^	NoVolumeZoneConflictPred = "NoVolumeZoneConflict"$/;"	c
+Node	cache/node_info.go	/^func (n *NodeInfo) Node() *v1.Node {$/;"	f
+NodeCache	core/equivalence/eqivalence.go	/^type NodeCache struct {$/;"	t
+NodeFieldSelectorKeyNodeName	api/well_known_labels.go	/^	NodeFieldSelectorKeyNodeName = api.ObjectNameField$/;"	c
+NodeFieldSelectorKeys	algorithm/types.go	/^var NodeFieldSelectorKeys = map[string]func(*v1.Node) string{$/;"	v
+NodeInfo	algorithm/predicates/predicates.go	/^type NodeInfo interface {$/;"	t
+NodeInfo	cache/node_info.go	/^type NodeInfo struct {$/;"	t
+NodeLabelChecker	algorithm/predicates/predicates.go	/^type NodeLabelChecker struct {$/;"	t
+NodeLabelPrioritizer	algorithm/priorities/node_label.go	/^type NodeLabelPrioritizer struct {$/;"	t
+NodeLister	algorithm/types.go	/^type NodeLister interface {$/;"	t
+NodeTree	internal/cache/cache.go	/^func (cache *schedulerCache) NodeTree() *NodeTree {$/;"	f
+NodeTree	internal/cache/fake/fake_cache.go	/^func (c *Cache) NodeTree() *schedulerinternalcache.NodeTree { return nil }$/;"	f
+NodeTree	internal/cache/node_tree.go	/^type NodeTree struct {$/;"	t
+NodesHaveSameTopologyKey	algorithm/priorities/util/topologies.go	/^func (tps *Topologies) NodesHaveSameTopologyKey(nodeA, nodeB *v1.Node, topologyKey string) bool {$/;"	f
+NodesHaveSameTopologyKey	algorithm/priorities/util/topologies.go	/^func NodesHaveSameTopologyKey(nodeA, nodeB *v1.Node, topologyKey string) bool {$/;"	f
+NominatedNodeName	internal/queue/scheduling_queue.go	/^func NominatedNodeName(pod *v1.Pod) string {$/;"	f
+NonZeroRequest	cache/node_info.go	/^func (n *NodeInfo) NonZeroRequest() Resource {$/;"	f
+NormalizeReduce	algorithm/priorities/reduce.go	/^func NormalizeReduce(maxPriority int, reverse bool) algorithm.PriorityReduceFunction {$/;"	f
+Now	util/backoff_utils.go	/^func (realClock) Now() time.Time {$/;"	f
+Now	util/backoff_utils_test.go	/^func (f *fakeClock) Now() time.Time {$/;"	f
+OldestVersion	api/latest/latest.go	/^const OldestVersion = "v1"$/;"	c
+OperationLabel	metrics/metrics.go	/^	OperationLabel = "operation"$/;"	c
+Option	scheduler.go	/^type Option func(*schedulerOptions)$/;"	t
+Ordering	algorithm/predicates/predicates.go	/^func Ordering() []string {$/;"	f
+PDBLister	algorithm/types.go	/^type PDBLister interface {$/;"	t
+PIDPressureCondition	cache/node_info.go	/^func (n *NodeInfo) PIDPressureCondition() v1.ConditionStatus {$/;"	f
+PersistentVolumeClaimInfo	algorithm/predicates/predicates.go	/^type PersistentVolumeClaimInfo interface {$/;"	t
+PersistentVolumeClaims	testing/fake_lister.go	/^func (f FakePersistentVolumeClaimLister) PersistentVolumeClaims(namespace string) corelisters.PersistentVolumeClaimNamespaceLister {$/;"	f
+PersistentVolumeInfo	algorithm/predicates/predicates.go	/^type PersistentVolumeInfo interface {$/;"	t
+PluginFactoryArgs	factory/plugins.go	/^type PluginFactoryArgs struct {$/;"	t
+PodAffinityChecker	algorithm/predicates/predicates.go	/^type PodAffinityChecker struct {$/;"	t
+PodBackoff	util/backoff_utils.go	/^type PodBackoff struct {$/;"	t
+PodConditionUpdater	factory/factory.go	/^type PodConditionUpdater interface {$/;"	t
+PodFilter	internal/cache/interface.go	/^type PodFilter func(*v1.Pod) bool$/;"	t
+PodFitsHost	algorithm/predicates/predicates.go	/^func PodFitsHost(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+PodFitsHostPorts	algorithm/predicates/predicates.go	/^func PodFitsHostPorts(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+PodFitsHostPortsPred	algorithm/predicates/predicates.go	/^	PodFitsHostPortsPred = "PodFitsHostPorts"$/;"	c
+PodFitsResources	algorithm/predicates/predicates.go	/^func PodFitsResources(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+PodFitsResourcesPred	algorithm/predicates/predicates.go	/^	PodFitsResourcesPred = "PodFitsResources"$/;"	c
+PodLister	algorithm/types.go	/^type PodLister interface {$/;"	t
+PodMatchNodeSelector	algorithm/predicates/predicates.go	/^func PodMatchNodeSelector(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+PodMatchesTermsNamespaceAndSelector	algorithm/priorities/util/topologies.go	/^func PodMatchesTermsNamespaceAndSelector(pod *v1.Pod, namespaces sets.String, selector labels.Selector) bool {$/;"	f
+PodPreemptor	factory/factory.go	/^type PodPreemptor interface {$/;"	t
+PodPriorityEnabled	util/utils.go	/^func PodPriorityEnabled() bool {$/;"	f
+PodScheduleErrors	metrics/metrics.go	/^	PodScheduleErrors = scheduleAttempts.With(prometheus.Labels{"result": "error"})$/;"	v
+PodScheduleFailures	metrics/metrics.go	/^	PodScheduleFailures = scheduleAttempts.With(prometheus.Labels{"result": "unschedulable"})$/;"	v
+PodScheduleSuccesses	metrics/metrics.go	/^	PodScheduleSuccesses = scheduleAttempts.With(prometheus.Labels{"result": "scheduled"})$/;"	v
+PodToleratesNodeNoExecuteTaints	algorithm/predicates/predicates.go	/^func PodToleratesNodeNoExecuteTaints(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+PodToleratesNodeNoExecuteTaintsPred	algorithm/predicates/predicates.go	/^	PodToleratesNodeNoExecuteTaintsPred = "PodToleratesNodeNoExecuteTaints"$/;"	c
+PodToleratesNodeTaints	algorithm/predicates/predicates.go	/^func PodToleratesNodeTaints(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+PodToleratesNodeTaintsPred	algorithm/predicates/predicates.go	/^	PodToleratesNodeTaintsPred = "PodToleratesNodeTaints"$/;"	c
+Pods	cache/node_info.go	/^func (n *NodeInfo) Pods() []*v1.Pod {$/;"	f
+Pods	factory/factory.go	/^func (l assignedPodLister) Pods(namespace string) corelisters.PodNamespaceLister {$/;"	f
+PodsWithAffinity	cache/node_info.go	/^func (n *NodeInfo) PodsWithAffinity() []*v1.Pod {$/;"	f
+Policy	api/types.go	/^type Policy struct {$/;"	t
+Policy	api/v1/types.go	/^type Policy struct {$/;"	t
+Pop	internal/queue/scheduling_queue.go	/^func (f *FIFO) Pop() (*v1.Pod, error) {$/;"	f
+Pop	internal/queue/scheduling_queue.go	/^func (h *Heap) Pop() (interface{}, error) {$/;"	f
+Pop	internal/queue/scheduling_queue.go	/^func (h *heapData) Pop() interface{} {$/;"	f
+Pop	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) Pop() (*v1.Pod, error) {$/;"	f
+PredicateArgument	api/types.go	/^type PredicateArgument struct {$/;"	t
+PredicateArgument	api/v1/types.go	/^type PredicateArgument struct {$/;"	t
+PredicateEvaluation	metrics/metrics.go	/^	PredicateEvaluation = "predicate_evaluation"$/;"	c
+PredicateFailureError	algorithm/predicates/error.go	/^type PredicateFailureError struct {$/;"	t
+PredicateFailureReason	algorithm/types.go	/^type PredicateFailureReason interface {$/;"	t
+PredicateMetadata	algorithm/predicates/predicates_test.go	/^func PredicateMetadata(p *v1.Pod, nodeInfo map[string]*schedulercache.NodeInfo) algorithm.PredicateMetadata {$/;"	f
+PredicateMetadata	algorithm/types.go	/^type PredicateMetadata interface {$/;"	t
+PredicateMetadata	core/generic_scheduler_test.go	/^func PredicateMetadata(p *v1.Pod, nodeInfo map[string]*schedulercache.NodeInfo) algorithm.PredicateMetadata {$/;"	f
+PredicateMetadataFactory	algorithm/predicates/metadata.go	/^type PredicateMetadataFactory struct {$/;"	t
+PredicateMetadataProducer	algorithm/predicates/metadata.go	/^type PredicateMetadataProducer func(pm *predicateMetadata)$/;"	t
+PredicateMetadataProducer	algorithm/types.go	/^type PredicateMetadataProducer func(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo) PredicateMetadata$/;"	t
+PredicateMetadataProducerFactory	factory/plugins.go	/^type PredicateMetadataProducerFactory func(PluginFactoryArgs) algorithm.PredicateMetadataProducer$/;"	t
+PredicateOne	factory/factory_test.go	/^func PredicateOne(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+PredicateOne	scheduler_test.go	/^func PredicateOne(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+PredicatePolicy	api/types.go	/^type PredicatePolicy struct {$/;"	t
+PredicatePolicy	api/v1/types.go	/^type PredicatePolicy struct {$/;"	t
+PredicateTwo	factory/factory_test.go	/^func PredicateTwo(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+Predicates	core/generic_scheduler.go	/^func (g *genericScheduler) Predicates() map[string]algorithm.FitPredicate {$/;"	f
+Predicates	scheduler_test.go	/^func (es mockScheduler) Predicates() map[string]algorithm.FitPredicate {$/;"	f
+Preempt	core/generic_scheduler.go	/^func (g *genericScheduler) Preempt(pod *v1.Pod, nodeLister algorithm.NodeLister, scheduleErr error) (*v1.Node, []*v1.Pod, []*v1.Pod, error) {$/;"	f
+Preempt	scheduler_test.go	/^func (es mockScheduler) Preempt(pod *v1.Pod, nodeLister algorithm.NodeLister, scheduleErr error) (*v1.Node, []*v1.Pod, []*v1.Pod, error) {$/;"	f
+PreemptionAttempts	metrics/metrics.go	/^	PreemptionAttempts = prometheus.NewCounter($/;"	v
+PreemptionEvaluation	metrics/metrics.go	/^	PreemptionEvaluation = "preemption_evaluation"$/;"	c
+PreemptionVictims	metrics/metrics.go	/^	PreemptionVictims = prometheus.NewGauge($/;"	v
+Prioritize	core/extender.go	/^func (h *HTTPExtender) Prioritize(pod *v1.Pod, nodes []*v1.Node) (*schedulerapi.HostPriorityList, int, error) {$/;"	f
+Prioritize	core/extender_test.go	/^func (f *FakeExtender) Prioritize(pod *v1.Pod, nodes []*v1.Node) (*schedulerapi.HostPriorityList, int, error) {$/;"	f
+Prioritize	factory/factory_test.go	/^func (f *fakeExtender) Prioritize($/;"	f
+PrioritizeNodes	core/generic_scheduler.go	/^func PrioritizeNodes($/;"	f
+Prioritizers	core/generic_scheduler.go	/^func (g *genericScheduler) Prioritizers() []algorithm.PriorityConfig {$/;"	f
+Prioritizers	scheduler_test.go	/^func (es mockScheduler) Prioritizers() []algorithm.PriorityConfig {$/;"	f
+PriorityArgument	api/types.go	/^type PriorityArgument struct {$/;"	t
+PriorityArgument	api/v1/types.go	/^type PriorityArgument struct {$/;"	t
+PriorityConfig	algorithm/types.go	/^type PriorityConfig struct {$/;"	t
+PriorityConfigFactory	factory/plugins.go	/^type PriorityConfigFactory struct {$/;"	t
+PriorityEvaluation	metrics/metrics.go	/^	PriorityEvaluation = "priority_evaluation"$/;"	c
+PriorityFunction	algorithm/types.go	/^type PriorityFunction func(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo, nodes []*v1.Node) (schedulerapi.HostPriorityList, error)$/;"	t
+PriorityFunctionFactory	factory/plugins.go	/^type PriorityFunctionFactory func(PluginFactoryArgs) algorithm.PriorityFunction$/;"	t
+PriorityFunctionFactory2	factory/plugins.go	/^type PriorityFunctionFactory2 func(PluginFactoryArgs) (algorithm.PriorityMapFunction, algorithm.PriorityReduceFunction)$/;"	t
+PriorityMap	algorithm/priorities/resource_allocation.go	/^func (r *ResourceAllocationPriority) PriorityMap($/;"	f
+PriorityMapFunction	algorithm/types.go	/^type PriorityMapFunction func(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error)$/;"	t
+PriorityMetadata	algorithm/priorities/metadata.go	/^func (pmf *PriorityMetadataFactory) PriorityMetadata(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo) interface{} {$/;"	f
+PriorityMetadataFactory	algorithm/priorities/metadata.go	/^type PriorityMetadataFactory struct {$/;"	t
+PriorityMetadataProducer	algorithm/types.go	/^type PriorityMetadataProducer func(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo) interface{}$/;"	t
+PriorityMetadataProducerFactory	factory/plugins.go	/^type PriorityMetadataProducerFactory func(PluginFactoryArgs) algorithm.PriorityMetadataProducer$/;"	t
+PriorityOne	factory/factory_test.go	/^func PriorityOne(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo, nodes []*v1.Node) (schedulerapi.HostPriorityList, error) {$/;"	f
+PriorityOne	scheduler_test.go	/^func PriorityOne(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo, nodes []*v1.Node) (api.HostPriorityList, error) {$/;"	f
+PriorityPolicy	api/types.go	/^type PriorityPolicy struct {$/;"	t
+PriorityPolicy	api/v1/types.go	/^type PriorityPolicy struct {$/;"	t
+PriorityQueue	internal/queue/scheduling_queue.go	/^type PriorityQueue struct {$/;"	t
+PriorityReduceFunction	algorithm/types.go	/^type PriorityReduceFunction func(pod *v1.Pod, meta interface{}, nodeNameToInfo map[string]*schedulercache.NodeInfo, result schedulerapi.HostPriorityList) error$/;"	t
+PriorityTwo	factory/factory_test.go	/^func PriorityTwo(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo, nodes []*v1.Node) (schedulerapi.HostPriorityList, error) {$/;"	f
+ProcessPreemption	core/extender.go	/^func (h *HTTPExtender) ProcessPreemption($/;"	f
+ProcessPreemption	core/extender_test.go	/^func (f *FakeExtender) ProcessPreemption($/;"	f
+ProcessPreemption	factory/factory_test.go	/^func (f *fakeExtender) ProcessPreemption($/;"	f
+ProtocolPort	cache/host_ports.go	/^type ProtocolPort struct {$/;"	t
+Push	internal/queue/scheduling_queue.go	/^func (h *heapData) Push(kv interface{}) {$/;"	f
+Register	metrics/metrics.go	/^func Register() {$/;"	f
+RegisterAlgorithmProvider	factory/plugins.go	/^func RegisterAlgorithmProvider(name string, predicateKeys, priorityKeys sets.String) string {$/;"	f
+RegisterConversions	apis/config/v1alpha1/zz_generated.conversion.go	/^func RegisterConversions(s *runtime.Scheme) error {$/;"	f
+RegisterCustomFitPredicate	factory/plugins.go	/^func RegisterCustomFitPredicate(policy schedulerapi.PredicatePolicy) string {$/;"	f
+RegisterCustomPriorityFunction	factory/plugins.go	/^func RegisterCustomPriorityFunction(policy schedulerapi.PriorityPolicy) string {$/;"	f
+RegisterDefaults	apis/config/v1alpha1/zz_generated.defaults.go	/^func RegisterDefaults(scheme *runtime.Scheme) error {$/;"	f
+RegisterFitPredicate	factory/plugins.go	/^func RegisterFitPredicate(name string, predicate algorithm.FitPredicate) string {$/;"	f
+RegisterFitPredicateFactory	factory/plugins.go	/^func RegisterFitPredicateFactory(name string, predicateFactory FitPredicateFactory) string {$/;"	f
+RegisterMandatoryFitPredicate	factory/plugins.go	/^func RegisterMandatoryFitPredicate(name string, predicate algorithm.FitPredicate) string {$/;"	f
+RegisterPredicateMetadataProducer	algorithm/predicates/metadata.go	/^func RegisterPredicateMetadataProducer(predicateName string, precomp PredicateMetadataProducer) {$/;"	f
+RegisterPredicateMetadataProducerFactory	factory/plugins.go	/^func RegisterPredicateMetadataProducerFactory(factory PredicateMetadataProducerFactory) {$/;"	f
+RegisterPredicateMetadataProducerWithExtendedResourceOptions	algorithm/predicates/metadata.go	/^func RegisterPredicateMetadataProducerWithExtendedResourceOptions(ignoredExtendedResources sets.String) {$/;"	f
+RegisterPriorityConfigFactory	factory/plugins.go	/^func RegisterPriorityConfigFactory(name string, pcf PriorityConfigFactory) string {$/;"	f
+RegisterPriorityFunction	factory/plugins.go	/^func RegisterPriorityFunction(name string, function algorithm.PriorityFunction, weight int) string {$/;"	f
+RegisterPriorityFunction2	factory/plugins.go	/^func RegisterPriorityFunction2($/;"	f
+RegisterPriorityMetadataProducerFactory	factory/plugins.go	/^func RegisterPriorityMetadataProducerFactory(factory PriorityMetadataProducerFactory) {$/;"	f
+Remove	cache/host_ports.go	/^func (h HostPortInfo) Remove(ip, protocol string, port int32) {$/;"	f
+RemoveFitPredicate	factory/plugins.go	/^func RemoveFitPredicate(name string) {$/;"	f
+RemoveNode	cache/node_info.go	/^func (n *NodeInfo) RemoveNode(node *v1.Node) error {$/;"	f
+RemoveNode	internal/cache/cache.go	/^func (cache *schedulerCache) RemoveNode(node *v1.Node) error {$/;"	f
+RemoveNode	internal/cache/fake/fake_cache.go	/^func (c *Cache) RemoveNode(node *v1.Node) error { return nil }$/;"	f
+RemoveNode	internal/cache/node_tree.go	/^func (nt *NodeTree) RemoveNode(n *v1.Node) error {$/;"	f
+RemoveNominatedNodeName	factory/factory.go	/^func (p *podPreemptor) RemoveNominatedNodeName(pod *v1.Pod) error {$/;"	f
+RemoveNominatedNodeName	scheduler_test.go	/^func (fp fakePodPreemptor) RemoveNominatedNodeName(pod *v1.Pod) error {$/;"	f
+RemovePod	algorithm/predicates/metadata.go	/^func (meta *predicateMetadata) RemovePod(deletedPod *v1.Pod) error {$/;"	f
+RemovePod	cache/node_info.go	/^func (n *NodeInfo) RemovePod(pod *v1.Pod) error {$/;"	f
+RemovePod	internal/cache/cache.go	/^func (cache *schedulerCache) RemovePod(pod *v1.Pod) error {$/;"	f
+RemovePod	internal/cache/fake/fake_cache.go	/^func (c *Cache) RemovePod(pod *v1.Pod) error { return nil }$/;"	f
+RemovePredicateKeyFromAlgoProvider	factory/plugins.go	/^func RemovePredicateKeyFromAlgoProvider(providerName, key string) error {$/;"	f
+RemovePredicateKeyFromAlgorithmProviderMap	factory/plugins.go	/^func RemovePredicateKeyFromAlgorithmProviderMap(key string) {$/;"	f
+ReplicaSetLister	algorithm/types.go	/^type ReplicaSetLister interface {$/;"	t
+RequestedResource	cache/node_info.go	/^func (n *NodeInfo) RequestedResource() Resource {$/;"	f
+RequestedToCapacityRatioArguments	api/types.go	/^type RequestedToCapacityRatioArguments struct {$/;"	t
+RequestedToCapacityRatioArguments	api/v1/types.go	/^type RequestedToCapacityRatioArguments struct {$/;"	t
+RequestedToCapacityRatioResourceAllocationPriority	algorithm/priorities/requested_to_capacity_ratio.go	/^func RequestedToCapacityRatioResourceAllocationPriority(scoringFunctionShape FunctionShape) *ResourceAllocationPriority {$/;"	f
+RequestedToCapacityRatioResourceAllocationPriorityDefault	algorithm/priorities/requested_to_capacity_ratio.go	/^func RequestedToCapacityRatioResourceAllocationPriorityDefault() *ResourceAllocationPriority {$/;"	f
+Reset	metrics/metrics.go	/^func Reset() {$/;"	f
+ResetTransientSchedulerInfo	cache/node_info.go	/^func (transientSchedInfo *TransientSchedulerInfo) ResetTransientSchedulerInfo() {$/;"	f
+Resource	cache/node_info.go	/^type Resource struct {$/;"	t
+ResourceAllocationPriority	algorithm/priorities/resource_allocation.go	/^type ResourceAllocationPriority struct {$/;"	t
+ResourceLimitsPriorityMap	algorithm/priorities/resource_limits.go	/^func ResourceLimitsPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {$/;"	f
+ResourceList	cache/node_info.go	/^func (r *Resource) ResourceList() v1.ResourceList {$/;"	f
+ResourcePath	testing/util.go	/^func (g TestGroup) ResourcePath(resource, namespace, name string) string {$/;"	f
+ResourcePathWithPrefix	testing/util.go	/^func (g TestGroup) ResourcePathWithPrefix(prefix, resource, namespace, name string) string {$/;"	f
+Run	scheduler.go	/^func (sched *Scheduler) Run() {$/;"	f
+RunPredicate	core/equivalence/eqivalence.go	/^func (n *NodeCache) RunPredicate($/;"	f
+Schedule	core/generic_scheduler.go	/^func (g *genericScheduler) Schedule(pod *v1.Pod, nodeLister algorithm.NodeLister) (string, error) {$/;"	f
+Schedule	scheduler_test.go	/^func (es mockScheduler) Schedule(pod *v1.Pod, ml algorithm.NodeLister) (string, error) {$/;"	f
+ScheduleAlgorithm	algorithm/scheduler_interface.go	/^type ScheduleAlgorithm interface {$/;"	t
+Scheduler	scheduler.go	/^type Scheduler struct {$/;"	t
+SchedulerAlgorithmSource	apis/config/types.go	/^type SchedulerAlgorithmSource struct {$/;"	t
+SchedulerDefaultLockObjectName	apis/config/types.go	/^	SchedulerDefaultLockObjectName = "kube-scheduler"$/;"	c
+SchedulerDefaultLockObjectNamespace	apis/config/types.go	/^	SchedulerDefaultLockObjectNamespace string = metav1.NamespaceSystem$/;"	c
+SchedulerDefaultProviderName	apis/config/types.go	/^	SchedulerDefaultProviderName = "DefaultProvider"$/;"	c
+SchedulerExtender	algorithm/scheduler_interface.go	/^type SchedulerExtender interface {$/;"	t
+SchedulerPolicyConfigMapKey	apis/config/types.go	/^	SchedulerPolicyConfigMapKey = "policy.cfg"$/;"	c
+SchedulerPolicyConfigMapSource	apis/config/types.go	/^type SchedulerPolicyConfigMapSource struct {$/;"	t
+SchedulerPolicyFileSource	apis/config/types.go	/^type SchedulerPolicyFileSource struct {$/;"	t
+SchedulerPolicySource	apis/config/types.go	/^type SchedulerPolicySource struct {$/;"	t
+SchedulerSubsystem	metrics/metrics.go	/^	SchedulerSubsystem = "scheduler"$/;"	c
+SchedulingAlgorithmLatency	metrics/metrics.go	/^	SchedulingAlgorithmLatency = prometheus.NewHistogram($/;"	v
+SchedulingAlgorithmPredicateEvaluationDuration	metrics/metrics.go	/^	SchedulingAlgorithmPredicateEvaluationDuration = prometheus.NewHistogram($/;"	v
+SchedulingAlgorithmPremptionEvaluationDuration	metrics/metrics.go	/^	SchedulingAlgorithmPremptionEvaluationDuration = prometheus.NewHistogram($/;"	v
+SchedulingAlgorithmPriorityEvaluationDuration	metrics/metrics.go	/^	SchedulingAlgorithmPriorityEvaluationDuration = prometheus.NewHistogram($/;"	v
+SchedulingLatency	metrics/metrics.go	/^	SchedulingLatency = prometheus.NewSummaryVec($/;"	v
+SchedulingLatencyName	metrics/metrics.go	/^	SchedulingLatencyName = "scheduling_latency_seconds"$/;"	c
+SchedulingQueue	internal/queue/scheduling_queue.go	/^type SchedulingQueue interface {$/;"	t
+Scheme	api/register.go	/^var Scheme = runtime.NewScheme()$/;"	v
+Scheme	apis/config/scheme/scheme.go	/^	Scheme = runtime.NewScheme()$/;"	v
+SchemeBuilder	api/register.go	/^	SchemeBuilder = runtime.NewSchemeBuilder(addKnownTypes)$/;"	v
+SchemeBuilder	api/v1/register.go	/^	SchemeBuilder      runtime.SchemeBuilder$/;"	v
+SchemeBuilder	apis/config/register.go	/^	SchemeBuilder = runtime.NewSchemeBuilder(addKnownTypes)$/;"	v
+SchemeGroupVersion	api/register.go	/^var SchemeGroupVersion = schema.GroupVersion{Group: "", Version: runtime.APIVersionInternal}$/;"	v
+SchemeGroupVersion	api/v1/register.go	/^var SchemeGroupVersion = schema.GroupVersion{Group: "", Version: "v1"}$/;"	v
+SchemeGroupVersion	apis/config/register.go	/^var SchemeGroupVersion = schema.GroupVersion{Group: GroupName, Version: runtime.APIVersionInternal}$/;"	v
+SchemeGroupVersion	apis/config/v1alpha1/register.go	/^var SchemeGroupVersion = schema.GroupVersion{Group: GroupName, Version: "v1alpha1"}$/;"	v
+SelectorSpread	algorithm/priorities/selector_spreading.go	/^type SelectorSpread struct {$/;"	t
+SelfLink	testing/util.go	/^func (g TestGroup) SelfLink(resource, name string) string {$/;"	f
+ServiceAffinity	algorithm/predicates/predicates.go	/^type ServiceAffinity struct {$/;"	t
+ServiceAffinity	api/types.go	/^type ServiceAffinity struct {$/;"	t
+ServiceAffinity	api/v1/types.go	/^type ServiceAffinity struct {$/;"	t
+ServiceAntiAffinity	algorithm/priorities/selector_spreading.go	/^type ServiceAntiAffinity struct {$/;"	t
+ServiceAntiAffinity	api/types.go	/^type ServiceAntiAffinity struct {$/;"	t
+ServiceAntiAffinity	api/v1/types.go	/^type ServiceAntiAffinity struct {$/;"	t
+ServiceLister	algorithm/types.go	/^type ServiceLister interface {$/;"	t
+SetAllocatableResource	cache/node_info.go	/^func (n *NodeInfo) SetAllocatableResource(allocatableResource *Resource) {$/;"	f
+SetDefaults_KubeSchedulerConfiguration	apis/config/v1alpha1/defaults.go	/^func SetDefaults_KubeSchedulerConfiguration(obj *kubescedulerconfigv1alpha1.KubeSchedulerConfiguration) {$/;"	f
+SetGeneration	cache/node_info.go	/^func (n *NodeInfo) SetGeneration(newGeneration int64) {$/;"	f
+SetImageStates	cache/node_info.go	/^func (n *NodeInfo) SetImageStates(newImageStates map[string]*ImageStateSummary) {$/;"	f
+SetMaxResource	cache/node_info.go	/^func (r *Resource) SetMaxResource(rl v1.ResourceList) {$/;"	f
+SetNode	cache/node_info.go	/^func (n *NodeInfo) SetNode(node *v1.Node) error {$/;"	f
+SetNominatedNodeName	factory/factory.go	/^func (p *podPreemptor) SetNominatedNodeName(pod *v1.Pod, nominatedNodeName string) error {$/;"	f
+SetNominatedNodeName	scheduler_test.go	/^func (fp fakePodPreemptor) SetNominatedNodeName(pod *v1.Pod, nomNodeName string) error {$/;"	f
+SetNonZeroRequest	cache/node_info.go	/^func (n *NodeInfo) SetNonZeroRequest(newResource *Resource) {$/;"	f
+SetObjectDefaults_KubeSchedulerConfiguration	apis/config/v1alpha1/zz_generated.defaults.go	/^func SetObjectDefaults_KubeSchedulerConfiguration(in *v1alpha1.KubeSchedulerConfiguration) {$/;"	f
+SetPods	cache/node_info.go	/^func (n *NodeInfo) SetPods(pods []*v1.Pod) {$/;"	f
+SetPredicatesOrdering	algorithm/predicates/predicates.go	/^func SetPredicatesOrdering(names []string) {$/;"	f
+SetRequestedResource	cache/node_info.go	/^func (n *NodeInfo) SetRequestedResource(newResource *Resource) {$/;"	f
+SetScalar	cache/node_info.go	/^func (r *Resource) SetScalar(name v1.ResourceName, quantity int64) {$/;"	f
+SetTaints	cache/node_info.go	/^func (n *NodeInfo) SetTaints(newTaints []v1.Taint) {$/;"	f
+SetUsedPorts	cache/node_info.go	/^func (n *NodeInfo) SetUsedPorts(newUsedPorts HostPortInfo) {$/;"	f
+ShallowCopy	algorithm/predicates/metadata.go	/^func (meta *predicateMetadata) ShallowCopy() algorithm.PredicateMetadata {$/;"	f
+SinceInMicroseconds	metrics/metrics.go	/^func SinceInMicroseconds(start time.Time) float64 {$/;"	f
+SinceInSeconds	metrics/metrics.go	/^func SinceInSeconds(start time.Time) float64 {$/;"	f
+Snapshot	core/equivalence/eqivalence.go	/^func (c *Cache) Snapshot() {$/;"	f
+Snapshot	internal/cache/cache.go	/^func (cache *schedulerCache) Snapshot() *Snapshot {$/;"	f
+Snapshot	internal/cache/fake/fake_cache.go	/^func (c *Cache) Snapshot() *schedulerinternalcache.Snapshot {$/;"	f
+Snapshot	internal/cache/interface.go	/^type Snapshot struct {$/;"	t
+Sort	util/utils.go	/^func (l *SortableList) Sort() {$/;"	f
+SortableList	util/utils.go	/^type SortableList struct {$/;"	t
+StatefulSetLister	algorithm/types.go	/^type StatefulSetLister interface {$/;"	t
+StorageClassInfo	algorithm/predicates/predicates.go	/^type StorageClassInfo interface {$/;"	t
+String	cache/node_info.go	/^func (n *NodeInfo) String() string {$/;"	f
+SubResourcePath	testing/util.go	/^func (g TestGroup) SubResourcePath(resource, namespace, name, sub string) string {$/;"	f
+SupportsPreemption	core/extender.go	/^func (h *HTTPExtender) SupportsPreemption() bool {$/;"	f
+SupportsPreemption	core/extender_test.go	/^func (f *FakeExtender) SupportsPreemption() bool {$/;"	f
+SupportsPreemption	factory/factory_test.go	/^func (f *fakeExtender) SupportsPreemption() bool {$/;"	f
+Swap	algorithm/predicates/metadata_test.go	/^func (s sortablePods) Swap(i, j int) { s[i], s[j] = s[j], s[i] }$/;"	f
+Swap	algorithm/predicates/metadata_test.go	/^func (s sortableServices) Swap(i, j int) { s[i], s[j] = s[j], s[i] }$/;"	f
+Swap	api/types.go	/^func (h HostPriorityList) Swap(i, j int) {$/;"	f
+Swap	api/v1/types.go	/^func (h HostPriorityList) Swap(i, j int) {$/;"	f
+Swap	internal/queue/scheduling_queue.go	/^func (h *heapData) Swap(i, j int) {$/;"	f
+Swap	util/utils.go	/^func (l *SortableList) Swap(i, j int) {$/;"	f
+TaintExternalCloudProvider	api/well_known_labels.go	/^	TaintExternalCloudProvider = "node.cloudprovider.kubernetes.io\/uninitialized"$/;"	c
+TaintNodeDiskPressure	api/well_known_labels.go	/^	TaintNodeDiskPressure = "node.kubernetes.io\/disk-pressure"$/;"	c
+TaintNodeMemoryPressure	api/well_known_labels.go	/^	TaintNodeMemoryPressure = "node.kubernetes.io\/memory-pressure"$/;"	c
+TaintNodeNetworkUnavailable	api/well_known_labels.go	/^	TaintNodeNetworkUnavailable = "node.kubernetes.io\/network-unavailable"$/;"	c
+TaintNodeNotReady	api/well_known_labels.go	/^	TaintNodeNotReady = "node.kubernetes.io\/not-ready"$/;"	c
+TaintNodeOutOfDisk	api/well_known_labels.go	/^	TaintNodeOutOfDisk = "node.kubernetes.io\/out-of-disk"$/;"	c
+TaintNodePIDPressure	api/well_known_labels.go	/^	TaintNodePIDPressure = "node.kubernetes.io\/pid-pressure"$/;"	c
+TaintNodeShutdown	api/well_known_labels.go	/^	TaintNodeShutdown = "node.cloudprovider.kubernetes.io\/shutdown"$/;"	c
+TaintNodeUnreachable	api/well_known_labels.go	/^	TaintNodeUnreachable = "node.kubernetes.io\/unreachable"$/;"	c
+TaintNodeUnschedulable	api/well_known_labels.go	/^	TaintNodeUnschedulable = "node.kubernetes.io\/unschedulable"$/;"	c
+Taints	cache/node_info.go	/^func (n *NodeInfo) Taints() ([]v1.Taint, error) {$/;"	f
+Test	testing/util.go	/^	Test TestGroup$/;"	v
+TestAWSDiskConflicts	algorithm/predicates/predicates_test.go	/^func TestAWSDiskConflicts(t *testing.T) {$/;"	f
+TestAddPodAfterExpiration	internal/cache/cache_test.go	/^func TestAddPodAfterExpiration(t *testing.T) {$/;"	f
+TestAddPodWillConfirm	internal/cache/cache_test.go	/^func TestAddPodWillConfirm(t *testing.T) {$/;"	f
+TestAddPodWillReplaceAssumed	internal/cache/cache_test.go	/^func TestAddPodWillReplaceAssumed(t *testing.T) {$/;"	f
+TestAlgorithmNameValidation	factory/plugins_test.go	/^func TestAlgorithmNameValidation(t *testing.T) {$/;"	f
+TestAlgorithmProviders	algorithmprovider/plugins_test.go	/^func TestAlgorithmProviders(t *testing.T) {$/;"	f
+TestApplyFeatureGates	algorithmprovider/plugins_test.go	/^func TestApplyFeatureGates(t *testing.T) {$/;"	f
+TestAssumePodScheduled	internal/cache/cache_test.go	/^func TestAssumePodScheduled(t *testing.T) {$/;"	f
+TestBackoff	util/backoff_utils_test.go	/^func TestBackoff(t *testing.T) {$/;"	f
+TestBalancedResourceAllocation	algorithm/priorities/balanced_resource_allocation_test.go	/^func TestBalancedResourceAllocation(t *testing.T) {$/;"	f
+TestBind	factory/factory_test.go	/^func TestBind(t *testing.T) {$/;"	f
+TestBrokenLinearFunction	algorithm/priorities/requested_to_capacity_ratio_test.go	/^func TestBrokenLinearFunction(t *testing.T) {$/;"	f
+TestBuildScoringFunctionShapeFromRequestedToCapacityRatioArguments	factory/plugins_test.go	/^func TestBuildScoringFunctionShapeFromRequestedToCapacityRatioArguments(t *testing.T) {$/;"	f
+TestCSIVolumeCountPredicate	algorithm/predicates/csi_volume_predicate_test.go	/^func TestCSIVolumeCountPredicate(t *testing.T) {$/;"	f
+TestCacheInvalidationRace	core/generic_scheduler_test.go	/^func TestCacheInvalidationRace(t *testing.T) {$/;"	f
+TestCacheInvalidationRace2	core/generic_scheduler_test.go	/^func TestCacheInvalidationRace2(t *testing.T) {$/;"	f
+TestCheckNodeUnschedulablePredicate	algorithm/predicates/predicates_test.go	/^func TestCheckNodeUnschedulablePredicate(t *testing.T) {$/;"	f
+TestCompareNodes	internal/cache/debugger/comparer_test.go	/^func TestCompareNodes(t *testing.T) {$/;"	f
+TestComparePods	internal/cache/debugger/comparer_test.go	/^func TestComparePods(t *testing.T) {$/;"	f
+TestCompatibility_v1_Scheduler	algorithmprovider/defaults/compatibility_test.go	/^func TestCompatibility_v1_Scheduler(t *testing.T) {$/;"	f
+TestCopyAndReplace	algorithmprovider/defaults/defaults_test.go	/^func TestCopyAndReplace(t *testing.T) {$/;"	f
+TestCreate	factory/factory_test.go	/^func TestCreate(t *testing.T) {$/;"	f
+TestCreateFromConfig	factory/factory_test.go	/^func TestCreateFromConfig(t *testing.T) {$/;"	f
+TestCreateFromConfigWithEmptyPredicatesOrPriorities	factory/factory_test.go	/^func TestCreateFromConfigWithEmptyPredicatesOrPriorities(t *testing.T) {$/;"	f
+TestCreateFromConfigWithHardPodAffinitySymmetricWeight	factory/factory_test.go	/^func TestCreateFromConfigWithHardPodAffinitySymmetricWeight(t *testing.T) {$/;"	f
+TestCreateFromConfigWithUnspecifiedPredicatesOrPriorities	factory/factory_test.go	/^func TestCreateFromConfigWithUnspecifiedPredicatesOrPriorities(t *testing.T) {$/;"	f
+TestCreateFromEmptyConfig	factory/factory_test.go	/^func TestCreateFromEmptyConfig(t *testing.T) {$/;"	f
+TestCreateImageExistenceMap	cache/util_test.go	/^func TestCreateImageExistenceMap(t *testing.T) {$/;"	f
+TestCreatingFunctionPointNotInAllowedRange	algorithm/priorities/requested_to_capacity_ratio_test.go	/^func TestCreatingFunctionPointNotInAllowedRange(t *testing.T) {$/;"	f
+TestCreatingFunctionShapeErrorsIfEmptyPoints	algorithm/priorities/requested_to_capacity_ratio_test.go	/^func TestCreatingFunctionShapeErrorsIfEmptyPoints(t *testing.T) {$/;"	f
+TestCreatingFunctionShapeErrorsIfXIsNotSorted	algorithm/priorities/requested_to_capacity_ratio_test.go	/^func TestCreatingFunctionShapeErrorsIfXIsNotSorted(t *testing.T) {$/;"	f
+TestDefaultConfigExists	algorithmprovider/plugins_test.go	/^func TestDefaultConfigExists(t *testing.T) {$/;"	f
+TestDefaultErrorFunc	factory/factory_test.go	/^func TestDefaultErrorFunc(t *testing.T) {$/;"	f
+TestDefaultPredicates	algorithmprovider/defaults/defaults_test.go	/^func TestDefaultPredicates(t *testing.T) {$/;"	f
+TestDefaultPriorities	algorithmprovider/defaults/defaults_test.go	/^func TestDefaultPriorities(t *testing.T) {$/;"	f
+TestEmptyPriorityMetadataProducer	algorithm/types_test.go	/^func TestEmptyPriorityMetadataProducer(t *testing.T) {$/;"	f
+TestEphemeralStorageResource	internal/cache/cache_test.go	/^func TestEphemeralStorageResource(t *testing.T) {$/;"	f
+TestExpireAddUpdatePod	internal/cache/cache_test.go	/^func TestExpireAddUpdatePod(t *testing.T) {$/;"	f
+TestExpirePod	internal/cache/cache_test.go	/^func TestExpirePod(t *testing.T) {$/;"	f
+TestFindFitAllError	core/generic_scheduler_test.go	/^func TestFindFitAllError(t *testing.T) {$/;"	f
+TestFindFitSomeError	core/generic_scheduler_test.go	/^func TestFindFitSomeError(t *testing.T) {$/;"	f
+TestForgetPod	internal/cache/cache_test.go	/^func TestForgetPod(t *testing.T) {$/;"	f
+TestGCEDiskConflicts	algorithm/predicates/predicates_test.go	/^func TestGCEDiskConflicts(t *testing.T) {$/;"	f
+TestGenericScheduler	core/generic_scheduler_test.go	/^func TestGenericScheduler(t *testing.T) {$/;"	f
+TestGenericSchedulerWithExtenders	core/extender_test.go	/^func TestGenericSchedulerWithExtenders(t *testing.T) {$/;"	f
+TestGetBinderFunc	factory/factory_test.go	/^func TestGetBinderFunc(t *testing.T) {$/;"	f
+TestGetContainerPorts	util/utils_test.go	/^func TestGetContainerPorts(t *testing.T) {$/;"	f
+TestGetEquivalenceHash	core/equivalence/eqivalence_test.go	/^func TestGetEquivalenceHash(t *testing.T) {$/;"	f
+TestGetMaxVols	algorithm/predicates/predicates_test.go	/^func TestGetMaxVols(t *testing.T) {$/;"	f
+TestGetNamespacesFromPodAffinityTerm	algorithm/priorities/util/topologies_test.go	/^func TestGetNamespacesFromPodAffinityTerm(t *testing.T) {$/;"	f
+TestGetNodeClassificationByLabels	algorithm/priorities/selector_spreading_test.go	/^func TestGetNodeClassificationByLabels(t *testing.T) {$/;"	f
+TestGetNodeImageStates	cache/util_test.go	/^func TestGetNodeImageStates(t *testing.T) {$/;"	f
+TestGetNonzeroRequests	algorithm/priorities/util/non_zero_test.go	/^func TestGetNonzeroRequests(t *testing.T) {$/;"	f
+TestGetPodPriority	util/utils_test.go	/^func TestGetPodPriority(t *testing.T) {$/;"	f
+TestGetTPMapMatchingIncomingAffinityAntiAffinity	algorithm/predicates/metadata_test.go	/^func TestGetTPMapMatchingIncomingAffinityAntiAffinity(t *testing.T) {$/;"	f
+TestGroup	testing/util.go	/^type TestGroup struct {$/;"	t
+TestHardPodAffinitySymmetricWeight	algorithm/priorities/interpod_affinity_test.go	/^func TestHardPodAffinitySymmetricWeight(t *testing.T) {$/;"	f
+TestHostPortInfo_AddRemove	cache/host_ports_test.go	/^func TestHostPortInfo_AddRemove(t *testing.T) {$/;"	f
+TestHostPortInfo_Check	cache/host_ports_test.go	/^func TestHostPortInfo_Check(t *testing.T) {$/;"	f
+TestHumanReadableFitError	core/generic_scheduler_test.go	/^func TestHumanReadableFitError(t *testing.T) {$/;"	f
+TestISCSIDiskConflicts	algorithm/predicates/predicates_test.go	/^func TestISCSIDiskConflicts(t *testing.T) {$/;"	f
+TestImageLocalityPriority	algorithm/priorities/image_locality_test.go	/^func TestImageLocalityPriority(t *testing.T) {$/;"	f
+TestInterPodAffinity	algorithm/predicates/predicates_test.go	/^func TestInterPodAffinity(t *testing.T) {$/;"	f
+TestInterPodAffinityPriority	algorithm/priorities/interpod_affinity_test.go	/^func TestInterPodAffinityPriority(t *testing.T) {$/;"	f
+TestInterPodAffinityWithMultipleNodes	algorithm/predicates/predicates_test.go	/^func TestInterPodAffinityWithMultipleNodes(t *testing.T) {$/;"	f
+TestInvalidFactoryArgs	factory/factory_test.go	/^func TestInvalidFactoryArgs(t *testing.T) {$/;"	f
+TestInvalidHardPodAffinitySymmetricWeight	factory/factory_test.go	/^func TestInvalidHardPodAffinitySymmetricWeight(t *testing.T) {$/;"	f
+TestInvalidateAllCachedPredicateItemOfNode	core/equivalence/eqivalence_test.go	/^func TestInvalidateAllCachedPredicateItemOfNode(t *testing.T) {$/;"	f
+TestInvalidateCachedPredicateItemOfAllNodes	core/equivalence/eqivalence_test.go	/^func TestInvalidateCachedPredicateItemOfAllNodes(t *testing.T) {$/;"	f
+TestLeastRequested	algorithm/priorities/least_requested_test.go	/^func TestLeastRequested(t *testing.T) {$/;"	f
+TestLookupResult	core/equivalence/eqivalence_test.go	/^func TestLookupResult(t *testing.T) {$/;"	f
+TestMain	algorithm/predicates/main_test.go	/^func TestMain(m *testing.M) {$/;"	f
+TestMain	algorithm/priorities/main_test.go	/^func TestMain(m *testing.M) {$/;"	f
+TestMain	algorithmprovider/main_test.go	/^func TestMain(m *testing.M) {$/;"	f
+TestMain	internal/cache/main_test.go	/^func TestMain(m *testing.M) {$/;"	f
+TestMain	main_test.go	/^func TestMain(m *testing.M) {$/;"	f
+TestMaxVolumeFuncM4	algorithm/predicates/max_attachable_volume_predicate_test.go	/^func TestMaxVolumeFuncM4(t *testing.T) {$/;"	f
+TestMaxVolumeFuncM5	algorithm/predicates/max_attachable_volume_predicate_test.go	/^func TestMaxVolumeFuncM5(t *testing.T) {$/;"	f
+TestMaxVolumeFuncR5	algorithm/predicates/max_attachable_volume_predicate_test.go	/^func TestMaxVolumeFuncR5(t *testing.T) {$/;"	f
+TestMaxVolumeFuncT3	algorithm/predicates/max_attachable_volume_predicate_test.go	/^func TestMaxVolumeFuncT3(t *testing.T) {$/;"	f
+TestMostRequested	algorithm/priorities/most_requested_test.go	/^func TestMostRequested(t *testing.T) {$/;"	f
+TestNewNodeInfo	cache/node_info_test.go	/^func TestNewNodeInfo(t *testing.T) {$/;"	f
+TestNewNodeLabelPriority	algorithm/priorities/node_label_test.go	/^func TestNewNodeLabelPriority(t *testing.T) {$/;"	f
+TestNewResource	cache/node_info_test.go	/^func TestNewResource(t *testing.T) {$/;"	f
+TestNodeAffinityPriority	algorithm/priorities/node_affinity_test.go	/^func TestNodeAffinityPriority(t *testing.T) {$/;"	f
+TestNodeConditionPredicate	algorithm/predicates/predicates_test.go	/^func TestNodeConditionPredicate(t *testing.T) {$/;"	f
+TestNodeEnumerator	factory/factory_test.go	/^func TestNodeEnumerator(t *testing.T) {$/;"	f
+TestNodeInfoAddPod	cache/node_info_test.go	/^func TestNodeInfoAddPod(t *testing.T) {$/;"	f
+TestNodeInfoClone	cache/node_info_test.go	/^func TestNodeInfoClone(t *testing.T) {$/;"	f
+TestNodeInfoRemovePod	cache/node_info_test.go	/^func TestNodeInfoRemovePod(t *testing.T) {$/;"	f
+TestNodeLabelPresence	algorithm/predicates/predicates_test.go	/^func TestNodeLabelPresence(t *testing.T) {$/;"	f
+TestNodeOperators	internal/cache/cache_test.go	/^func TestNodeOperators(t *testing.T) {$/;"	f
+TestNodePreferAvoidPriority	algorithm/priorities/node_prefer_avoid_pods_test.go	/^func TestNodePreferAvoidPriority(t *testing.T) {$/;"	f
+TestNodeTreeMultiOperations	internal/cache/node_tree_test.go	/^func TestNodeTreeMultiOperations(t *testing.T) {$/;"	f
+TestNodeTree_AddNode	internal/cache/node_tree_test.go	/^func TestNodeTree_AddNode(t *testing.T) {$/;"	f
+TestNodeTree_Next	internal/cache/node_tree_test.go	/^func TestNodeTree_Next(t *testing.T) {$/;"	f
+TestNodeTree_RemoveNode	internal/cache/node_tree_test.go	/^func TestNodeTree_RemoveNode(t *testing.T) {$/;"	f
+TestNodeTree_UpdateNode	internal/cache/node_tree_test.go	/^func TestNodeTree_UpdateNode(t *testing.T) {$/;"	f
+TestNodesHaveSameTopologyKey	algorithm/priorities/util/topologies_test.go	/^func TestNodesHaveSameTopologyKey(t *testing.T) {$/;"	f
+TestNodesWherePreemptionMightHelp	core/generic_scheduler_test.go	/^func TestNodesWherePreemptionMightHelp(t *testing.T) {$/;"	f
+TestNormalizedImageName	algorithm/priorities/image_locality_test.go	/^func TestNormalizedImageName(t *testing.T) {$/;"	f
+TestPickOneNodeForPreemption	core/generic_scheduler_test.go	/^func TestPickOneNodeForPreemption(t *testing.T) {$/;"	f
+TestPodFitsHost	algorithm/predicates/predicates_test.go	/^func TestPodFitsHost(t *testing.T) {$/;"	f
+TestPodFitsHostPorts	algorithm/predicates/predicates_test.go	/^func TestPodFitsHostPorts(t *testing.T) {$/;"	f
+TestPodFitsResources	algorithm/predicates/predicates_test.go	/^func TestPodFitsResources(t *testing.T) {$/;"	f
+TestPodFitsSelector	algorithm/predicates/predicates_test.go	/^func TestPodFitsSelector(t *testing.T) {$/;"	f
+TestPodMatchesTermsNamespaceAndSelector	algorithm/priorities/util/topologies_test.go	/^func TestPodMatchesTermsNamespaceAndSelector(t *testing.T) {$/;"	f
+TestPodSchedulesOnNodeWithDiskPressureCondition	algorithm/predicates/predicates_test.go	/^func TestPodSchedulesOnNodeWithDiskPressureCondition(t *testing.T) {$/;"	f
+TestPodSchedulesOnNodeWithMemoryPressureCondition	algorithm/predicates/predicates_test.go	/^func TestPodSchedulesOnNodeWithMemoryPressureCondition(t *testing.T) {$/;"	f
+TestPodSchedulesOnNodeWithPIDPressureCondition	algorithm/predicates/predicates_test.go	/^func TestPodSchedulesOnNodeWithPIDPressureCondition(t *testing.T) {$/;"	f
+TestPodToleratesTaints	algorithm/predicates/predicates_test.go	/^func TestPodToleratesTaints(t *testing.T) {$/;"	f
+TestPredicateMetadata_AddRemovePod	algorithm/predicates/metadata_test.go	/^func TestPredicateMetadata_AddRemovePod(t *testing.T) {$/;"	f
+TestPredicateMetadata_ShallowCopy	algorithm/predicates/metadata_test.go	/^func TestPredicateMetadata_ShallowCopy(t *testing.T) {$/;"	f
+TestPreempt	core/generic_scheduler_test.go	/^func TestPreempt(t *testing.T) {$/;"	f
+TestPriorityMetadata	algorithm/priorities/metadata_test.go	/^func TestPriorityMetadata(t *testing.T) {$/;"	f
+TestPriorityQueue_Add	internal/queue/scheduling_queue_test.go	/^func TestPriorityQueue_Add(t *testing.T) {$/;"	f
+TestPriorityQueue_AddIfNotPresent	internal/queue/scheduling_queue_test.go	/^func TestPriorityQueue_AddIfNotPresent(t *testing.T) {$/;"	f
+TestPriorityQueue_AddUnschedulableIfNotPresent	internal/queue/scheduling_queue_test.go	/^func TestPriorityQueue_AddUnschedulableIfNotPresent(t *testing.T) {$/;"	f
+TestPriorityQueue_AssignedPodAdded	internal/queue/scheduling_queue_test.go	/^func TestPriorityQueue_AssignedPodAdded(t *testing.T) {$/;"	f
+TestPriorityQueue_Delete	internal/queue/scheduling_queue_test.go	/^func TestPriorityQueue_Delete(t *testing.T) {$/;"	f
+TestPriorityQueue_MoveAllToActiveQueue	internal/queue/scheduling_queue_test.go	/^func TestPriorityQueue_MoveAllToActiveQueue(t *testing.T) {$/;"	f
+TestPriorityQueue_Pop	internal/queue/scheduling_queue_test.go	/^func TestPriorityQueue_Pop(t *testing.T) {$/;"	f
+TestPriorityQueue_Update	internal/queue/scheduling_queue_test.go	/^func TestPriorityQueue_Update(t *testing.T) {$/;"	f
+TestPriorityQueue_WaitingPodsForNode	internal/queue/scheduling_queue_test.go	/^func TestPriorityQueue_WaitingPodsForNode(t *testing.T) {$/;"	f
+TestRBDDiskConflicts	algorithm/predicates/predicates_test.go	/^func TestRBDDiskConflicts(t *testing.T) {$/;"	f
+TestRemovePod	internal/cache/cache_test.go	/^func TestRemovePod(t *testing.T) {$/;"	f
+TestRequestedToCapacityRatio	algorithm/priorities/requested_to_capacity_ratio_test.go	/^func TestRequestedToCapacityRatio(t *testing.T) {$/;"	f
+TestResourceAddScalar	cache/node_info_test.go	/^func TestResourceAddScalar(t *testing.T) {$/;"	f
+TestResourceClone	cache/node_info_test.go	/^func TestResourceClone(t *testing.T) {$/;"	f
+TestResourceLimistPriority	algorithm/priorities/resource_limits_test.go	/^func TestResourceLimistPriority(t *testing.T) {$/;"	f
+TestResourceList	cache/node_info_test.go	/^func TestResourceList(t *testing.T) {$/;"	f
+TestResourcePath	testing/util_test.go	/^func TestResourcePath(t *testing.T) {$/;"	f
+TestResourcePathWithPrefix	testing/util_test.go	/^func TestResourcePathWithPrefix(t *testing.T) {$/;"	f
+TestRunGeneralPredicates	algorithm/predicates/predicates_test.go	/^func TestRunGeneralPredicates(t *testing.T) {$/;"	f
+TestRunPredicate	core/equivalence/eqivalence_test.go	/^func TestRunPredicate(t *testing.T) {$/;"	f
+TestScheduler	scheduler_test.go	/^func TestScheduler(t *testing.T) {$/;"	f
+TestSchedulerCreation	scheduler_test.go	/^func TestSchedulerCreation(t *testing.T) {$/;"	f
+TestSchedulerDefaults	apis/config/v1alpha1/defaults_test.go	/^func TestSchedulerDefaults(t *testing.T) {$/;"	f
+TestSchedulerErrorWithLongBinding	scheduler_test.go	/^func TestSchedulerErrorWithLongBinding(t *testing.T) {$/;"	f
+TestSchedulerFailedSchedulingReasons	scheduler_test.go	/^func TestSchedulerFailedSchedulingReasons(t *testing.T) {$/;"	f
+TestSchedulerNoPhantomPodAfterDelete	scheduler_test.go	/^func TestSchedulerNoPhantomPodAfterDelete(t *testing.T) {$/;"	f
+TestSchedulerNoPhantomPodAfterExpire	scheduler_test.go	/^func TestSchedulerNoPhantomPodAfterExpire(t *testing.T) {$/;"	f
+TestSchedulerWithVolumeBinding	scheduler_test.go	/^func TestSchedulerWithVolumeBinding(t *testing.T) {$/;"	f
+TestSchedulingQueue_Close	internal/queue/scheduling_queue_test.go	/^func TestSchedulingQueue_Close(t *testing.T) {$/;"	f
+TestSelectHost	core/generic_scheduler_test.go	/^func TestSelectHost(t *testing.T) {$/;"	f
+TestSelectNodesForPreemption	core/generic_scheduler_test.go	/^func TestSelectNodesForPreemption(t *testing.T) {$/;"	f
+TestSelectorSpreadPriority	algorithm/priorities/selector_spreading_test.go	/^func TestSelectorSpreadPriority(t *testing.T) {$/;"	f
+TestSelfLink	testing/util_test.go	/^func TestSelfLink(t *testing.T) {$/;"	f
+TestServiceAffinity	algorithm/predicates/predicates_test.go	/^func TestServiceAffinity(t *testing.T) {$/;"	f
+TestSetMaxResource	cache/node_info_test.go	/^func TestSetMaxResource(t *testing.T) {$/;"	f
+TestSkipPodUpdate	factory/factory_test.go	/^func TestSkipPodUpdate(t *testing.T) {$/;"	f
+TestSnapshot	internal/cache/cache_test.go	/^func TestSnapshot(t *testing.T) {$/;"	f
+TestSortableList	util/utils_test.go	/^func TestSortableList(t *testing.T) {$/;"	f
+TestSubResourcePath	testing/util_test.go	/^func TestSubResourcePath(t *testing.T) {$/;"	f
+TestTaintAndToleration	algorithm/priorities/taint_toleration_test.go	/^func TestTaintAndToleration(t *testing.T) {$/;"	f
+TestUnschedulablePodsMap	internal/queue/scheduling_queue_test.go	/^func TestUnschedulablePodsMap(t *testing.T) {$/;"	f
+TestUpdatePod	internal/cache/cache_test.go	/^func TestUpdatePod(t *testing.T) {$/;"	f
+TestUpdatePodAndGet	internal/cache/cache_test.go	/^func TestUpdatePodAndGet(t *testing.T) {$/;"	f
+TestUpdateResult	core/equivalence/eqivalence_test.go	/^func TestUpdateResult(t *testing.T) {$/;"	f
+TestV1EncodeDecodeStatus	testing/util_test.go	/^func TestV1EncodeDecodeStatus(t *testing.T) {$/;"	f
+TestValidateKubeSchedulerConfiguration	apis/config/validation/validation_test.go	/^func TestValidateKubeSchedulerConfiguration(t *testing.T) {$/;"	f
+TestValidatePolicy	api/validation/validation_test.go	/^func TestValidatePolicy(t *testing.T) {$/;"	f
+TestValidatePriorityConfigOverFlow	factory/plugins_test.go	/^func TestValidatePriorityConfigOverFlow(t *testing.T) {$/;"	f
+TestVolumeCountConflicts	algorithm/predicates/max_attachable_volume_predicate_test.go	/^func TestVolumeCountConflicts(t *testing.T) {$/;"	f
+TestVolumeZonePredicate	algorithm/predicates/predicates_test.go	/^func TestVolumeZonePredicate(t *testing.T) {$/;"	f
+TestVolumeZonePredicateMultiZone	algorithm/predicates/predicates_test.go	/^func TestVolumeZonePredicateMultiZone(t *testing.T) {$/;"	f
+TestVolumeZonePredicateWithVolumeBinding	algorithm/predicates/predicates_test.go	/^func TestVolumeZonePredicateWithVolumeBinding(t *testing.T) {$/;"	f
+TestZeroRequest	core/generic_scheduler_test.go	/^func TestZeroRequest(t *testing.T) {$/;"	f
+TestZoneSelectorSpreadPriority	algorithm/priorities/selector_spreading_test.go	/^func TestZoneSelectorSpreadPriority(t *testing.T) {$/;"	f
+TestZoneSpreadPriority	algorithm/priorities/selector_spreading_test.go	/^func TestZoneSpreadPriority(t *testing.T) {$/;"	f
+Topologies	algorithm/priorities/util/topologies.go	/^type Topologies struct {$/;"	t
+TransientSchedulerInfo	cache/node_info.go	/^type TransientSchedulerInfo struct {$/;"	t
+TryWait	util/backoff_utils.go	/^func (b *BackoffEntry) TryWait(maxDuration time.Duration) bool {$/;"	f
+UnmarshalJSON	api/v1/types.go	/^func (t *ExtenderConfig) UnmarshalJSON(b []byte) error {$/;"	f
+UnschedulablePodsMap	internal/queue/scheduling_queue.go	/^type UnschedulablePodsMap struct {$/;"	t
+Update	factory/factory.go	/^func (p *podConditionUpdater) Update(pod *v1.Pod, condition *v1.PodCondition) error {$/;"	f
+Update	internal/queue/scheduling_queue.go	/^func (f *FIFO) Update(oldPod, newPod *v1.Pod) error {$/;"	f
+Update	internal/queue/scheduling_queue.go	/^func (h *Heap) Update(obj interface{}) error {$/;"	f
+Update	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) Update(oldPod, newPod *v1.Pod) error {$/;"	f
+Update	scheduler_test.go	/^func (fc fakePodConditionUpdater) Update(pod *v1.Pod, podCondition *v1.PodCondition) error {$/;"	f
+UpdateNode	internal/cache/cache.go	/^func (cache *schedulerCache) UpdateNode(oldNode, newNode *v1.Node) error {$/;"	f
+UpdateNode	internal/cache/fake/fake_cache.go	/^func (c *Cache) UpdateNode(oldNode, newNode *v1.Node) error { return nil }$/;"	f
+UpdateNode	internal/cache/node_tree.go	/^func (nt *NodeTree) UpdateNode(old, new *v1.Node) {$/;"	f
+UpdateNodeNameToInfoMap	core/generic_scheduler_test.go	/^func (c *syncingMockCache) UpdateNodeNameToInfoMap(infoMap map[string]*schedulercache.NodeInfo) error {$/;"	f
+UpdateNodeNameToInfoMap	internal/cache/cache.go	/^func (cache *schedulerCache) UpdateNodeNameToInfoMap(nodeNameToInfo map[string]*schedulercache.NodeInfo) error {$/;"	f
+UpdateNodeNameToInfoMap	internal/cache/fake/fake_cache.go	/^func (c *Cache) UpdateNodeNameToInfoMap(infoMap map[string]*schedulercache.NodeInfo) error {$/;"	f
+UpdatePod	internal/cache/cache.go	/^func (cache *schedulerCache) UpdatePod(oldPod, newPod *v1.Pod) error {$/;"	f
+UpdatePod	internal/cache/fake/fake_cache.go	/^func (c *Cache) UpdatePod(oldPod, newPod *v1.Pod) error { return nil }$/;"	f
+UpdateUsedPorts	cache/node_info.go	/^func (n *NodeInfo) UpdateUsedPorts(pod *v1.Pod, add bool) {$/;"	f
+UsedPorts	cache/node_info.go	/^func (n *NodeInfo) UsedPorts() HostPortInfo {$/;"	f
+UtilizationShapePoint	api/types.go	/^type UtilizationShapePoint struct {$/;"	t
+UtilizationShapePoint	api/v1/types.go	/^type UtilizationShapePoint struct {$/;"	t
+ValidateKubeSchedulerConfiguration	apis/config/validation/validation.go	/^func ValidateKubeSchedulerConfiguration(cc *config.KubeSchedulerConfiguration) field.ErrorList {$/;"	f
+ValidateKubeSchedulerLeaderElectionConfiguration	apis/config/validation/validation.go	/^func ValidateKubeSchedulerLeaderElectionConfiguration(cc *config.KubeSchedulerLeaderElectionConfiguration, fldPath *field.Path) field.ErrorList {$/;"	f
+ValidatePolicy	api/validation/validation.go	/^func ValidatePolicy(policy schedulerapi.Policy) error {$/;"	f
+Version	api/latest/latest.go	/^const Version = "v1"$/;"	c
+Versions	api/latest/latest.go	/^var Versions = []string{"v1"}$/;"	v
+Victims	api/types.go	/^type Victims struct {$/;"	t
+Victims	api/v1/types.go	/^type Victims struct {$/;"	t
+VolumeBinder	volumebinder/volume_binder.go	/^type VolumeBinder struct {$/;"	t
+VolumeBindingChecker	algorithm/predicates/predicates.go	/^type VolumeBindingChecker struct {$/;"	t
+VolumeFilter	algorithm/predicates/predicates.go	/^type VolumeFilter struct {$/;"	t
+VolumeLimits	cache/node_info.go	/^func (n *NodeInfo) VolumeLimits() map[v1.ResourceName]int64 {$/;"	f
+VolumeZoneChecker	algorithm/predicates/predicates.go	/^type VolumeZoneChecker struct {$/;"	t
+WaitingPods	internal/queue/scheduling_queue.go	/^func (f *FIFO) WaitingPods() []*v1.Pod {$/;"	f
+WaitingPods	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) WaitingPods() []*v1.Pod {$/;"	f
+WaitingPodsForNode	internal/queue/scheduling_queue.go	/^func (f *FIFO) WaitingPodsForNode(nodeName string) []*v1.Pod {$/;"	f
+WaitingPodsForNode	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) WaitingPodsForNode(nodeName string) []*v1.Pod {$/;"	f
+WithBindTimeoutSeconds	scheduler.go	/^func WithBindTimeoutSeconds(bindTimeoutSeconds int64) Option {$/;"	f
+WithEquivalenceClassCacheEnabled	scheduler.go	/^func WithEquivalenceClassCacheEnabled(enableEquivalenceClassCache bool) Option {$/;"	f
+WithHardPodAffinitySymmetricWeight	scheduler.go	/^func WithHardPodAffinitySymmetricWeight(hardPodAffinitySymmetricWeight int32) Option {$/;"	f
+WithName	scheduler.go	/^func WithName(schedulerName string) Option {$/;"	f
+WithPercentageOfNodesToScore	scheduler.go	/^func WithPercentageOfNodesToScore(percentageOfNodesToScore int32) Option {$/;"	f
+WithPreemptionDisabled	scheduler.go	/^func WithPreemptionDisabled(disablePreemption bool) Option {$/;"	f
+_	algorithm/predicates/metadata.go	/^var _ algorithm.PredicateMetadata = &predicateMetadata{}$/;"	v
+_	algorithm/predicates/metadata_test.go	/^var _ = sort.Interface(&sortablePods{})$/;"	v
+_	algorithm/predicates/metadata_test.go	/^var _ = sort.Interface(&sortableServices{})$/;"	v
+_	algorithm/priorities/requested_to_capacity_ratio.go	/^	defaultFunctionShape, _ = NewFunctionShape([]FunctionShapePoint{{0, 10}, {100, 0}})$/;"	v
+_	algorithm/types.go	/^var _ ControllerLister = &EmptyControllerLister{}$/;"	v
+_	algorithm/types.go	/^var _ ReplicaSetLister = &EmptyReplicaSetLister{}$/;"	v
+_	algorithm/types.go	/^var _ StatefulSetLister = &EmptyStatefulSetLister{}$/;"	v
+_	core/extender_test.go	/^var _ algorithm.SchedulerExtender = &FakeExtender{}$/;"	v
+_	internal/queue/scheduling_queue.go	/^	_ = heap.Interface(&heapData{}) \/\/ heapData is a standard heap$/;"	v
+_	internal/queue/scheduling_queue.go	/^var _ = SchedulingQueue(&FIFO{}) \/\/ Making sure that FIFO implements SchedulingQueue.$/;"	v
+_	internal/queue/scheduling_queue.go	/^var _ = SchedulingQueue(&PriorityQueue{})$/;"	v
+_	testing/fake_lister.go	/^var _ algorithm.ControllerLister = &FakeControllerLister{}$/;"	v
+_	testing/fake_lister.go	/^var _ algorithm.NodeLister = &FakeNodeLister{}$/;"	v
+_	testing/fake_lister.go	/^var _ algorithm.PodLister = &FakePodLister{}$/;"	v
+_	testing/fake_lister.go	/^var _ algorithm.ReplicaSetLister = &FakeReplicaSetLister{}$/;"	v
+_	testing/fake_lister.go	/^var _ algorithm.ServiceLister = &FakeServiceLister{}$/;"	v
+_	testing/fake_lister.go	/^var _ algorithm.StatefulSetLister = &FakeStatefulSetLister{}$/;"	v
+_	testing/fake_lister.go	/^var _ corelisters.PersistentVolumeClaimLister = FakePersistentVolumeClaimLister{}$/;"	v
+_	util/utils.go	/^var _ = sort.Interface(&SortableList{})$/;"	v
+add	internal/cache/cache_test.go	/^func (b *hostPortInfoBuilder) add(protocol, ip string, port int32) *hostPortInfoBuilder {$/;"	f
+addDefaultingFuncs	apis/config/v1alpha1/defaults.go	/^func addDefaultingFuncs(scheme *runtime.Scheme) error {$/;"	f
+addKnownTypes	api/register.go	/^func addKnownTypes(scheme *runtime.Scheme) error {$/;"	f
+addKnownTypes	api/v1/register.go	/^func addKnownTypes(scheme *runtime.Scheme) error {$/;"	f
+addKnownTypes	apis/config/register.go	/^func addKnownTypes(scheme *runtime.Scheme) error {$/;"	f
+addNode	internal/cache/node_tree.go	/^func (nt *NodeTree) addNode(n *v1.Node) {$/;"	f
+addNodeImageStates	internal/cache/cache.go	/^func (cache *schedulerCache) addNodeImageStates(node *v1.Node, nodeInfo *schedulercache.NodeInfo) {$/;"	f
+addNodeToCache	factory/factory.go	/^func (c *configFactory) addNodeToCache(obj interface{}) {$/;"	f
+addNominatedPodIfNeeded	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) addNominatedPodIfNeeded(pod *v1.Pod) {$/;"	f
+addNominatedPods	core/generic_scheduler.go	/^func addNominatedPods(pod *v1.Pod, meta algorithm.PredicateMetadata,$/;"	f
+addOrUpdate	internal/queue/scheduling_queue.go	/^func (u *UnschedulablePodsMap) addOrUpdate(pod *v1.Pod) {$/;"	f
+addPod	internal/cache/cache.go	/^func (cache *schedulerCache) addPod(pod *v1.Pod) {$/;"	f
+addPodToCache	factory/factory.go	/^func (c *configFactory) addPodToCache(obj interface{}) {$/;"	f
+addPodToSchedulingQueue	factory/factory.go	/^func (c *configFactory) addPodToSchedulingQueue(obj interface{}) {$/;"	f
+addTopologyPair	algorithm/predicates/metadata.go	/^func (topologyPairsMaps *topologyPairsMaps) addTopologyPair(pair topologyPair, pod *v1.Pod) {$/;"	f
+affinityTermProperties	algorithm/predicates/metadata.go	/^type affinityTermProperties struct {$/;"	t
+algorithm	algorithm/doc.go	/^package algorithm \/\/ import "k8s.io\/kubernetes\/pkg\/scheduler\/algorithm"$/;"	p
+algorithm	algorithm/scheduler_interface.go	/^package algorithm$/;"	p
+algorithm	algorithm/types.go	/^package algorithm$/;"	p
+algorithm	algorithm/types_test.go	/^package algorithm$/;"	p
+algorithmProviderMap	factory/plugins.go	/^	algorithmProviderMap   = make(map[string]AlgorithmProviderConfig)$/;"	v
+algorithmProviderNames	algorithmprovider/plugins_test.go	/^	algorithmProviderNames = []string{$/;"	v
+algorithmprovider	algorithmprovider/main_test.go	/^package algorithmprovider$/;"	p
+algorithmprovider	algorithmprovider/plugins.go	/^package algorithmprovider$/;"	p
+algorithmprovider	algorithmprovider/plugins_test.go	/^package algorithmprovider$/;"	p
+allNodes	internal/cache/node_tree_test.go	/^var allNodes = []*v1.Node{$/;"	v
+api	api/doc.go	/^package api \/\/ import "k8s.io\/kubernetes\/pkg\/scheduler\/api"$/;"	p
+api	api/register.go	/^package api$/;"	p
+api	api/types.go	/^package api$/;"	p
+api	api/well_known_labels.go	/^package api$/;"	p
+api	api/zz_generated.deepcopy.go	/^package api$/;"	p
+appendMaps	algorithm/predicates/metadata.go	/^func (topologyPairsMaps *topologyPairsMaps) appendMaps(toAppend *topologyPairsMaps) {$/;"	f
+assignedPod	factory/factory.go	/^func assignedPod(pod *v1.Pod) bool {$/;"	f
+assignedPodLister	factory/factory.go	/^type assignedPodLister struct {$/;"	t
+assignedPodNamespaceLister	factory/factory.go	/^type assignedPodNamespaceLister struct {$/;"	t
+assume	scheduler.go	/^func (sched *Scheduler) assume(assumed *v1.Pod, host string) error {$/;"	f
+assumeAndFinishBinding	internal/cache/cache_test.go	/^func assumeAndFinishBinding(cache *schedulerCache, pod *v1.Pod, assumedTime time.Time) error {$/;"	f
+assumeVolumes	scheduler.go	/^func (sched *Scheduler) assumeVolumes(assumed *v1.Pod, host string) (allBound bool, err error) {$/;"	f
+attachableLimitPredicate	algorithm/predicates/csi_volume_predicate.go	/^func (c *CSIMaxVolumeLimitChecker) attachableLimitPredicate($/;"	f
+autoConvert_config_KubeSchedulerConfiguration_To_v1alpha1_KubeSchedulerConfiguration	apis/config/v1alpha1/zz_generated.conversion.go	/^func autoConvert_config_KubeSchedulerConfiguration_To_v1alpha1_KubeSchedulerConfiguration(in *config.KubeSchedulerConfiguration, out *v1alpha1.KubeSchedulerConfiguration, s conversion.Scope) error {$/;"	f
+autoConvert_config_KubeSchedulerLeaderElectionConfiguration_To_v1alpha1_KubeSchedulerLeaderElectionConfiguration	apis/config/v1alpha1/zz_generated.conversion.go	/^func autoConvert_config_KubeSchedulerLeaderElectionConfiguration_To_v1alpha1_KubeSchedulerLeaderElectionConfiguration(in *config.KubeSchedulerLeaderElectionConfiguration, out *v1alpha1.KubeSchedulerLeaderElectionConfiguration, s conversion.Scope) error {$/;"	f
+autoConvert_config_SchedulerAlgorithmSource_To_v1alpha1_SchedulerAlgorithmSource	apis/config/v1alpha1/zz_generated.conversion.go	/^func autoConvert_config_SchedulerAlgorithmSource_To_v1alpha1_SchedulerAlgorithmSource(in *config.SchedulerAlgorithmSource, out *v1alpha1.SchedulerAlgorithmSource, s conversion.Scope) error {$/;"	f
+autoConvert_config_SchedulerPolicyConfigMapSource_To_v1alpha1_SchedulerPolicyConfigMapSource	apis/config/v1alpha1/zz_generated.conversion.go	/^func autoConvert_config_SchedulerPolicyConfigMapSource_To_v1alpha1_SchedulerPolicyConfigMapSource(in *config.SchedulerPolicyConfigMapSource, out *v1alpha1.SchedulerPolicyConfigMapSource, s conversion.Scope) error {$/;"	f
+autoConvert_config_SchedulerPolicyFileSource_To_v1alpha1_SchedulerPolicyFileSource	apis/config/v1alpha1/zz_generated.conversion.go	/^func autoConvert_config_SchedulerPolicyFileSource_To_v1alpha1_SchedulerPolicyFileSource(in *config.SchedulerPolicyFileSource, out *v1alpha1.SchedulerPolicyFileSource, s conversion.Scope) error {$/;"	f
+autoConvert_config_SchedulerPolicySource_To_v1alpha1_SchedulerPolicySource	apis/config/v1alpha1/zz_generated.conversion.go	/^func autoConvert_config_SchedulerPolicySource_To_v1alpha1_SchedulerPolicySource(in *config.SchedulerPolicySource, out *v1alpha1.SchedulerPolicySource, s conversion.Scope) error {$/;"	f
+autoConvert_v1alpha1_KubeSchedulerConfiguration_To_config_KubeSchedulerConfiguration	apis/config/v1alpha1/zz_generated.conversion.go	/^func autoConvert_v1alpha1_KubeSchedulerConfiguration_To_config_KubeSchedulerConfiguration(in *v1alpha1.KubeSchedulerConfiguration, out *config.KubeSchedulerConfiguration, s conversion.Scope) error {$/;"	f
+autoConvert_v1alpha1_KubeSchedulerLeaderElectionConfiguration_To_config_KubeSchedulerLeaderElectionConfiguration	apis/config/v1alpha1/zz_generated.conversion.go	/^func autoConvert_v1alpha1_KubeSchedulerLeaderElectionConfiguration_To_config_KubeSchedulerLeaderElectionConfiguration(in *v1alpha1.KubeSchedulerLeaderElectionConfiguration, out *config.KubeSchedulerLeaderElectionConfiguration, s conversion.Scope) error {$/;"	f
+autoConvert_v1alpha1_SchedulerAlgorithmSource_To_config_SchedulerAlgorithmSource	apis/config/v1alpha1/zz_generated.conversion.go	/^func autoConvert_v1alpha1_SchedulerAlgorithmSource_To_config_SchedulerAlgorithmSource(in *v1alpha1.SchedulerAlgorithmSource, out *config.SchedulerAlgorithmSource, s conversion.Scope) error {$/;"	f
+autoConvert_v1alpha1_SchedulerPolicyConfigMapSource_To_config_SchedulerPolicyConfigMapSource	apis/config/v1alpha1/zz_generated.conversion.go	/^func autoConvert_v1alpha1_SchedulerPolicyConfigMapSource_To_config_SchedulerPolicyConfigMapSource(in *v1alpha1.SchedulerPolicyConfigMapSource, out *config.SchedulerPolicyConfigMapSource, s conversion.Scope) error {$/;"	f
+autoConvert_v1alpha1_SchedulerPolicyFileSource_To_config_SchedulerPolicyFileSource	apis/config/v1alpha1/zz_generated.conversion.go	/^func autoConvert_v1alpha1_SchedulerPolicyFileSource_To_config_SchedulerPolicyFileSource(in *v1alpha1.SchedulerPolicyFileSource, out *config.SchedulerPolicyFileSource, s conversion.Scope) error {$/;"	f
+autoConvert_v1alpha1_SchedulerPolicySource_To_config_SchedulerPolicySource	apis/config/v1alpha1/zz_generated.conversion.go	/^func autoConvert_v1alpha1_SchedulerPolicySource_To_config_SchedulerPolicySource(in *v1alpha1.SchedulerPolicySource, out *config.SchedulerPolicySource, s conversion.Scope) error {$/;"	f
+balancedResourcePriority	algorithm/priorities/balanced_resource_allocation.go	/^	balancedResourcePriority = &ResourceAllocationPriority{"BalancedResourceAllocation", balancedResourceScorer}$/;"	v
+balancedResourceScorer	algorithm/priorities/balanced_resource_allocation.go	/^func balancedResourceScorer(requested, allocable *schedulercache.Resource, includeVolumes bool, requestedVolumes int, allocatableVolumes int) int64 {$/;"	f
+benchmarkExpire	internal/cache/cache_test.go	/^func benchmarkExpire(b *testing.B, podNum int) {$/;"	f
+bind	scheduler.go	/^func (sched *Scheduler) bind(assumed *v1.Pod, b *v1.Binding) error {$/;"	f
+bindTimeoutSeconds	factory/factory_test.go	/^	bindTimeoutSeconds     = 600$/;"	c
+bindVolumes	scheduler.go	/^func (sched *Scheduler) bindVolumes(assumed *v1.Pod) error {$/;"	f
+binder	factory/factory.go	/^type binder struct {$/;"	t
+build	internal/cache/cache_test.go	/^func (b *hostPortInfoBuilder) build() schedulercache.HostPortInfo {$/;"	f
+buildBrokenLinearFunction	algorithm/priorities/requested_to_capacity_ratio.go	/^func buildBrokenLinearFunction(shape FunctionShape) func(int64) int64 {$/;"	f
+buildNodeInfo	internal/cache/cache_test.go	/^func buildNodeInfo(node *v1.Node, pods []*v1.Pod) *schedulercache.NodeInfo {$/;"	f
+buildPod	algorithm/priorities/selector_spreading_test.go	/^func buildPod(nodeName string, labels map[string]string, ownerRefs []metav1.OwnerReference) *v1.Pod {$/;"	f
+buildRequestedToCapacityRatioScorerFunction	algorithm/priorities/requested_to_capacity_ratio.go	/^func buildRequestedToCapacityRatioScorerFunction(scoringFunctionShape FunctionShape) func(*schedulercache.Resource, *schedulercache.Resource, bool, int, int) int64 {$/;"	f
+buildScoringFunctionShapeFromRequestedToCapacityRatioArguments	factory/plugins.go	/^func buildScoringFunctionShapeFromRequestedToCapacityRatioArguments(arguments *schedulerapi.RequestedToCapacityRatioArguments) priorities.FunctionShape {$/;"	f
+cache	cache/host_ports.go	/^package cache$/;"	p
+cache	cache/host_ports_test.go	/^package cache$/;"	p
+cache	cache/node_info.go	/^package cache$/;"	p
+cache	cache/node_info_test.go	/^package cache$/;"	p
+cache	cache/util.go	/^package cache$/;"	p
+cache	cache/util_test.go	/^package cache$/;"	p
+cache	internal/cache/cache.go	/^package cache$/;"	p
+cache	internal/cache/cache_test.go	/^package cache$/;"	p
+cache	internal/cache/interface.go	/^package cache$/;"	p
+cache	internal/cache/main_test.go	/^package cache$/;"	p
+cache	internal/cache/node_tree.go	/^package cache$/;"	p
+cache	internal/cache/node_tree_test.go	/^package cache$/;"	p
+calculatePriority	algorithm/priorities/image_locality.go	/^func calculatePriority(sumScores int64) int {$/;"	f
+calculateResource	cache/node_info.go	/^func calculateResource(pod *v1.Pod) (res Resource, non0CPU int64, non0Mem int64) {$/;"	f
+caseInsensitiveExtenderConfig	api/v1/types.go	/^type caseInsensitiveExtenderConfig *ExtenderConfig$/;"	t
+checkPreemptionVictims	core/generic_scheduler_test.go	/^func checkPreemptionVictims(expected map[string]map[string]bool, nodeToPods map[*v1.Node]*schedulerapi.Victims) error {$/;"	f
+checkServiceAffinity	algorithm/predicates/predicates.go	/^func (s *ServiceAffinity) checkServiceAffinity(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+cleanAssumedPeriod	internal/cache/cache.go	/^	cleanAssumedPeriod = 1 * time.Second$/;"	v
+cleanupAssumedPods	internal/cache/cache.go	/^func (cache *schedulerCache) cleanupAssumedPods(now time.Time) {$/;"	f
+cleanupExpiredAssumedPods	internal/cache/cache.go	/^func (cache *schedulerCache) cleanupExpiredAssumedPods() {$/;"	f
+clear	internal/queue/scheduling_queue.go	/^func (u *UnschedulablePodsMap) clear() {$/;"	f
+clock	util/backoff_utils.go	/^type clock interface {$/;"	t
+compareSignal	factory/signal.go	/^var compareSignal = syscall.SIGUSR2$/;"	v
+compareSignal	factory/signal_windows.go	/^var compareSignal = os.Interrupt$/;"	v
+compareStrings	internal/cache/debugger/comparer.go	/^func compareStrings(actual, cached []string) (missed, redundant []string) {$/;"	f
+computeScore	algorithm/priorities/resource_limits.go	/^func computeScore(limit, allocatable int64) int64 {$/;"	f
+config	apis/config/doc.go	/^package config \/\/ import "k8s.io\/kubernetes\/pkg\/scheduler\/apis\/config"$/;"	p
+config	apis/config/register.go	/^package config$/;"	p
+config	apis/config/types.go	/^package config$/;"	p
+config	apis/config/zz_generated.deepcopy.go	/^package config$/;"	p
+configFactory	factory/factory.go	/^type configFactory struct {$/;"	t
+controllerRef	algorithm/priorities/selector_spreading_test.go	/^func controllerRef(kind, name, uid string) []metav1.OwnerReference {$/;"	f
+convertObjToConfigMap	apis/config/v1alpha1/defaults_test.go	/^func convertObjToConfigMap(name string, obj runtime.Object) (*v1.ConfigMap, error) {$/;"	f
+convertPodUIDToPod	core/extender.go	/^func (h *HTTPExtender) convertPodUIDToPod($/;"	f
+convertToNodeNameToMetaVictims	core/extender.go	/^func convertToNodeNameToMetaVictims($/;"	f
+convertToNodeNameToVictims	core/extender.go	/^func convertToNodeNameToVictims($/;"	f
+convertToNodeToVictims	core/extender.go	/^func (h *HTTPExtender) convertToNodeToVictims($/;"	f
+copyAndReplace	algorithmprovider/defaults/defaults.go	/^func copyAndReplace(set sets.String, replaceWhat, replaceWith string) sets.String {$/;"	f
+core	core/extender.go	/^package core$/;"	p
+core	core/extender_test.go	/^package core$/;"	p
+core	core/generic_scheduler.go	/^package core$/;"	p
+core	core/generic_scheduler_test.go	/^package core$/;"	p
+countIntolerableTaintsPreferNoSchedule	algorithm/priorities/taint_toleration.go	/^func countIntolerableTaintsPreferNoSchedule(taints []v1.Taint, tolerations []v1.Toleration) (intolerableTaints int) {$/;"	f
+createImageExistenceMap	cache/util.go	/^func createImageExistenceMap(nodes []*v1.Node) map[string]sets.String {$/;"	f
+createImageStateSummary	internal/cache/cache.go	/^func (cache *schedulerCache) createImageStateSummary(state *imageState) *schedulercache.ImageStateSummary {$/;"	f
+createNode	core/extender_test.go	/^func createNode(name string) *v1.Node {$/;"	f
+createPodWithVolume	algorithm/predicates/predicates_test.go	/^func createPodWithVolume(pod, pv, pvc string) *v1.Pod {$/;"	f
+debugger	internal/cache/debugger/comparer.go	/^package debugger$/;"	p
+debugger	internal/cache/debugger/comparer_test.go	/^package debugger$/;"	p
+debugger	internal/cache/debugger/debugger.go	/^package debugger$/;"	p
+debugger	internal/cache/debugger/dumper.go	/^package debugger$/;"	p
+deepEqualWithoutGeneration	internal/cache/cache_test.go	/^func deepEqualWithoutGeneration(t *testing.T, testcase int, actual, expected *schedulercache.NodeInfo) {$/;"	f
+defaultFunctionShape	algorithm/priorities/requested_to_capacity_ratio.go	/^	defaultFunctionShape, _ = NewFunctionShape([]FunctionShapePoint{{0, 10}, {100, 0}})$/;"	v
+defaultPredicates	algorithmprovider/defaults/defaults.go	/^func defaultPredicates() sets.String {$/;"	f
+defaultPriorities	algorithmprovider/defaults/defaults.go	/^func defaultPriorities() sets.String {$/;"	f
+defaultSchedulerOptions	scheduler.go	/^var defaultSchedulerOptions = schedulerOptions{$/;"	v
+defaults	algorithmprovider/defaults/compatibility_test.go	/^package defaults$/;"	p
+defaults	algorithmprovider/defaults/defaults.go	/^package defaults$/;"	p
+defaults	algorithmprovider/defaults/defaults_test.go	/^package defaults$/;"	p
+delete	internal/queue/scheduling_queue.go	/^func (u *UnschedulablePodsMap) delete(pod *v1.Pod) {$/;"	f
+deleteNodeFromCache	factory/factory.go	/^func (c *configFactory) deleteNodeFromCache(obj interface{}) {$/;"	f
+deleteNominatedPodIfExists	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) deleteNominatedPodIfExists(pod *v1.Pod) {$/;"	f
+deletePodFromCache	factory/factory.go	/^func (c *configFactory) deletePodFromCache(obj interface{}) {$/;"	f
+deletePodFromSchedulingQueue	factory/factory.go	/^func (c *configFactory) deletePodFromSchedulingQueue(obj interface{}) {$/;"	f
+deletingPod	scheduler_test.go	/^func deletingPod(id string) *v1.Pod {$/;"	f
+disablePodPreemption	factory/factory_test.go	/^	disablePodPreemption   = false$/;"	c
+dumpNodes	internal/cache/debugger/dumper.go	/^func (d *CacheDumper) dumpNodes() {$/;"	f
+dumpSchedulingQueue	internal/cache/debugger/dumper.go	/^func (d *CacheDumper) dumpSchedulingQueue() {$/;"	f
+emptyResource	cache/node_info.go	/^	emptyResource = Resource{}$/;"	v
+enableEquivalenceCache	algorithmprovider/defaults/compatibility_test.go	/^const enableEquivalenceCache = true$/;"	c
+enableEquivalenceCache	factory/factory_test.go	/^	enableEquivalenceCache = true$/;"	c
+equivalence	core/equivalence/eqivalence.go	/^package equivalence$/;"	p
+equivalence	core/equivalence/eqivalence_test.go	/^package equivalence$/;"	p
+equivalenceCacheLookups	metrics/metrics.go	/^	equivalenceCacheLookups = prometheus.NewCounterVec($/;"	v
+equivalencePod	core/equivalence/eqivalence.go	/^type equivalencePod struct {$/;"	t
+errPrioritize	core/generic_scheduler_test.go	/^	errPrioritize = fmt.Errorf("priority map encounters an error")$/;"	v
+errorPredicateExtender	core/extender_test.go	/^func errorPredicateExtender(pod *v1.Pod, node *v1.Node) (bool, error) {$/;"	f
+errorPrioritizerExtender	core/extender_test.go	/^func errorPrioritizerExtender(pod *v1.Pod, nodes []*v1.Node) (*schedulerapi.HostPriorityList, error) {$/;"	f
+expirePod	internal/cache/cache.go	/^func (cache *schedulerCache) expirePod(key string, ps *podState) error {$/;"	f
+extendedResourceA	algorithm/predicates/predicates_test.go	/^	extendedResourceA     = v1.ResourceName("example.com\/aaa")$/;"	v
+extendedResourceB	algorithm/predicates/predicates_test.go	/^	extendedResourceB     = v1.ResourceName("example.com\/bbb")$/;"	v
+factory	factory/factory.go	/^package factory$/;"	p
+factory	factory/factory_test.go	/^package factory$/;"	p
+factory	factory/plugins.go	/^package factory$/;"	p
+factory	factory/plugins_test.go	/^package factory$/;"	p
+factory	factory/signal.go	/^package factory$/;"	p
+factory	factory/signal_windows.go	/^package factory$/;"	p
+fake	internal/cache/fake/fake_cache.go	/^package fake$/;"	p
+fakeBinder	scheduler_test.go	/^type fakeBinder struct {$/;"	t
+fakeClock	util/backoff_utils_test.go	/^type fakeClock struct {$/;"	t
+fakeExtender	factory/factory_test.go	/^type fakeExtender struct {$/;"	t
+fakeNodeInfo	cache/node_info_test.go	/^func fakeNodeInfo(pods ...*v1.Pod) *NodeInfo {$/;"	f
+fakePersistentVolumeClaimNamespaceLister	testing/fake_lister.go	/^type fakePersistentVolumeClaimNamespaceLister struct {$/;"	t
+fakePod	algorithm/priorities/util/topologies_test.go	/^func fakePod() *v1.Pod {$/;"	f
+fakePodConditionUpdater	scheduler_test.go	/^type fakePodConditionUpdater struct{}$/;"	t
+fakePodPreemptor	scheduler_test.go	/^type fakePodPreemptor struct{}$/;"	t
+falseMapPriority	core/generic_scheduler_test.go	/^func falseMapPriority(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {$/;"	f
+falsePredicate	core/generic_scheduler_test.go	/^func falsePredicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+falsePredicateExtender	core/extender_test.go	/^func falsePredicateExtender(pod *v1.Pod, node *v1.Node) (bool, error) {$/;"	f
+filterAttachableVolumes	algorithm/predicates/csi_volume_predicate.go	/^func (c *CSIMaxVolumeLimitChecker) filterAttachableVolumes($/;"	f
+filterPodsWithPDBViolation	core/generic_scheduler.go	/^func filterPodsWithPDBViolation(pods []interface{}, pdbs []*policy.PodDisruptionBudget) (violatingPods, nonViolatingPods []*v1.Pod) {$/;"	f
+filterVolumes	algorithm/predicates/predicates.go	/^func (c *MaxPDVolumeCountChecker) filterVolumes(volumes []v1.Volume, namespace string, filteredVolumes map[string]bool) error {$/;"	f
+filteredPod	algorithm/priorities/selector_spreading.go	/^func filteredPod(namespace string, selector labels.Selector, nodeInfo *schedulercache.NodeInfo) (pods []*v1.Pod) {$/;"	f
+findMaxScores	core/generic_scheduler.go	/^func findMaxScores(priorityList schedulerapi.HostPriorityList) []int {$/;"	f
+findNodesThatFit	core/generic_scheduler.go	/^func (g *genericScheduler) findNodesThatFit(pod *v1.Pod, nodes []*v1.Node) ([]*v1.Node, FailedPredicateMap, error) {$/;"	f
+finishBinding	internal/cache/cache.go	/^func (cache *schedulerCache) finishBinding(pod *v1.Pod, now time.Time) error {$/;"	f
+fitPredicate	core/extender_test.go	/^type fitPredicate func(pod *v1.Pod, node *v1.Node) (bool, error)$/;"	t
+fitPredicateMap	factory/plugins.go	/^	fitPredicateMap        = make(map[string]FitPredicateFactory)$/;"	v
+fractionOfCapacity	algorithm/priorities/balanced_resource_allocation.go	/^func fractionOfCapacity(requested, capacity int64) float64 {$/;"	f
+generalPredicatesSets	factory/factory.go	/^	generalPredicatesSets         = sets.NewString(predicates.GeneralPred)$/;"	v
+generation	cache/node_info.go	/^	generation    int64$/;"	v
+genericScheduler	core/generic_scheduler.go	/^type genericScheduler struct {$/;"	t
+get	internal/queue/scheduling_queue.go	/^func (u *UnschedulablePodsMap) get(pod *v1.Pod) *v1.Pod {$/;"	f
+getAffinityTermProperties	algorithm/predicates/metadata.go	/^func getAffinityTermProperties(pod *v1.Pod, terms []v1.PodAffinityTerm) (properties []*affinityTermProperties, err error) {$/;"	f
+getAllTolerationPreferNoSchedule	algorithm/priorities/taint_toleration.go	/^func getAllTolerationPreferNoSchedule(tolerations []v1.Toleration) (tolerationList []v1.Toleration) {$/;"	f
+getBackoff	util/backoff_utils.go	/^func (b *BackoffEntry) getBackoff(maxDuration time.Duration) time.Duration {$/;"	f
+getBinderFunc	factory/factory.go	/^func (c *configFactory) getBinderFunc(extenders []algorithm.SchedulerExtender) func(pod *v1.Pod) Binder {$/;"	f
+getEquivalencePod	core/equivalence/eqivalence.go	/^func getEquivalencePod(pod *v1.Pod) *equivalencePod {$/;"	f
+getExistingVolumeCountForNode	algorithm/priorities/balanced_resource_allocation_test.go	/^func getExistingVolumeCountForNode(pods []*v1.Pod, maxVolumes int) int {$/;"	f
+getFakeCSIPVCInfo	algorithm/predicates/csi_volume_predicate_test.go	/^func getFakeCSIPVCInfo(volumeName string) FakePersistentVolumeClaimInfo {$/;"	f
+getFakeCSIPVInfo	algorithm/predicates/csi_volume_predicate_test.go	/^func getFakeCSIPVInfo(volumeName, driverName string) FakePersistentVolumeInfo {$/;"	f
+getFakePVCInfo	algorithm/predicates/max_attachable_volume_predicate_test.go	/^func getFakePVCInfo(filterName string) FakePersistentVolumeClaimInfo {$/;"	f
+getFakePVInfo	algorithm/predicates/max_attachable_volume_predicate_test.go	/^func getFakePVInfo(filterName string) FakePersistentVolumeInfo {$/;"	f
+getFirstServiceSelector	algorithm/priorities/metadata.go	/^func getFirstServiceSelector(pod *v1.Pod, sl algorithm.ServiceLister) (firstServiceSelector labels.Selector) {$/;"	f
+getFitPredicateFunctions	factory/plugins.go	/^func getFitPredicateFunctions(names sets.String, args PluginFactoryArgs) (map[string]algorithm.FitPredicate, error) {$/;"	f
+getImageFakeDigest	algorithm/priorities/image_locality_test.go	/^func getImageFakeDigest(fakeContent string) string {$/;"	f
+getLowerPriorityNominatedPods	core/generic_scheduler.go	/^func (g *genericScheduler) getLowerPriorityNominatedPods(pod *v1.Pod, nodeName string) []*v1.Pod {$/;"	f
+getMatchingAntiAffinityTopologyPairsOfPod	algorithm/predicates/predicates.go	/^func getMatchingAntiAffinityTopologyPairsOfPod(newPod *v1.Pod, existingPod *v1.Pod, node *v1.Node) (*topologyPairsMaps, error) {$/;"	f
+getMatchingAntiAffinityTopologyPairsOfPods	algorithm/predicates/predicates.go	/^func (c *PodAffinityChecker) getMatchingAntiAffinityTopologyPairsOfPods(pod *v1.Pod, existingPods []*v1.Pod) (*topologyPairsMaps, error) {$/;"	f
+getMaxEBSVolume	algorithm/predicates/predicates.go	/^func getMaxEBSVolume(nodeInstanceType string) int {$/;"	f
+getMaxVolLimitFromEnv	algorithm/predicates/predicates.go	/^func getMaxVolLimitFromEnv() int {$/;"	f
+getMaxVolumeFunc	algorithm/predicates/predicates.go	/^func getMaxVolumeFunc(filterName string) func(node *v1.Node) int {$/;"	f
+getNextPod	factory/factory.go	/^func (c *configFactory) getNextPod() *v1.Pod {$/;"	f
+getNodeClassificationByLabels	algorithm/priorities/selector_spreading.go	/^func (s *ServiceAntiAffinity) getNodeClassificationByLabels(nodes []*v1.Node) (map[string]string, []string) {$/;"	f
+getNodeImageStates	cache/util.go	/^func getNodeImageStates(node *v1.Node, imageExistenceMap map[string]sets.String) map[string]*ImageStateSummary {$/;"	f
+getNodeReducePriority	core/generic_scheduler_test.go	/^func getNodeReducePriority(pod *v1.Pod, meta interface{}, nodeNameToInfo map[string]*schedulercache.NodeInfo, result schedulerapi.HostPriorityList) error {$/;"	f
+getNodeWithPodAndVolumeLimits	algorithm/predicates/max_attachable_volume_predicate_test.go	/^func getNodeWithPodAndVolumeLimits(pods []*v1.Pod, limit int64, filter string) *schedulercache.NodeInfo {$/;"	f
+getNonZeroRequests	algorithm/priorities/resource_allocation.go	/^func getNonZeroRequests(pod *v1.Pod) *schedulercache.Resource {$/;"	f
+getPluginArgs	factory/factory.go	/^func (c *configFactory) getPluginArgs() (*PluginFactoryArgs, error) {$/;"	f
+getPredicateMetadataProducer	factory/plugins.go	/^func getPredicateMetadataProducer(args PluginFactoryArgs) (algorithm.PredicateMetadataProducer, error) {$/;"	f
+getPriorityFunctionConfigs	factory/plugins.go	/^func getPriorityFunctionConfigs(names sets.String, args PluginFactoryArgs) ([]algorithm.PriorityConfig, error) {$/;"	f
+getPriorityMetadataProducer	factory/plugins.go	/^func getPriorityMetadataProducer(args PluginFactoryArgs) (algorithm.PriorityMetadataProducer, error) {$/;"	f
+getResourceLimits	algorithm/priorities/resource_limits.go	/^func getResourceLimits(pod *v1.Pod) *schedulercache.Resource {$/;"	f
+getResourceRequest	internal/cache/cache_test.go	/^func getResourceRequest(pod *v1.Pod) v1.ResourceList {$/;"	f
+getSelectors	algorithm/priorities/metadata.go	/^func getSelectors(pod *v1.Pod, sl algorithm.ServiceLister, cl algorithm.ControllerLister, rsl algorithm.ReplicaSetLister, ssl algorithm.StatefulSetLister) []labels.Selector {$/;"	f
+getTPMapMatchingExistingAntiAffinity	algorithm/predicates/metadata.go	/^func getTPMapMatchingExistingAntiAffinity(pod *v1.Pod, nodeInfoMap map[string]*schedulercache.NodeInfo) (*topologyPairsMaps, error) {$/;"	f
+getTPMapMatchingIncomingAffinityAntiAffinity	algorithm/predicates/metadata.go	/^func getTPMapMatchingIncomingAffinityAntiAffinity(pod *v1.Pod, nodeInfoMap map[string]*schedulercache.NodeInfo) (topologyPairsAffinityPodsMaps *topologyPairsMaps, topologyPairsAntiAffinityPodsMaps *topologyPairsMaps, err error) {$/;"	f
+getUnschedulablePodsWithMatchingAffinityTerm	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) getUnschedulablePodsWithMatchingAffinityTerm(pod *v1.Pod) []*v1.Pod {$/;"	f
+getVolumeLimitKey	algorithm/predicates/max_attachable_volume_predicate_test.go	/^func getVolumeLimitKey(filterType string) v1.ResourceName {$/;"	f
+hasManagedResources	core/extender.go	/^func (h *HTTPExtender) hasManagedResources(containers []v1.Container) bool {$/;"	f
+hasNoPodsPredicate	core/generic_scheduler_test.go	/^func hasNoPodsPredicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+hasPodAffinityConstraints	cache/node_info.go	/^func hasPodAffinityConstraints(pod *v1.Pod) bool {$/;"	f
+haveOverlap	algorithm/predicates/predicates.go	/^func haveOverlap(a1, a2 []string) bool {$/;"	f
+heapData	internal/queue/scheduling_queue.go	/^type heapData struct {$/;"	t
+heapItem	internal/queue/scheduling_queue.go	/^type heapItem struct {$/;"	t
+highPriNominatedPod	internal/queue/scheduling_queue_test.go	/^var highPriorityPod, highPriNominatedPod, medPriorityPod, unschedulablePod = v1.Pod{$/;"	v
+highPriority	core/generic_scheduler_test.go	/^var negPriority, lowPriority, midPriority, highPriority, veryHighPriority = int32(-100), int32(0), int32(100), int32(1000), int32(10000)$/;"	v
+highPriority	internal/queue/scheduling_queue_test.go	/^var negPriority, lowPriority, midPriority, highPriority, veryHighPriority = int32(-100), int32(0), int32(100), int32(1000), int32(10000)$/;"	v
+highPriorityPod	internal/queue/scheduling_queue_test.go	/^var highPriorityPod, highPriNominatedPod, medPriorityPod, unschedulablePod = v1.Pod{$/;"	v
+hostPortInfoBuilder	internal/cache/cache_test.go	/^type hostPortInfoBuilder struct {$/;"	t
+hostPortInfoParam	cache/host_ports_test.go	/^type hostPortInfoParam struct {$/;"	t
+hostPortInfoParam	internal/cache/cache_test.go	/^type hostPortInfoParam struct {$/;"	t
+hugePageResourceA	algorithm/predicates/predicates_test.go	/^	hugePageResourceA     = v1helper.HugePageResourceName(resource.MustParse("2Mi"))$/;"	v
+imageState	internal/cache/cache.go	/^type imageState struct {$/;"	t
+init	algorithmprovider/defaults/defaults.go	/^func init() {$/;"	f
+init	api/latest/latest.go	/^func init() {$/;"	f
+init	api/register.go	/^func init() {$/;"	f
+init	api/v1/register.go	/^func init() {$/;"	f
+init	apis/config/scheme/scheme.go	/^func init() {$/;"	f
+init	apis/config/v1alpha1/register.go	/^func init() {$/;"	f
+init	apis/config/v1alpha1/zz_generated.conversion.go	/^func init() {$/;"	f
+init	testing/util.go	/^func init() {$/;"	f
+initPolicyFromConfigMap	scheduler.go	/^func initPolicyFromConfigMap(client clientset.Interface, policyRef *kubeschedulerconfig.SchedulerPolicyConfigMapSource, policy *schedulerapi.Policy) error {$/;"	f
+initPolicyFromFile	scheduler.go	/^func initPolicyFromFile(policyFile string, policy *schedulerapi.Policy) error {$/;"	f
+initialGetBackoff	factory/factory.go	/^	initialGetBackoff = 100 * time.Millisecond$/;"	c
+initializeNodeTransientInfo	cache/node_info.go	/^func initializeNodeTransientInfo() nodeTransientInfo {$/;"	f
+invalidate	core/equivalence/eqivalence.go	/^func (n *NodeCache) invalidate() {$/;"	f
+invalidateCachedPredicatesOnDeletePod	factory/factory.go	/^func (c *configFactory) invalidateCachedPredicatesOnDeletePod(pod *v1.Pod) {$/;"	f
+invalidateCachedPredicatesOnNodeUpdate	factory/factory.go	/^func (c *configFactory) invalidateCachedPredicatesOnNodeUpdate(newNode *v1.Node, oldNode *v1.Node) {$/;"	f
+invalidateCachedPredicatesOnUpdatePod	factory/factory.go	/^func (c *configFactory) invalidateCachedPredicatesOnUpdatePod(newPod *v1.Pod, oldPod *v1.Pod) {$/;"	f
+invalidatePredicatesForPv	factory/factory.go	/^func (c *configFactory) invalidatePredicatesForPv(pv *v1.PersistentVolume) {$/;"	f
+invalidatePredicatesForPvUpdate	factory/factory.go	/^func (c *configFactory) invalidatePredicatesForPvUpdate(oldPV, newPV *v1.PersistentVolume) {$/;"	f
+invalidatePredicatesForPvc	factory/factory.go	/^func (c *configFactory) invalidatePredicatesForPvc(pvc *v1.PersistentVolumeClaim) {$/;"	f
+invalidatePredicatesForPvcUpdate	factory/factory.go	/^func (c *configFactory) invalidatePredicatesForPvcUpdate(old, new *v1.PersistentVolumeClaim) {$/;"	f
+invalidatePredicatesForStorageClass	factory/factory.go	/^func (c *configFactory) invalidatePredicatesForStorageClass(sc *storagev1.StorageClass) {$/;"	f
+invalidatePreds	core/equivalence/eqivalence.go	/^func (n *NodeCache) invalidatePreds(predicateIDs []int) {$/;"	f
+isPodBestEffort	algorithm/predicates/predicates.go	/^func isPodBestEffort(pod *v1.Pod) bool {$/;"	f
+isPodUnschedulable	internal/queue/scheduling_queue.go	/^func isPodUnschedulable(pod *v1.Pod) bool {$/;"	f
+isPodUpdated	internal/queue/scheduling_queue.go	/^func isPodUpdated(oldPod, newPod *v1.Pod) bool {$/;"	f
+isVolumeConflict	algorithm/predicates/predicates.go	/^func isVolumeConflict(volume v1.Volume, pod *v1.Pod) bool {$/;"	f
+isZoneRegionLabel	factory/factory.go	/^func isZoneRegionLabel(k string) bool {$/;"	f
+itemKeyValue	internal/queue/scheduling_queue.go	/^type itemKeyValue struct {$/;"	t
+kubernetesIOResourceA	algorithm/predicates/predicates_test.go	/^	kubernetesIOResourceA = v1.ResourceName("kubernetes.io\/something")$/;"	v
+kubernetesIOResourceB	algorithm/predicates/predicates_test.go	/^	kubernetesIOResourceB = v1.ResourceName("subdomain.kubernetes.io\/something")$/;"	v
+largeContainers	core/generic_scheduler_test.go	/^var largeContainers = []v1.Container{$/;"	v
+latest	api/latest/latest.go	/^package latest$/;"	p
+leastRequestedScore	algorithm/priorities/least_requested.go	/^func leastRequestedScore(requested, capacity int64) int64 {$/;"	f
+leastResourcePriority	algorithm/priorities/least_requested.go	/^	leastResourcePriority = &ResourceAllocationPriority{"LeastResourceAllocation", leastResourceScorer}$/;"	v
+leastResourceScorer	algorithm/priorities/least_requested.go	/^func leastResourceScorer(requested, allocable *schedulercache.Resource, includeVolumes bool, requestedVolumes int, allocatableVolumes int) int64 {$/;"	f
+localSchemeBuilder	api/v1/register.go	/^	localSchemeBuilder = &SchemeBuilder$/;"	v
+localSchemeBuilder	apis/config/v1alpha1/register.go	/^	localSchemeBuilder = &kubeschedulerconfigv1alpha1.SchemeBuilder$/;"	v
+lookupResult	core/equivalence/eqivalence.go	/^func (n *NodeCache) lookupResult($/;"	f
+lowPriority	core/generic_scheduler_test.go	/^var negPriority, lowPriority, midPriority, highPriority, veryHighPriority = int32(-100), int32(0), int32(100), int32(1000), int32(10000)$/;"	v
+lowPriority	internal/queue/scheduling_queue_test.go	/^var negPriority, lowPriority, midPriority, highPriority, veryHighPriority = int32(-100), int32(0), int32(100), int32(1000), int32(10000)$/;"	v
+machine1PredicateExtender	core/extender_test.go	/^func machine1PredicateExtender(pod *v1.Pod, node *v1.Node) (bool, error) {$/;"	f
+machine1PrioritizerExtender	core/extender_test.go	/^func machine1PrioritizerExtender(pod *v1.Pod, nodes []*v1.Node) (*schedulerapi.HostPriorityList, error) {$/;"	f
+machine2PredicateExtender	core/extender_test.go	/^func machine2PredicateExtender(pod *v1.Pod, node *v1.Node) (bool, error) {$/;"	f
+machine2Prioritizer	core/extender_test.go	/^func machine2Prioritizer(_ *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo, nodes []*v1.Node) (schedulerapi.HostPriorityList, error) {$/;"	f
+machine2PrioritizerExtender	core/extender_test.go	/^func machine2PrioritizerExtender(pod *v1.Pod, nodes []*v1.Node) (*schedulerapi.HostPriorityList, error) {$/;"	f
+makeAllocatableResources	algorithm/predicates/predicates_test.go	/^func makeAllocatableResources(milliCPU, memory, pods, extendedA, storage, hugePageA int64) v1.ResourceList {$/;"	f
+makeBasePod	cache/node_info_test.go	/^func makeBasePod(t testingMode, nodeName, objName, cpu, mem, extended string, ports []v1.ContainerPort) *v1.Pod {$/;"	f
+makeBasePod	internal/cache/cache_test.go	/^func makeBasePod(t testingMode, nodeName, objName, cpu, mem, extended string, ports []v1.ContainerPort) *v1.Pod {$/;"	f
+makeBasicPod	core/equivalence/eqivalence_test.go	/^func makeBasicPod(name string) *v1.Pod {$/;"	f
+makeEmptyNodeInfo	algorithm/predicates/predicates_test.go	/^func makeEmptyNodeInfo(node *v1.Node) *schedulercache.NodeInfo {$/;"	f
+makeImageNode	algorithm/priorities/image_locality_test.go	/^func makeImageNode(node string, status v1.NodeStatus) *v1.Node {$/;"	f
+makeLabeledNodeList	algorithm/priorities/selector_spreading_test.go	/^func makeLabeledNodeList(nodeMap map[string]map[string]string) []*v1.Node {$/;"	f
+makeNode	algorithm/priorities/test_util.go	/^func makeNode(node string, milliCPU, memory int64) *v1.Node {$/;"	f
+makeNode	core/generic_scheduler_test.go	/^func makeNode(node string, milliCPU, memory int64) *v1.Node {$/;"	f
+makeNodeList	algorithm/priorities/selector_spreading_test.go	/^func makeNodeList(nodeNames []string) []*v1.Node {$/;"	f
+makeNodeList	core/generic_scheduler_test.go	/^func makeNodeList(nodeNames []string) []*v1.Node {$/;"	f
+makePodWithEphemeralStorage	internal/cache/cache_test.go	/^func makePodWithEphemeralStorage(nodeName, ephemeralStorage string) *v1.Pod {$/;"	f
+makePredicateError	scheduler_test.go	/^func makePredicateError(failReason string) error {$/;"	f
+makeResources	algorithm/predicates/predicates_test.go	/^func makeResources(milliCPU, memory, pods, extendedA, storage, hugePageA int64) v1.NodeResources {$/;"	f
+makeScheduler	core/generic_scheduler_test.go	/^func makeScheduler(predicates map[string]algorithm.FitPredicate, nodes []*v1.Node) *genericScheduler {$/;"	f
+makeTransport	core/extender.go	/^func makeTransport(config *schedulerapi.ExtenderConfig) (http.RoundTripper, error) {$/;"	f
+mandatoryFitPredicates	factory/plugins.go	/^	mandatoryFitPredicates = sets.NewString()$/;"	v
+matchInterPodAffinitySet	factory/factory.go	/^	matchInterPodAffinitySet      = sets.NewString(predicates.MatchInterPodAffinityPred)$/;"	v
+matchesPredicate	core/generic_scheduler_test.go	/^func matchesPredicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+matchingPodAntiAffinityTerm	algorithm/predicates/metadata.go	/^type matchingPodAntiAffinityTerm struct {$/;"	t
+maxPDVolumeCountPredicateKeys	factory/factory.go	/^	maxPDVolumeCountPredicateKeys = []string{predicates.MaxGCEPDVolumeCountPred, predicates.MaxAzureDiskVolumeCountPred, predicates.MaxEBSVolumeCountPred}$/;"	v
+maxScore	algorithm/priorities/requested_to_capacity_ratio.go	/^	maxScore       = schedulerapi.MaxPriority$/;"	c
+maxThreshold	algorithm/priorities/image_locality.go	/^	maxThreshold int64 = 1000 * mb$/;"	c
+maxUtilization	algorithm/priorities/requested_to_capacity_ratio.go	/^	maxUtilization = 100$/;"	c
+maximalGetBackoff	factory/factory.go	/^	maximalGetBackoff = time.Minute$/;"	c
+mb	algorithm/priorities/image_locality.go	/^	mb           int64 = 1024 * 1024$/;"	c
+mb	cache/util_test.go	/^const mb int64 = 1024 * 1024$/;"	c
+medPriorityPod	internal/queue/scheduling_queue_test.go	/^var highPriorityPod, highPriNominatedPod, medPriorityPod, unschedulablePod = v1.Pod{$/;"	v
+mediumContainers	core/generic_scheduler_test.go	/^var mediumContainers = []v1.Container{$/;"	v
+mediumPriority	internal/queue/scheduling_queue_test.go	/^var mediumPriority = (lowPriority + highPriority) \/ 2$/;"	v
+metrics	metrics/metrics.go	/^package metrics$/;"	p
+metricsList	metrics/metrics.go	/^	metricsList = []prometheus.Collector{$/;"	v
+midPriority	core/generic_scheduler_test.go	/^var negPriority, lowPriority, midPriority, highPriority, veryHighPriority = int32(-100), int32(0), int32(100), int32(1000), int32(10000)$/;"	v
+midPriority	internal/queue/scheduling_queue_test.go	/^var negPriority, lowPriority, midPriority, highPriority, veryHighPriority = int32(-100), int32(0), int32(100), int32(1000), int32(10000)$/;"	v
+minFeasibleNodesToFind	core/generic_scheduler.go	/^	minFeasibleNodesToFind = 100$/;"	c
+minScore	algorithm/priorities/requested_to_capacity_ratio.go	/^	minScore       = 0$/;"	c
+minThreshold	algorithm/priorities/image_locality.go	/^	minThreshold int64 = 23 * mb$/;"	c
+minUtilization	algorithm/priorities/requested_to_capacity_ratio.go	/^	minUtilization = 0$/;"	c
+mockPredicate	core/equivalence/eqivalence_test.go	/^type mockPredicate struct {$/;"	t
+mockScheduler	scheduler_test.go	/^type mockScheduler struct {$/;"	t
+mostRequestedScore	algorithm/priorities/most_requested.go	/^func mostRequestedScore(requested, capacity int64) int64 {$/;"	f
+mostResourcePriority	algorithm/priorities/most_requested.go	/^	mostResourcePriority = &ResourceAllocationPriority{"MostResourceAllocation", mostResourceScorer}$/;"	v
+mostResourceScorer	algorithm/priorities/most_requested.go	/^func mostResourceScorer(requested, allocable *schedulercache.Resource, includeVolumes bool, requestedVolumes int, allocatableVolumes int) int64 {$/;"	f
+movePodsToActiveQueue	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) movePodsToActiveQueue(pods []*v1.Pod) {$/;"	f
+negPriority	core/generic_scheduler_test.go	/^var negPriority, lowPriority, midPriority, highPriority, veryHighPriority = int32(-100), int32(0), int32(100), int32(1000), int32(10000)$/;"	v
+negPriority	internal/queue/scheduling_queue_test.go	/^var negPriority, lowPriority, midPriority, highPriority, veryHighPriority = int32(-100), int32(0), int32(100), int32(1000), int32(10000)$/;"	v
+newConfigFactory	factory/factory_test.go	/^func newConfigFactory(client clientset.Interface, hardPodAffinitySymmetricWeight int32, stopCh <-chan struct{}) Configurator {$/;"	f
+newHeap	internal/queue/scheduling_queue.go	/^func newHeap(keyFn KeyFunc, lessFn LessFunc) *Heap {$/;"	f
+newHostPortInfoBuilder	internal/cache/cache_test.go	/^func newHostPortInfoBuilder() *hostPortInfoBuilder {$/;"	f
+newNodeCache	core/equivalence/eqivalence.go	/^func newNodeCache(n int) *NodeCache {$/;"	f
+newNodeInfo	internal/cache/cache_test.go	/^func newNodeInfo(requestedResource *schedulercache.Resource,$/;"	f
+newNodeTree	internal/cache/node_tree.go	/^func newNodeTree(nodes []*v1.Node) *NodeTree {$/;"	f
+newPod	algorithm/predicates/predicates_test.go	/^func newPod(host string, hostPortInfos ...string) *v1.Pod {$/;"	f
+newPodAffinityPriorityMap	algorithm/priorities/interpod_affinity.go	/^func newPodAffinityPriorityMap(nodes []*v1.Node) *podAffinityPriorityMap {$/;"	f
+newPodWithPort	algorithm/predicates/predicates_test.go	/^func newPodWithPort(hostPorts ...int) *v1.Pod {$/;"	f
+newPredicateFailureError	algorithm/predicates/error.go	/^func newPredicateFailureError(predicateName, predicateDesc string) *PredicateFailureError {$/;"	f
+newResourceInitPod	algorithm/predicates/predicates_test.go	/^func newResourceInitPod(pod *v1.Pod, usage ...schedulercache.Resource) *v1.Pod {$/;"	f
+newResourcePod	algorithm/predicates/predicates_test.go	/^func newResourcePod(usage ...schedulercache.Resource) *v1.Pod {$/;"	f
+newSchedulerCache	internal/cache/cache.go	/^func newSchedulerCache(ttl, period time.Duration, stop <-chan struct{}) *schedulerCache {$/;"	f
+newTopologyPairsMaps	algorithm/predicates/metadata.go	/^func newTopologyPairsMaps() *topologyPairsMaps {$/;"	f
+newUnschedulablePodsMap	internal/queue/scheduling_queue.go	/^func newUnschedulablePodsMap() *UnschedulablePodsMap {$/;"	f
+next	internal/cache/node_tree.go	/^func (na *nodeArray) next() (nodeName string, exhausted bool) {$/;"	f
+nextGeneration	cache/node_info.go	/^func nextGeneration() int64 {$/;"	f
+noDiskConflictSet	factory/factory.go	/^	noDiskConflictSet             = sets.NewString(predicates.NoDiskConflictPred)$/;"	v
+nodeArray	internal/cache/node_tree.go	/^type nodeArray struct {$/;"	t
+nodeEnumerator	factory/factory.go	/^type nodeEnumerator struct {$/;"	t
+nodeLister	factory/factory.go	/^type nodeLister struct {$/;"	t
+nodeLister	scheduler_test.go	/^type nodeLister struct {$/;"	t
+nodeMap	core/equivalence/eqivalence.go	/^type nodeMap map[string]*NodeCache$/;"	t
+nodeMatchesAllTopologyTerms	algorithm/predicates/predicates.go	/^func (c *PodAffinityChecker) nodeMatchesAllTopologyTerms(pod *v1.Pod, topologyPairs *topologyPairsMaps, nodeInfo *schedulercache.NodeInfo, terms []v1.PodAffinityTerm) bool {$/;"	f
+nodeMatchesAnyTopologyTerm	algorithm/predicates/predicates.go	/^func (c *PodAffinityChecker) nodeMatchesAnyTopologyTerm(pod *v1.Pod, topologyPairs *topologyPairsMaps, nodeInfo *schedulercache.NodeInfo, terms []v1.PodAffinityTerm) bool {$/;"	f
+nodeMatchesNodeSelectorTerms	algorithm/predicates/predicates.go	/^func nodeMatchesNodeSelectorTerms(node *v1.Node, nodeSelectorTerms []v1.NodeSelectorTerm) bool {$/;"	f
+nodeTransientInfo	cache/node_info.go	/^type nodeTransientInfo struct {$/;"	t
+nodeWithTaints	algorithm/priorities/taint_toleration_test.go	/^func nodeWithTaints(nodeName string, taints []v1.Taint) *v1.Node {$/;"	f
+nodesWherePreemptionMightHelp	core/generic_scheduler.go	/^func nodesWherePreemptionMightHelp(nodes []*v1.Node, failedPredicatesMap FailedPredicateMap) []*v1.Node {$/;"	f
+noncriticalPredicates	algorithm/predicates/predicates.go	/^func noncriticalPredicates(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+normalizedImageName	algorithm/priorities/image_locality.go	/^func normalizedImageName(name string) string {$/;"	f
+numFeasibleNodesToFind	core/generic_scheduler.go	/^func (g *genericScheduler) numFeasibleNodesToFind(numAllNodes int32) int32 {$/;"	f
+numericPriority	core/generic_scheduler_test.go	/^func numericPriority(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo, nodes []*v1.Node) (schedulerapi.HostPriorityList, error) {$/;"	f
+onPvAdd	factory/factory.go	/^func (c *configFactory) onPvAdd(obj interface{}) {$/;"	f
+onPvDelete	factory/factory.go	/^func (c *configFactory) onPvDelete(obj interface{}) {$/;"	f
+onPvUpdate	factory/factory.go	/^func (c *configFactory) onPvUpdate(old, new interface{}) {$/;"	f
+onPvcAdd	factory/factory.go	/^func (c *configFactory) onPvcAdd(obj interface{}) {$/;"	f
+onPvcDelete	factory/factory.go	/^func (c *configFactory) onPvcDelete(obj interface{}) {$/;"	f
+onPvcUpdate	factory/factory.go	/^func (c *configFactory) onPvcUpdate(old, new interface{}) {$/;"	f
+onServiceAdd	factory/factory.go	/^func (c *configFactory) onServiceAdd(obj interface{}) {$/;"	f
+onServiceDelete	factory/factory.go	/^func (c *configFactory) onServiceDelete(obj interface{}) {$/;"	f
+onServiceUpdate	factory/factory.go	/^func (c *configFactory) onServiceUpdate(oldObj interface{}, newObj interface{}) {$/;"	f
+onStorageClassAdd	factory/factory.go	/^func (c *configFactory) onStorageClassAdd(obj interface{}) {$/;"	f
+onStorageClassDelete	factory/factory.go	/^func (c *configFactory) onStorageClassDelete(obj interface{}) {$/;"	f
+onePVCPod	algorithm/predicates/max_attachable_volume_predicate_test.go	/^func onePVCPod(filterName string) *v1.Pod {$/;"	f
+order	core/generic_scheduler_test.go	/^	order         = []string{"false", "true", "matches", "nopods", algorithmpredicates.MatchInterPodAffinityPred}$/;"	v
+pickOneNodeForPreemption	core/generic_scheduler.go	/^func pickOneNodeForPreemption(nodesToVictims map[*v1.Node]*schedulerapi.Victims) *v1.Node {$/;"	f
+podAffinityPriorityMap	algorithm/priorities/interpod_affinity.go	/^type podAffinityPriorityMap struct {$/;"	t
+podConditionUpdater	factory/factory.go	/^type podConditionUpdater struct {$/;"	t
+podEligibleToPreemptOthers	core/generic_scheduler.go	/^func podEligibleToPreemptOthers(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo) bool {$/;"	f
+podFitsOnNode	core/generic_scheduler.go	/^func podFitsOnNode($/;"	f
+podInformer	factory/factory.go	/^type podInformer struct {$/;"	t
+podMatchesAllAffinityTermProperties	algorithm/predicates/metadata.go	/^func podMatchesAllAffinityTermProperties(pod *v1.Pod, properties []*affinityTermProperties) bool {$/;"	f
+podMatchesAnyAffinityTermProperties	algorithm/predicates/metadata.go	/^func podMatchesAnyAffinityTermProperties(pod *v1.Pod, properties []*affinityTermProperties) bool {$/;"	f
+podMatchesNodeSelectorAndAffinityTerms	algorithm/predicates/predicates.go	/^func podMatchesNodeSelectorAndAffinityTerms(pod *v1.Pod, node *v1.Node) bool {$/;"	f
+podMatchesPodAffinityTerms	algorithm/predicates/predicates.go	/^func (c *PodAffinityChecker) podMatchesPodAffinityTerms(pod, targetPod *v1.Pod, nodeInfo *schedulercache.NodeInfo, terms []v1.PodAffinityTerm) (bool, bool, error) {$/;"	f
+podName	algorithm/predicates/predicates.go	/^func podName(pod *v1.Pod) string {$/;"	f
+podPassesBasicChecks	core/generic_scheduler.go	/^func podPassesBasicChecks(pod *v1.Pod, pvcLister corelisters.PersistentVolumeClaimLister) error {$/;"	f
+podPreemptor	factory/factory.go	/^type podPreemptor struct {$/;"	t
+podSet	algorithm/predicates/metadata.go	/^type podSet map[*v1.Pod]struct{}$/;"	t
+podState	internal/cache/cache.go	/^type podState struct {$/;"	t
+podToleratesNodeTaints	algorithm/predicates/predicates.go	/^func podToleratesNodeTaints(pod *v1.Pod, nodeInfo *schedulercache.NodeInfo, filter func(t *v1.Taint) bool) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+podWithID	scheduler_test.go	/^func podWithID(id, desiredHost string) *v1.Pod {$/;"	f
+podWithPort	scheduler_test.go	/^func podWithPort(id, desiredHost string, port int) *v1.Pod {$/;"	f
+podWithResources	scheduler_test.go	/^func podWithResources(id, desiredHost string, limits v1.ResourceList, requests v1.ResourceList) *v1.Pod {$/;"	f
+podWithTolerations	algorithm/priorities/taint_toleration_test.go	/^func podWithTolerations(tolerations []v1.Toleration) *v1.Pod {$/;"	f
+portsConflict	algorithm/predicates/utils.go	/^func portsConflict(existingPorts schedulercache.HostPortInfo, wantPorts []*v1.ContainerPort) bool {$/;"	f
+predicate	algorithm/predicates/predicates.go	/^func (c *MaxPDVolumeCountChecker) predicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+predicate	algorithm/predicates/predicates.go	/^func (c *VolumeBindingChecker) predicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+predicate	algorithm/predicates/predicates.go	/^func (c *VolumeZoneChecker) predicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+predicate	core/equivalence/eqivalence_test.go	/^func (p *mockPredicate) predicate(*v1.Pod, algorithm.PredicateMetadata, *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+predicateItemType	core/equivalence/eqivalence_test.go	/^type predicateItemType struct {$/;"	t
+predicateKeysToIDs	core/equivalence/eqivalence.go	/^func (c *Cache) predicateKeysToIDs(predicateKeys sets.String) []int {$/;"	f
+predicateMap	core/equivalence/eqivalence.go	/^type predicateMap []resultMap$/;"	t
+predicateMetaProducerRegisterLock	algorithm/predicates/metadata.go	/^var predicateMetaProducerRegisterLock sync.Mutex$/;"	v
+predicateMetadata	algorithm/predicates/metadata.go	/^type predicateMetadata struct {$/;"	t
+predicateMetadataEquivalent	algorithm/predicates/metadata_test.go	/^func predicateMetadataEquivalent(meta1, meta2 *predicateMetadata) error {$/;"	f
+predicateMetadataProducer	factory/plugins.go	/^	predicateMetadataProducer PredicateMetadataProducerFactory$/;"	v
+predicateMetadataProducers	algorithm/predicates/metadata.go	/^var predicateMetadataProducers = make(map[string]PredicateMetadataProducer)$/;"	v
+predicateResult	core/equivalence/eqivalence.go	/^type predicateResult struct {$/;"	t
+predicates	algorithm/predicates/csi_volume_predicate.go	/^package predicates$/;"	p
+predicates	algorithm/predicates/csi_volume_predicate_test.go	/^package predicates$/;"	p
+predicates	algorithm/predicates/error.go	/^package predicates$/;"	p
+predicates	algorithm/predicates/main_test.go	/^package predicates$/;"	p
+predicates	algorithm/predicates/max_attachable_volume_predicate_test.go	/^package predicates$/;"	p
+predicates	algorithm/predicates/metadata.go	/^package predicates$/;"	p
+predicates	algorithm/predicates/metadata_test.go	/^package predicates$/;"	p
+predicates	algorithm/predicates/predicates.go	/^package predicates$/;"	p
+predicates	algorithm/predicates/predicates_test.go	/^package predicates$/;"	p
+predicates	algorithm/predicates/testing_helper.go	/^package predicates$/;"	p
+predicates	algorithm/predicates/utils.go	/^package predicates$/;"	p
+predicates	algorithm/predicates/utils_test.go	/^package predicates$/;"	p
+predicatesOrdering	algorithm/predicates/predicates.go	/^	predicatesOrdering = []string{CheckNodeConditionPred, CheckNodeUnschedulablePred,$/;"	v
+preempt	scheduler.go	/^func (sched *Scheduler) preempt(preemptor *v1.Pod, scheduleErr error) (string, error) {$/;"	f
+printNodeInfo	internal/cache/debugger/dumper.go	/^func printNodeInfo(n *cache.NodeInfo) string {$/;"	f
+printNodeToVictims	core/generic_scheduler_test.go	/^func printNodeToVictims(nodeToVictims map[*v1.Node]*schedulerapi.Victims) string {$/;"	f
+printPod	internal/cache/debugger/dumper.go	/^func printPod(p *v1.Pod) string {$/;"	f
+priorities	algorithm/priorities/balanced_resource_allocation.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/balanced_resource_allocation_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/image_locality.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/image_locality_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/interpod_affinity.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/interpod_affinity_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/least_requested.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/least_requested_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/main_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/metadata.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/metadata_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/most_requested.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/most_requested_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/node_affinity.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/node_affinity_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/node_label.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/node_label_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/node_prefer_avoid_pods.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/node_prefer_avoid_pods_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/reduce.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/requested_to_capacity_ratio.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/requested_to_capacity_ratio_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/resource_allocation.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/resource_limits.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/resource_limits_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/selector_spreading.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/selector_spreading_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/taint_toleration.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/taint_toleration_test.go	/^package priorities$/;"	p
+priorities	algorithm/priorities/test_util.go	/^package priorities$/;"	p
+priorityConfig	core/extender_test.go	/^type priorityConfig struct {$/;"	t
+priorityFunc	core/extender_test.go	/^type priorityFunc func(pod *v1.Pod, nodes []*v1.Node) (*schedulerapi.HostPriorityList, error)$/;"	t
+priorityFunction	algorithm/priorities/test_util.go	/^func priorityFunction(mapFn algorithm.PriorityMapFunction, reduceFn algorithm.PriorityReduceFunction, metaData interface{}) algorithm.PriorityFunction {$/;"	f
+priorityFunctionMap	factory/plugins.go	/^	priorityFunctionMap    = make(map[string]PriorityConfigFactory)$/;"	v
+priorityMetadata	algorithm/priorities/metadata.go	/^type priorityMetadata struct {$/;"	t
+priorityMetadataProducer	factory/plugins.go	/^	priorityMetadataProducer  PriorityMetadataProducerFactory$/;"	v
+processPreemptionWithExtenders	core/generic_scheduler.go	/^func (g *genericScheduler) processPreemptionWithExtenders($/;"	f
+processTerm	algorithm/priorities/interpod_affinity.go	/^func (p *podAffinityPriorityMap) processTerm(term *v1.PodAffinityTerm, podDefiningAffinityTerm, podToCheck *v1.Pod, fixedNode *v1.Node, weight float64) {$/;"	f
+processTerms	algorithm/priorities/interpod_affinity.go	/^func (p *podAffinityPriorityMap) processTerms(terms []v1.WeightedPodAffinityTerm, podDefiningAffinityTerm, podToCheck *v1.Pod, fixedNode *v1.Node, multiplier int) {$/;"	f
+queue	internal/queue/scheduling_queue.go	/^package queue$/;"	p
+queue	internal/queue/scheduling_queue_test.go	/^package queue$/;"	p
+queueClosed	internal/queue/scheduling_queue.go	/^	queueClosed = "scheduling queue is closed"$/;"	v
+realClock	util/backoff_utils.go	/^type realClock struct{}$/;"	t
+registerAlgorithmProvider	algorithmprovider/defaults/defaults.go	/^func registerAlgorithmProvider(predSet, priSet sets.String) {$/;"	f
+registerMetrics	metrics/metrics.go	/^var registerMetrics sync.Once$/;"	v
+removeNode	internal/cache/node_tree.go	/^func (nt *NodeTree) removeNode(n *v1.Node) error {$/;"	f
+removeNodeImageStates	internal/cache/cache.go	/^func (cache *schedulerCache) removeNodeImageStates(node *v1.Node) {$/;"	f
+removePod	algorithm/predicates/metadata.go	/^func (topologyPairsMaps *topologyPairsMaps) removePod(deletedPod *v1.Pod) {$/;"	f
+removePod	internal/cache/cache.go	/^func (cache *schedulerCache) removePod(pod *v1.Pod) error {$/;"	f
+removeZone	internal/cache/node_tree.go	/^func (nt *NodeTree) removeZone(zone string) {$/;"	f
+resetExhausted	internal/cache/node_tree.go	/^func (nt *NodeTree) resetExhausted() {$/;"	f
+responsibleForPod	factory/factory.go	/^func responsibleForPod(pod *v1.Pod, schedulerName string) bool {$/;"	f
+resultMap	core/equivalence/eqivalence.go	/^type resultMap map[uint64]predicateResult$/;"	t
+reverseNumericPriority	core/generic_scheduler_test.go	/^func reverseNumericPriority(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo, nodes []*v1.Node) (schedulerapi.HostPriorityList, error) {$/;"	f
+run	internal/cache/cache.go	/^func (cache *schedulerCache) run() {$/;"	f
+runPredicate	core/extender_test.go	/^func (f *FakeExtender) runPredicate(pod *v1.Pod, node *v1.Node) (bool, error) {$/;"	f
+sanitize	cache/host_ports.go	/^func (h HostPortInfo) sanitize(ip, protocol *string) {$/;"	f
+satisfiesExistingPodsAntiAffinity	algorithm/predicates/predicates.go	/^func (c *PodAffinityChecker) satisfiesExistingPodsAntiAffinity(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (algorithm.PredicateFailureReason, error) {$/;"	f
+satisfiesPodsAffinityAntiAffinity	algorithm/predicates/predicates.go	/^func (c *PodAffinityChecker) satisfiesPodsAffinityAntiAffinity(pod *v1.Pod,$/;"	f
+scaledImageScore	algorithm/priorities/image_locality.go	/^func scaledImageScore(imageState *schedulercache.ImageStateSummary, totalNumNodes int) int64 {$/;"	f
+schedule	scheduler.go	/^func (sched *Scheduler) schedule(pod *v1.Pod) (string, error) {$/;"	f
+scheduleAttempts	metrics/metrics.go	/^	scheduleAttempts = prometheus.NewCounterVec($/;"	v
+scheduleOne	scheduler.go	/^func (sched *Scheduler) scheduleOne() {$/;"	f
+scheduler	main_test.go	/^package scheduler$/;"	p
+scheduler	scheduler.go	/^package scheduler$/;"	p
+scheduler	scheduler_test.go	/^package scheduler$/;"	p
+scheduler	testutil.go	/^package scheduler$/;"	p
+schedulerCache	internal/cache/cache.go	/^type schedulerCache struct {$/;"	t
+schedulerFactoryMutex	factory/plugins.go	/^	schedulerFactoryMutex sync.Mutex$/;"	v
+schedulerOptions	scheduler.go	/^type schedulerOptions struct {$/;"	t
+scheme	apis/config/scheme/scheme.go	/^package scheme$/;"	p
+selectHost	core/generic_scheduler.go	/^func (g *genericScheduler) selectHost(priorityList schedulerapi.HostPriorityList) (string, error) {$/;"	f
+selectNodesForPreemption	core/generic_scheduler.go	/^func selectNodesForPreemption(pod *v1.Pod,$/;"	f
+selectVictimsOnNode	core/generic_scheduler.go	/^func selectVictimsOnNode($/;"	f
+selectVictimsOnNodeByExtender	core/extender_test.go	/^func (f *FakeExtender) selectVictimsOnNodeByExtender($/;"	f
+send	core/extender.go	/^func (h *HTTPExtender) send(action string, args interface{}, result interface{}) error {$/;"	f
+serializer	testing/util.go	/^	serializer runtime.SerializerInfo$/;"	v
+serviceAffinityMetadataProducer	algorithm/predicates/predicates.go	/^func (s *ServiceAffinity) serviceAffinityMetadataProducer(pm *predicateMetadata) {$/;"	f
+serviceAffinitySet	factory/factory.go	/^	serviceAffinitySet            = sets.NewString(predicates.CheckServiceAffinityPred)$/;"	v
+setError	algorithm/priorities/interpod_affinity.go	/^func (p *podAffinityPriorityMap) setError(err error) {$/;"	f
+setupCacheOf1kNodes30kPods	internal/cache/cache_test.go	/^func setupCacheOf1kNodes30kPods(b *testing.B) Cache {$/;"	f
+setupCacheWithAssumedPods	internal/cache/cache_test.go	/^func setupCacheWithAssumedPods(b *testing.B, podNum int, assumedTime time.Time) *schedulerCache {$/;"	f
+setupTestScheduler	scheduler_test.go	/^func setupTestScheduler(queuedPodStore *clientcache.FIFO, scache schedulerinternalcache.Cache, informerFactory informers.SharedInformerFactory, predicateMap map[string]algorithm.FitPredicate, recorder record.EventRecorder) (*Scheduler, chan *v1.Binding, chan error) {$/;"	f
+setupTestSchedulerLongBindingWithRetry	scheduler_test.go	/^func setupTestSchedulerLongBindingWithRetry(queuedPodStore *clientcache.FIFO, scache schedulerinternalcache.Cache, informerFactory informers.SharedInformerFactory, predicateMap map[string]algorithm.FitPredicate, stop chan struct{}, bindingTime time.Duration) (*Scheduler, chan *v1.Binding) {$/;"	f
+setupTestSchedulerWithOnePodOnNode	scheduler_test.go	/^func setupTestSchedulerWithOnePodOnNode(t *testing.T, queuedPodStore *clientcache.FIFO, scache schedulerinternalcache.Cache,$/;"	f
+setupTestSchedulerWithVolumeBinding	scheduler_test.go	/^func setupTestSchedulerWithVolumeBinding(fakeVolumeBinder *volumebinder.VolumeBinder, stop <-chan struct{}, broadcaster record.EventBroadcaster) (*Scheduler, chan *v1.Binding, chan error) {$/;"	f
+skipPodUpdate	factory/factory.go	/^func (c *configFactory) skipPodUpdate(pod *v1.Pod) bool {$/;"	f
+slicesEqual	core/equivalence/eqivalence_test.go	/^func slicesEqual(a, b []algorithm.PredicateFailureReason) bool {$/;"	f
+smallContainers	core/generic_scheduler_test.go	/^var smallContainers = []v1.Container{$/;"	v
+snapshot	core/generic_scheduler.go	/^func (g *genericScheduler) snapshot() error {$/;"	f
+sortablePods	algorithm/predicates/metadata_test.go	/^type sortablePods []*v1.Pod$/;"	t
+sortableServices	algorithm/predicates/metadata_test.go	/^type sortableServices []*v1.Service$/;"	t
+splitPVCPod	algorithm/predicates/max_attachable_volume_predicate_test.go	/^func splitPVCPod(filterName string) *v1.Pod {$/;"	f
+status	testing/util_test.go	/^var status = &metav1.Status{$/;"	v
+sumImageScores	algorithm/priorities/image_locality.go	/^func sumImageScores(nodeInfo *schedulercache.NodeInfo, containers []v1.Container, totalNumNodes int) int64 {$/;"	f
+syncingMockCache	core/generic_scheduler_test.go	/^type syncingMockCache struct {$/;"	t
+targetPodMatchesAffinityOfPod	algorithm/predicates/metadata.go	/^func targetPodMatchesAffinityOfPod(pod, targetPod *v1.Pod) bool {$/;"	f
+targetPodMatchesAntiAffinityOfPod	algorithm/predicates/metadata.go	/^func targetPodMatchesAntiAffinityOfPod(pod, targetPod *v1.Pod) bool {$/;"	f
+testBind	factory/factory_test.go	/^func testBind(binding *v1.Binding, t *testing.T) {$/;"	f
+testCompareNodes	internal/cache/debugger/comparer_test.go	/^func testCompareNodes(actual, cached, missing, redundant []string, t *testing.T) {$/;"	f
+testComparePods	internal/cache/debugger/comparer_test.go	/^func testComparePods(actual, cached, queued, missing, redundant []string, t *testing.T) {$/;"	f
+testExpirePodStruct	internal/cache/cache_test.go	/^type testExpirePodStruct struct {$/;"	t
+testGetBinderFunc	factory/factory_test.go	/^func testGetBinderFunc(expectedBinderType, podName string, extenders []algorithm.SchedulerExtender, t *testing.T) {$/;"	f
+testing	testing/fake_lister.go	/^package testing$/;"	p
+testing	testing/util.go	/^package testing$/;"	p
+testing	testing/util_test.go	/^package testing$/;"	p
+testingMode	cache/node_info_test.go	/^type testingMode interface {$/;"	t
+testingMode	internal/cache/cache_test.go	/^type testingMode interface {$/;"	t
+topologyPair	algorithm/predicates/metadata.go	/^type topologyPair struct {$/;"	t
+topologyPairSet	algorithm/predicates/metadata.go	/^type topologyPairSet map[topologyPair]struct{}$/;"	t
+topologyPairsMaps	algorithm/predicates/metadata.go	/^type topologyPairsMaps struct {$/;"	t
+trueMapPriority	core/generic_scheduler_test.go	/^func trueMapPriority(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {$/;"	f
+truePredicate	core/generic_scheduler_test.go	/^func truePredicate(pod *v1.Pod, meta algorithm.PredicateMetadata, nodeInfo *schedulercache.NodeInfo) (bool, []algorithm.PredicateFailureReason, error) {$/;"	f
+truePredicateExtender	core/extender_test.go	/^func truePredicateExtender(pod *v1.Pod, node *v1.Node) (bool, error) {$/;"	f
+tryLock	util/backoff_utils.go	/^func (b *BackoffEntry) tryLock() bool {$/;"	f
+unlock	util/backoff_utils.go	/^func (b *BackoffEntry) unlock() {$/;"	f
+unschedulablePod	internal/queue/scheduling_queue_test.go	/^var highPriorityPod, highPriNominatedPod, medPriorityPod, unschedulablePod = v1.Pod{$/;"	v
+updateNodeInCache	factory/factory.go	/^func (c *configFactory) updateNodeInCache(oldObj, newObj interface{}) {$/;"	f
+updateNominatedPod	internal/queue/scheduling_queue.go	/^func (p *PriorityQueue) updateNominatedPod(oldPod, newPod *v1.Pod) {$/;"	f
+updatePod	internal/cache/cache.go	/^func (cache *schedulerCache) updatePod(oldPod, newPod *v1.Pod) error {$/;"	f
+updatePodInCache	factory/factory.go	/^func (c *configFactory) updatePodInCache(oldObj, newObj interface{}) {$/;"	f
+updatePodInSchedulingQueue	factory/factory.go	/^func (c *configFactory) updatePodInSchedulingQueue(oldObj, newObj interface{}) {$/;"	f
+updateResult	core/equivalence/eqivalence.go	/^func (n *NodeCache) updateResult($/;"	f
+util	algorithm/priorities/util/non_zero.go	/^package util$/;"	p
+util	algorithm/priorities/util/non_zero_test.go	/^package util$/;"	p
+util	algorithm/priorities/util/topologies.go	/^package util$/;"	p
+util	algorithm/priorities/util/topologies_test.go	/^package util$/;"	p
+util	util/backoff_utils.go	/^package util$/;"	p
+util	util/backoff_utils_test.go	/^package util$/;"	p
+util	util/utils.go	/^package util$/;"	p
+util	util/utils_test.go	/^package util$/;"	p
+v1	api/v1/doc.go	/^package v1 \/\/ import "k8s.io\/kubernetes\/pkg\/scheduler\/api\/v1"$/;"	p
+v1	api/v1/register.go	/^package v1$/;"	p
+v1	api/v1/types.go	/^package v1$/;"	p
+v1	api/v1/zz_generated.deepcopy.go	/^package v1$/;"	p
+v1alpha1	apis/config/v1alpha1/defaults.go	/^package v1alpha1$/;"	p
+v1alpha1	apis/config/v1alpha1/defaults_test.go	/^package v1alpha1$/;"	p
+v1alpha1	apis/config/v1alpha1/doc.go	/^package v1alpha1 \/\/ import "k8s.io\/kubernetes\/pkg\/scheduler\/apis\/config\/v1alpha1"$/;"	p
+v1alpha1	apis/config/v1alpha1/register.go	/^package v1alpha1$/;"	p
+v1alpha1	apis/config/v1alpha1/zz_generated.conversion.go	/^package v1alpha1$/;"	p
+v1alpha1	apis/config/v1alpha1/zz_generated.deepcopy.go	/^package v1alpha1$/;"	p
+v1alpha1	apis/config/v1alpha1/zz_generated.defaults.go	/^package v1alpha1$/;"	p
+validName	factory/plugins.go	/^var validName = regexp.MustCompile("^[a-zA-Z0-9]([-a-zA-Z0-9]*[a-zA-Z0-9])$")$/;"	v
+validateAlgorithmNameOrDie	factory/plugins.go	/^func validateAlgorithmNameOrDie(name string) {$/;"	f
+validateExtendedResourceName	api/validation/validation.go	/^func validateExtendedResourceName(name v1.ResourceName) []error {$/;"	f
+validatePredicateOrDie	factory/plugins.go	/^func validatePredicateOrDie(predicate schedulerapi.PredicatePolicy) {$/;"	f
+validatePriorityOrDie	factory/plugins.go	/^func validatePriorityOrDie(priority schedulerapi.PriorityPolicy) {$/;"	f
+validateSelectedConfigs	factory/plugins.go	/^func validateSelectedConfigs(configs []algorithm.PriorityConfig) error {$/;"	f
+validation	api/validation/validation.go	/^package validation$/;"	p
+validation	api/validation/validation_test.go	/^package validation$/;"	p
+validation	apis/config/validation/validation.go	/^package validation$/;"	p
+validation	apis/config/validation/validation_test.go	/^package validation$/;"	p
+verifyNodeTree	internal/cache/node_tree_test.go	/^func verifyNodeTree(t *testing.T, nt *NodeTree, expectedTree map[string]*nodeArray) {$/;"	f
+veryHighPriority	core/generic_scheduler_test.go	/^var negPriority, lowPriority, midPriority, highPriority, veryHighPriority = int32(-100), int32(0), int32(100), int32(1000), int32(10000)$/;"	v
+veryHighPriority	internal/queue/scheduling_queue_test.go	/^var negPriority, lowPriority, midPriority, highPriority, veryHighPriority = int32(-100), int32(0), int32(100), int32(1000), int32(10000)$/;"	v
+veryLargeContainers	core/generic_scheduler_test.go	/^var veryLargeContainers = []v1.Container{$/;"	v
+volumebinder	volumebinder/volume_binder.go	/^package volumebinder$/;"	p
+wait	util/backoff_utils.go	/^func (b *BackoffEntry) wait(maxDuration time.Duration) {$/;"	f
+zoneWeighting	algorithm/priorities/selector_spreading.go	/^const zoneWeighting float64 = 2.0 \/ 3.0$/;"	c
