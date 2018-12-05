@@ -21,6 +21,7 @@ import (
 
 	"k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/labels"
+	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	"k8s.io/kubernetes/pkg/scheduler/algorithm"
 	schedulerapi "k8s.io/kubernetes/pkg/scheduler/api"
 	schedulercache "k8s.io/kubernetes/pkg/scheduler/cache"
@@ -63,7 +64,7 @@ func NewSelectorSpreadPriority(
 // It favors nodes that have fewer existing matching pods.
 // i.e. it pushes the scheduler towards a node where there's the smallest number of
 // pods which match the same service, RC,RSs or StatefulSets selectors as the pod being scheduled.
-func (s *SelectorSpread) CalculateSpreadPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {
+func (s *SelectorSpread) CalculateSpreadPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo, _ utilfeature.FeatureGate) (schedulerapi.HostPriority, error) {
 	var selectors []labels.Selector
 	node := nodeInfo.Node()
 	if node == nil {
@@ -218,7 +219,7 @@ func filteredPod(namespace string, selector labels.Selector, nodeInfo *scheduler
 
 // CalculateAntiAffinityPriorityMap spreads pods by minimizing the number of pods belonging to the same service
 // on given machine
-func (s *ServiceAntiAffinity) CalculateAntiAffinityPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {
+func (s *ServiceAntiAffinity) CalculateAntiAffinityPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo, _ utilfeature.FeatureGate) (schedulerapi.HostPriority, error) {
 	var firstServiceSelector labels.Selector
 
 	node := nodeInfo.Node()

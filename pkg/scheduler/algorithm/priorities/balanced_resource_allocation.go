@@ -38,11 +38,12 @@ var (
 	BalancedResourceAllocationMap = balancedResourcePriority.PriorityMap
 )
 
-func balancedResourceScorer(requested, allocable *schedulercache.Resource, includeVolumes bool, requestedVolumes int, allocatableVolumes int) int64 {
+func balancedResourceScorer(requested, allocable *schedulercache.Resource, includeVolumes bool, requestedVolumes int, allocatableVolumes int, featureGate utilfeature.FeatureGate) int64 {
+
 	cpuFraction := fractionOfCapacity(requested.MilliCPU, allocable.MilliCPU)
 	memoryFraction := fractionOfCapacity(requested.Memory, allocable.Memory)
 	// This to find a node which has most balanced CPU, memory and volume usage.
-	if includeVolumes && utilfeature.DefaultFeatureGate.Enabled(features.BalanceAttachedNodeVolumes) && allocatableVolumes > 0 {
+	if includeVolumes && featureGate.Enabled(features.BalanceAttachedNodeVolumes) && allocatableVolumes > 0 {
 		volumeFraction := float64(requestedVolumes) / float64(allocatableVolumes)
 		if cpuFraction >= 1 || memoryFraction >= 1 || volumeFraction >= 1 {
 			// if requested >= capacity, the corresponding host should never be preferred.

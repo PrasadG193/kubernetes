@@ -21,6 +21,7 @@ import (
 	"strings"
 
 	"k8s.io/api/core/v1"
+	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	schedulerapi "k8s.io/kubernetes/pkg/scheduler/api"
 	schedulercache "k8s.io/kubernetes/pkg/scheduler/cache"
 	"k8s.io/kubernetes/pkg/util/parsers"
@@ -39,7 +40,7 @@ const (
 // based on the total size of those images.
 // - If none of the images are present, this node will be given the lowest priority.
 // - If some of the images are present on a node, the larger their sizes' sum, the higher the node's priority.
-func ImageLocalityPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {
+func ImageLocalityPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo, _ utilfeature.FeatureGate) (schedulerapi.HostPriority, error) {
 	node := nodeInfo.Node()
 	if node == nil {
 		return schedulerapi.HostPriority{}, fmt.Errorf("node not found")

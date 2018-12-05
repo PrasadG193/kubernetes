@@ -21,6 +21,7 @@ import (
 
 	"k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/labels"
+	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	v1helper "k8s.io/kubernetes/pkg/apis/core/v1/helper"
 	schedulerapi "k8s.io/kubernetes/pkg/scheduler/api"
 	schedulercache "k8s.io/kubernetes/pkg/scheduler/cache"
@@ -31,7 +32,7 @@ import (
 // it will a get an add of preferredSchedulingTerm.Weight. Thus, the more preferredSchedulingTerms
 // the node satisfies and the more the preferredSchedulingTerm that is satisfied weights, the higher
 // score the node gets.
-func CalculateNodeAffinityPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {
+func CalculateNodeAffinityPriorityMap(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo, _ utilfeature.FeatureGate) (schedulerapi.HostPriority, error) {
 	node := nodeInfo.Node()
 	if node == nil {
 		return schedulerapi.HostPriority{}, fmt.Errorf("node not found")

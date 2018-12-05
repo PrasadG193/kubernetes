@@ -19,6 +19,7 @@ package priorities
 import (
 	"fmt"
 
+	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	schedulerapi "k8s.io/kubernetes/pkg/scheduler/api"
 	schedulercache "k8s.io/kubernetes/pkg/scheduler/cache"
 )
@@ -98,7 +99,7 @@ func RequestedToCapacityRatioResourceAllocationPriority(scoringFunctionShape Fun
 	return &ResourceAllocationPriority{"RequestedToCapacityRatioResourceAllocationPriority", buildRequestedToCapacityRatioScorerFunction(scoringFunctionShape)}
 }
 
-func buildRequestedToCapacityRatioScorerFunction(scoringFunctionShape FunctionShape) func(*schedulercache.Resource, *schedulercache.Resource, bool, int, int) int64 {
+func buildRequestedToCapacityRatioScorerFunction(scoringFunctionShape FunctionShape) func(*schedulercache.Resource, *schedulercache.Resource, bool, int, int, utilfeature.FeatureGate) int64 {
 	rawScoringFunction := buildBrokenLinearFunction(scoringFunctionShape)
 
 	resourceScoringFunction := func(requested, capacity int64) int64 {
@@ -109,7 +110,7 @@ func buildRequestedToCapacityRatioScorerFunction(scoringFunctionShape FunctionSh
 		return rawScoringFunction(maxUtilization - (capacity-requested)*maxUtilization/capacity)
 	}
 
-	return func(requested, allocable *schedulercache.Resource, includeVolumes bool, requestedVolumes int, allocatableVolumes int) int64 {
+	return func(requested, allocable *schedulercache.Resource, includeVolumes bool, requestedVolumes int, allocatableVolumes int, featureGate utilfeature.FeatureGate) int64 {
 		cpuScore := resourceScoringFunction(requested.MilliCPU, allocable.MilliCPU)
 		memoryScore := resourceScoringFunction(requested.Memory, allocable.Memory)
 		return (cpuScore + memoryScore) / 2

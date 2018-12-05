@@ -31,7 +31,7 @@ import (
 // ResourceAllocationPriority contains information to calculate resource allocation priority.
 type ResourceAllocationPriority struct {
 	Name   string
-	scorer func(requested, allocable *schedulercache.Resource, includeVolumes bool, requestedVolumes int, allocatableVolumes int) int64
+	scorer func(requested, allocable *schedulercache.Resource, includeVolumes bool, requestedVolumes int, allocatableVolumes int, featureGate utilfeature.FeatureGate) int64
 }
 
 // PriorityMap priorities nodes according to the resource allocations on the node.
@@ -39,7 +39,8 @@ type ResourceAllocationPriority struct {
 func (r *ResourceAllocationPriority) PriorityMap(
 	pod *v1.Pod,
 	meta interface{},
-	nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {
+	nodeInfo *schedulercache.NodeInfo,
+	featureGate utilfeature.FeatureGate) (schedulerapi.HostPriority, error) {
 	node := nodeInfo.Node()
 	if node == nil {
 		return schedulerapi.HostPriority{}, fmt.Errorf("node not found")
@@ -58,14 +59,14 @@ func (r *ResourceAllocationPriority) PriorityMap(
 	requested.Memory += nodeInfo.NonZeroRequest().Memory
 	var score int64
 	// Check if the pod has volumes and this could be added to scorer function for balanced resource allocation.
-	if len(pod.Spec.Volumes) >= 0 && utilfeature.DefaultFeatureGate.Enabled(features.BalanceAttachedNodeVolumes) && nodeInfo.TransientInfo != nil {
-		score = r.scorer(&requested, &allocatable, true, nodeInfo.TransientInfo.TransNodeInfo.RequestedVolumes, nodeInfo.TransientInfo.TransNodeInfo.AllocatableVolumesCount)
+	if len(pod.Spec.Volumes) >= 0 && featureGate.Enabled(features.BalanceAttachedNodeVolumes) && nodeInfo.TransientInfo != nil {
+		score = r.scorer(&requested, &allocatable, true, nodeInfo.TransientInfo.TransNodeInfo.RequestedVolumes, nodeInfo.TransientInfo.TransNodeInfo.AllocatableVolumesCount, featureGate)
 	} else {
-		score = r.scorer(&requested, &allocatable, false, 0, 0)
+		score = r.scorer(&requested, &allocatable, false, 0, 0, featureGate)
 	}
 
 	if klog.V(10) {
-		if len(pod.Spec.Volumes) >= 0 && utilfeature.DefaultFeatureGate.Enabled(features.BalanceAttachedNodeVolumes) && nodeInfo.TransientInfo != nil {
+		if len(pod.Spec.Volumes) >= 0 && featureGate.Enabled(features.BalanceAttachedNodeVolumes) && nodeInfo.TransientInfo != nil {
 			klog.Infof(
 				"%v -> %v: %v, capacity %d millicores %d memory bytes, %d volumes, total request %d millicores %d memory bytes %d volumes, score %d",
 				pod.Name, node.Name, r.Name,

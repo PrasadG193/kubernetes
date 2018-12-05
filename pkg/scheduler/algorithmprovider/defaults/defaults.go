@@ -104,6 +104,7 @@ func init() {
 }
 
 func defaultPredicates() sets.String {
+
 	return sets.NewString(
 		// Fit is determined by volume zone requirements.
 		factory.RegisterFitPredicateFactory(

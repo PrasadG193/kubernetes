@@ -33,6 +33,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/util/errors"
+	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	utiltrace "k8s.io/apiserver/pkg/util/trace"
 	corelisters "k8s.io/client-go/listers/core/v1"
 	"k8s.io/client-go/util/workqueue"
@@ -185,7 +186,7 @@ func (g *genericScheduler) Schedule(pod *v1.Pod, nodeLister algorithm.NodeLister
 	}
 
 	metaPrioritiesInterface := g.priorityMetaProducer(pod, g.cachedNodeInfoMap)
-	priorityList, err := PrioritizeNodes(pod, g.cachedNodeInfoMap, metaPrioritiesInterface, g.prioritizers, filteredNodes, g.extenders)
+	priorityList, err := PrioritizeNodes(pod, g.cachedNodeInfoMap, metaPrioritiesInterface, g.prioritizers, filteredNodes, g.extenders, g.cache.FeatureGate())
 	if err != nil {
 		return "", err
 	}
@@ -627,13 +628,14 @@ func PrioritizeNodes(
 	priorityConfigs []algorithm.PriorityConfig,
 	nodes []*v1.Node,
 	extenders []algorithm.SchedulerExtender,
+	featureGate utilfeature.FeatureGate,
 ) (schedulerapi.HostPriorityList, error) {
 	// If no priority configs are provided, then the EqualPriority function is applied
 	// This is required to generate the priority list in the required format
 	if len(priorityConfigs) == 0 && len(extenders) == 0 {
 		result := make(schedulerapi.HostPriorityList, 0, len(nodes))
 		for i := range nodes {
-			hostPriority, err := EqualPriorityMap(pod, meta, nodeNameToInfo[nodes[i].Name])
+			hostPriority, err := EqualPriorityMap(pod, meta, nodeNameToInfo[nodes[i].Name], featureGate)
 			if err != nil {
 				return nil, err
 			}
@@ -679,7 +681,7 @@ func PrioritizeNodes(
 			}
 
 			var err error
-			results[i][index], err = priorityConfigs[i].Map(pod, meta, nodeInfo)
+			results[i][index], err = priorityConfigs[i].Map(pod, meta, nodeInfo, featureGate)
 			if err != nil {
 				appendError(err)
 				results[i][index].Host = nodes[index].Name
@@ -761,7 +763,7 @@ func PrioritizeNodes(
 }
 
 // EqualPriorityMap is a prioritizer function that gives an equal weight of one to all nodes
-func EqualPriorityMap(_ *v1.Pod, _ interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error) {
+func EqualPriorityMap(_ *v1.Pod, _ interface{}, nodeInfo *schedulercache.NodeInfo, _ utilfeature.FeatureGate) (schedulerapi.HostPriority, error) {
 	node := nodeInfo.Node()
 	if node == nil {
 		return schedulerapi.HostPriority{}, fmt.Errorf("node not found")

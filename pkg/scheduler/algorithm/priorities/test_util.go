@@ -45,7 +45,7 @@ func priorityFunction(mapFn algorithm.PriorityMapFunction, reduceFn algorithm.Pr
 	return func(pod *v1.Pod, nodeNameToInfo map[string]*schedulercache.NodeInfo, nodes []*v1.Node) (schedulerapi.HostPriorityList, error) {
 		result := make(schedulerapi.HostPriorityList, 0, len(nodes))
 		for i := range nodes {
-			hostResult, err := mapFn(pod, metaData, nodeNameToInfo[nodes[i].Name])
+			hostResult, err := mapFn(pod, metaData, nodeNameToInfo[nodes[i].Name], nil)
 			if err != nil {
 				return nil, err
 			}

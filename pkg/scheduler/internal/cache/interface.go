@@ -19,6 +19,7 @@ package cache
 import (
 	"k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/labels"
+	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	schedulercache "k8s.io/kubernetes/pkg/scheduler/cache"
 )
 
@@ -113,6 +114,9 @@ type Cache interface {
 
 	// NodeTree returns a node tree structure
 	NodeTree() *NodeTree
+
+	// FeatureGate returns a featureGate
+	FeatureGate() utilfeature.FeatureGate
 }
 
 // Snapshot is a snapshot of cache state

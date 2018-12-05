@@ -17,6 +17,7 @@ limitations under the License.
 package priorities
 
 import (
+	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	schedulerapi "k8s.io/kubernetes/pkg/scheduler/api"
 	schedulercache "k8s.io/kubernetes/pkg/scheduler/cache"
 )
@@ -31,7 +32,7 @@ var (
 	MostRequestedPriorityMap = mostResourcePriority.PriorityMap
 )
 
-func mostResourceScorer(requested, allocable *schedulercache.Resource, includeVolumes bool, requestedVolumes int, allocatableVolumes int) int64 {
+func mostResourceScorer(requested, allocable *schedulercache.Resource, includeVolumes bool, requestedVolumes int, allocatableVolumes int, _ utilfeature.FeatureGate) int64 {
 	return (mostRequestedScore(requested.MilliCPU, allocable.MilliCPU) +
 		mostRequestedScore(requested.Memory, allocable.Memory)) / 2
 }

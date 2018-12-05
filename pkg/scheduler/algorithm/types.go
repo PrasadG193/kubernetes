@@ -21,6 +21,7 @@ import (
 	"k8s.io/api/core/v1"
 	policyv1beta1 "k8s.io/api/policy/v1beta1"
 	"k8s.io/apimachinery/pkg/labels"
+	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	schedulerapi "k8s.io/kubernetes/pkg/scheduler/api"
 	schedulercache "k8s.io/kubernetes/pkg/scheduler/cache"
 	schedulerinternalcache "k8s.io/kubernetes/pkg/scheduler/internal/cache"
@@ -39,7 +40,7 @@ type FitPredicate func(pod *v1.Pod, meta PredicateMetadata, nodeInfo *schedulerc
 // PriorityMapFunction is a function that computes per-node results for a given node.
 // TODO: Figure out the exact API of this method.
 // TODO: Change interface{} to a specific type.
-type PriorityMapFunction func(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo) (schedulerapi.HostPriority, error)
+type PriorityMapFunction func(pod *v1.Pod, meta interface{}, nodeInfo *schedulercache.NodeInfo, featureGate utilfeature.FeatureGate) (schedulerapi.HostPriority, error)
 
 // PriorityReduceFunction is a function that aggregated per-node results and computes
 // final scores for all nodes.

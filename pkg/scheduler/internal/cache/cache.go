@@ -151,6 +151,10 @@ func (cache *schedulerCache) List(selector labels.Selector) ([]*v1.Pod, error) {
 	return cache.FilteredList(alwaysTrue, selector)
 }
 
+func (cache *schedulerCache) FeatureGate() utilfeature.FeatureGate {
+	return cache.featureGate
+}
+
 func (cache *schedulerCache) FilteredList(podFilter PodFilter, selector labels.Selector) ([]*v1.Pod, error) {
 	cache.mu.RLock()
 	defer cache.mu.RUnlock()
